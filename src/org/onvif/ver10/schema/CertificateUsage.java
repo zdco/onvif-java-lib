@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -13,69 +14,73 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 CertificateUsage complex type.
+ * <p>CertificateUsage complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="CertificateUsage">
- *   <simpleContent>
- *     <extension base="<http://www.w3.org/2001/XMLSchema>string">
- *       <attribute name="Critical" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *     </extension>
- *   </simpleContent>
- * </complexType>
+ * &lt;complexType name="CertificateUsage"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+ *       &lt;attribute name="Critical" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CertificateUsage", propOrder = { "value" })
+@XmlType(name = "CertificateUsage", propOrder = {
+    "value"
+})
 public class CertificateUsage {
 
-	@XmlValue
-	protected String value;
-	@XmlAttribute(name = "Critical", required = true)
-	protected boolean critical;
+    @XmlValue
+    protected String value;
+    @XmlAttribute(name = "Critical", required = true)
+    protected boolean critical;
 
-	/**
-	 * Ruft den Wert der value-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getValue() {
-		return value;
-	}
+    /**
+     * 获取value属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getValue() {
+        return value;
+    }
 
-	/**
-	 * Legt den Wert der value-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setValue(String value) {
-		this.value = value;
-	}
+    /**
+     * 设置value属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setValue(String value) {
+        this.value = value;
+    }
 
-	/**
-	 * Ruft den Wert der critical-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isCritical() {
-		return critical;
-	}
+    /**
+     * 获取critical属性的值。
+     * 
+     */
+    public boolean isCritical() {
+        return critical;
+    }
 
-	/**
-	 * Legt den Wert der critical-Eigenschaft fest.
-	 * 
-	 */
-	public void setCritical(boolean value) {
-		this.critical = value;
-	}
+    /**
+     * 设置critical属性的值。
+     * 
+     */
+    public void setCritical(boolean value) {
+        this.critical = value;
+    }
 
 }

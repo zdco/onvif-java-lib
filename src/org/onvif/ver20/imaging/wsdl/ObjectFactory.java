@@ -1,8 +1,8 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 膎derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.25 um 04:22:13 PM CEST 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:33:08 PM CST 
 //
 
 
@@ -41,43 +41,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetOptions }
+     * Create an instance of {@link GetServiceCapabilities }
      * 
      */
-    public GetOptions createGetOptions() {
-        return new GetOptions();
-    }
-
-    /**
-     * Create an instance of {@link MoveResponse }
-     * 
-     */
-    public MoveResponse createMoveResponse() {
-        return new MoveResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetImagingSettings }
-     * 
-     */
-    public GetImagingSettings createGetImagingSettings() {
-        return new GetImagingSettings();
-    }
-
-    /**
-     * Create an instance of {@link GetStatus }
-     * 
-     */
-    public GetStatus createGetStatus() {
-        return new GetStatus();
-    }
-
-    /**
-     * Create an instance of {@link GetOptionsResponse }
-     * 
-     */
-    public GetOptionsResponse createGetOptionsResponse() {
-        return new GetOptionsResponse();
+    public GetServiceCapabilities createGetServiceCapabilities() {
+        return new GetServiceCapabilities();
     }
 
     /**
@@ -97,51 +65,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Stop }
+     * Create an instance of {@link GetImagingSettings }
      * 
      */
-    public Stop createStop() {
-        return new Stop();
-    }
-
-    /**
-     * Create an instance of {@link SetImagingSettingsResponse }
-     * 
-     */
-    public SetImagingSettingsResponse createSetImagingSettingsResponse() {
-        return new SetImagingSettingsResponse();
-    }
-
-    /**
-     * Create an instance of {@link StopResponse }
-     * 
-     */
-    public StopResponse createStopResponse() {
-        return new StopResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetStatusResponse }
-     * 
-     */
-    public GetStatusResponse createGetStatusResponse() {
-        return new GetStatusResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetServiceCapabilities }
-     * 
-     */
-    public GetServiceCapabilities createGetServiceCapabilities() {
-        return new GetServiceCapabilities();
-    }
-
-    /**
-     * Create an instance of {@link Move }
-     * 
-     */
-    public Move createMove() {
-        return new Move();
+    public GetImagingSettings createGetImagingSettings() {
+        return new GetImagingSettings();
     }
 
     /**
@@ -161,6 +89,46 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link SetImagingSettingsResponse }
+     * 
+     */
+    public SetImagingSettingsResponse createSetImagingSettingsResponse() {
+        return new SetImagingSettingsResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetOptions }
+     * 
+     */
+    public GetOptions createGetOptions() {
+        return new GetOptions();
+    }
+
+    /**
+     * Create an instance of {@link GetOptionsResponse }
+     * 
+     */
+    public GetOptionsResponse createGetOptionsResponse() {
+        return new GetOptionsResponse();
+    }
+
+    /**
+     * Create an instance of {@link Move }
+     * 
+     */
+    public Move createMove() {
+        return new Move();
+    }
+
+    /**
+     * Create an instance of {@link MoveResponse }
+     * 
+     */
+    public MoveResponse createMoveResponse() {
+        return new MoveResponse();
+    }
+
+    /**
      * Create an instance of {@link GetMoveOptions }
      * 
      */
@@ -174,6 +142,38 @@ public class ObjectFactory {
      */
     public GetMoveOptionsResponse createGetMoveOptionsResponse() {
         return new GetMoveOptionsResponse();
+    }
+
+    /**
+     * Create an instance of {@link Stop }
+     * 
+     */
+    public Stop createStop() {
+        return new Stop();
+    }
+
+    /**
+     * Create an instance of {@link StopResponse }
+     * 
+     */
+    public StopResponse createStopResponse() {
+        return new StopResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetStatus }
+     * 
+     */
+    public GetStatus createGetStatus() {
+        return new GetStatus();
+    }
+
+    /**
+     * Create an instance of {@link GetStatusResponse }
+     * 
+     */
+    public GetStatusResponse createGetStatusResponse() {
+        return new GetStatusResponse();
     }
 
     /**

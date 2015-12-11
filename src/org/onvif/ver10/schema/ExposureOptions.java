@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -12,308 +13,352 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 ExposureOptions complex type.
+ * <p>ExposureOptions complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="ExposureOptions">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="Mode" type="{http://www.onvif.org/ver10/schema}ExposureMode" maxOccurs="unbounded"/>
- *         <element name="Priority" type="{http://www.onvif.org/ver10/schema}ExposurePriority" maxOccurs="unbounded"/>
- *         <element name="MinExposureTime" type="{http://www.onvif.org/ver10/schema}FloatRange"/>
- *         <element name="MaxExposureTime" type="{http://www.onvif.org/ver10/schema}FloatRange"/>
- *         <element name="MinGain" type="{http://www.onvif.org/ver10/schema}FloatRange"/>
- *         <element name="MaxGain" type="{http://www.onvif.org/ver10/schema}FloatRange"/>
- *         <element name="MinIris" type="{http://www.onvif.org/ver10/schema}FloatRange"/>
- *         <element name="MaxIris" type="{http://www.onvif.org/ver10/schema}FloatRange"/>
- *         <element name="ExposureTime" type="{http://www.onvif.org/ver10/schema}FloatRange"/>
- *         <element name="Gain" type="{http://www.onvif.org/ver10/schema}FloatRange"/>
- *         <element name="Iris" type="{http://www.onvif.org/ver10/schema}FloatRange"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="ExposureOptions"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Mode" type="{http://www.onvif.org/ver10/schema}ExposureMode" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="Priority" type="{http://www.onvif.org/ver10/schema}ExposurePriority" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="MinExposureTime" type="{http://www.onvif.org/ver10/schema}FloatRange"/&gt;
+ *         &lt;element name="MaxExposureTime" type="{http://www.onvif.org/ver10/schema}FloatRange"/&gt;
+ *         &lt;element name="MinGain" type="{http://www.onvif.org/ver10/schema}FloatRange"/&gt;
+ *         &lt;element name="MaxGain" type="{http://www.onvif.org/ver10/schema}FloatRange"/&gt;
+ *         &lt;element name="MinIris" type="{http://www.onvif.org/ver10/schema}FloatRange"/&gt;
+ *         &lt;element name="MaxIris" type="{http://www.onvif.org/ver10/schema}FloatRange"/&gt;
+ *         &lt;element name="ExposureTime" type="{http://www.onvif.org/ver10/schema}FloatRange"/&gt;
+ *         &lt;element name="Gain" type="{http://www.onvif.org/ver10/schema}FloatRange"/&gt;
+ *         &lt;element name="Iris" type="{http://www.onvif.org/ver10/schema}FloatRange"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExposureOptions", propOrder = { "mode", "priority", "minExposureTime", "maxExposureTime", "minGain", "maxGain", "minIris", "maxIris",
-		"exposureTime", "gain", "iris" })
+@XmlType(name = "ExposureOptions", propOrder = {
+    "mode",
+    "priority",
+    "minExposureTime",
+    "maxExposureTime",
+    "minGain",
+    "maxGain",
+    "minIris",
+    "maxIris",
+    "exposureTime",
+    "gain",
+    "iris"
+})
 public class ExposureOptions {
 
-	@XmlElement(name = "Mode", required = true)
-	protected List<ExposureMode> mode;
-	@XmlElement(name = "Priority", required = true)
-	protected List<ExposurePriority> priority;
-	@XmlElement(name = "MinExposureTime", required = true)
-	protected FloatRange minExposureTime;
-	@XmlElement(name = "MaxExposureTime", required = true)
-	protected FloatRange maxExposureTime;
-	@XmlElement(name = "MinGain", required = true)
-	protected FloatRange minGain;
-	@XmlElement(name = "MaxGain", required = true)
-	protected FloatRange maxGain;
-	@XmlElement(name = "MinIris", required = true)
-	protected FloatRange minIris;
-	@XmlElement(name = "MaxIris", required = true)
-	protected FloatRange maxIris;
-	@XmlElement(name = "ExposureTime", required = true)
-	protected FloatRange exposureTime;
-	@XmlElement(name = "Gain", required = true)
-	protected FloatRange gain;
-	@XmlElement(name = "Iris", required = true)
-	protected FloatRange iris;
+    @XmlElement(name = "Mode", required = true)
+    @XmlSchemaType(name = "string")
+    protected List<ExposureMode> mode;
+    @XmlElement(name = "Priority", required = true)
+    @XmlSchemaType(name = "string")
+    protected List<ExposurePriority> priority;
+    @XmlElement(name = "MinExposureTime", required = true)
+    protected FloatRange minExposureTime;
+    @XmlElement(name = "MaxExposureTime", required = true)
+    protected FloatRange maxExposureTime;
+    @XmlElement(name = "MinGain", required = true)
+    protected FloatRange minGain;
+    @XmlElement(name = "MaxGain", required = true)
+    protected FloatRange maxGain;
+    @XmlElement(name = "MinIris", required = true)
+    protected FloatRange minIris;
+    @XmlElement(name = "MaxIris", required = true)
+    protected FloatRange maxIris;
+    @XmlElement(name = "ExposureTime", required = true)
+    protected FloatRange exposureTime;
+    @XmlElement(name = "Gain", required = true)
+    protected FloatRange gain;
+    @XmlElement(name = "Iris", required = true)
+    protected FloatRange iris;
 
-	/**
-	 * Gets the value of the mode property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the mode property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getMode().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link ExposureMode }
-	 * 
-	 * 
-	 */
-	public List<ExposureMode> getMode() {
-		if (mode == null) {
-			mode = new ArrayList<ExposureMode>();
-		}
-		return this.mode;
-	}
+    /**
+     * Gets the value of the mode property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the mode property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getMode().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ExposureMode }
+     * 
+     * 
+     */
+    public List<ExposureMode> getMode() {
+        if (mode == null) {
+            mode = new ArrayList<ExposureMode>();
+        }
+        return this.mode;
+    }
 
-	/**
-	 * Gets the value of the priority property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the priority property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getPriority().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link ExposurePriority }
-	 * 
-	 * 
-	 */
-	public List<ExposurePriority> getPriority() {
-		if (priority == null) {
-			priority = new ArrayList<ExposurePriority>();
-		}
-		return this.priority;
-	}
+    /**
+     * Gets the value of the priority property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the priority property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getPriority().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ExposurePriority }
+     * 
+     * 
+     */
+    public List<ExposurePriority> getPriority() {
+        if (priority == null) {
+            priority = new ArrayList<ExposurePriority>();
+        }
+        return this.priority;
+    }
 
-	/**
-	 * Ruft den Wert der minExposureTime-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FloatRange }
-	 * 
-	 */
-	public FloatRange getMinExposureTime() {
-		return minExposureTime;
-	}
+    /**
+     * 获取minExposureTime属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link FloatRange }
+     *     
+     */
+    public FloatRange getMinExposureTime() {
+        return minExposureTime;
+    }
 
-	/**
-	 * Legt den Wert der minExposureTime-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FloatRange }
-	 * 
-	 */
-	public void setMinExposureTime(FloatRange value) {
-		this.minExposureTime = value;
-	}
+    /**
+     * 设置minExposureTime属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FloatRange }
+     *     
+     */
+    public void setMinExposureTime(FloatRange value) {
+        this.minExposureTime = value;
+    }
 
-	/**
-	 * Ruft den Wert der maxExposureTime-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FloatRange }
-	 * 
-	 */
-	public FloatRange getMaxExposureTime() {
-		return maxExposureTime;
-	}
+    /**
+     * 获取maxExposureTime属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link FloatRange }
+     *     
+     */
+    public FloatRange getMaxExposureTime() {
+        return maxExposureTime;
+    }
 
-	/**
-	 * Legt den Wert der maxExposureTime-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FloatRange }
-	 * 
-	 */
-	public void setMaxExposureTime(FloatRange value) {
-		this.maxExposureTime = value;
-	}
+    /**
+     * 设置maxExposureTime属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FloatRange }
+     *     
+     */
+    public void setMaxExposureTime(FloatRange value) {
+        this.maxExposureTime = value;
+    }
 
-	/**
-	 * Ruft den Wert der minGain-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FloatRange }
-	 * 
-	 */
-	public FloatRange getMinGain() {
-		return minGain;
-	}
+    /**
+     * 获取minGain属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link FloatRange }
+     *     
+     */
+    public FloatRange getMinGain() {
+        return minGain;
+    }
 
-	/**
-	 * Legt den Wert der minGain-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FloatRange }
-	 * 
-	 */
-	public void setMinGain(FloatRange value) {
-		this.minGain = value;
-	}
+    /**
+     * 设置minGain属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FloatRange }
+     *     
+     */
+    public void setMinGain(FloatRange value) {
+        this.minGain = value;
+    }
 
-	/**
-	 * Ruft den Wert der maxGain-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FloatRange }
-	 * 
-	 */
-	public FloatRange getMaxGain() {
-		return maxGain;
-	}
+    /**
+     * 获取maxGain属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link FloatRange }
+     *     
+     */
+    public FloatRange getMaxGain() {
+        return maxGain;
+    }
 
-	/**
-	 * Legt den Wert der maxGain-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FloatRange }
-	 * 
-	 */
-	public void setMaxGain(FloatRange value) {
-		this.maxGain = value;
-	}
+    /**
+     * 设置maxGain属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FloatRange }
+     *     
+     */
+    public void setMaxGain(FloatRange value) {
+        this.maxGain = value;
+    }
 
-	/**
-	 * Ruft den Wert der minIris-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FloatRange }
-	 * 
-	 */
-	public FloatRange getMinIris() {
-		return minIris;
-	}
+    /**
+     * 获取minIris属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link FloatRange }
+     *     
+     */
+    public FloatRange getMinIris() {
+        return minIris;
+    }
 
-	/**
-	 * Legt den Wert der minIris-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FloatRange }
-	 * 
-	 */
-	public void setMinIris(FloatRange value) {
-		this.minIris = value;
-	}
+    /**
+     * 设置minIris属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FloatRange }
+     *     
+     */
+    public void setMinIris(FloatRange value) {
+        this.minIris = value;
+    }
 
-	/**
-	 * Ruft den Wert der maxIris-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FloatRange }
-	 * 
-	 */
-	public FloatRange getMaxIris() {
-		return maxIris;
-	}
+    /**
+     * 获取maxIris属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link FloatRange }
+     *     
+     */
+    public FloatRange getMaxIris() {
+        return maxIris;
+    }
 
-	/**
-	 * Legt den Wert der maxIris-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FloatRange }
-	 * 
-	 */
-	public void setMaxIris(FloatRange value) {
-		this.maxIris = value;
-	}
+    /**
+     * 设置maxIris属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FloatRange }
+     *     
+     */
+    public void setMaxIris(FloatRange value) {
+        this.maxIris = value;
+    }
 
-	/**
-	 * Ruft den Wert der exposureTime-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FloatRange }
-	 * 
-	 */
-	public FloatRange getExposureTime() {
-		return exposureTime;
-	}
+    /**
+     * 获取exposureTime属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link FloatRange }
+     *     
+     */
+    public FloatRange getExposureTime() {
+        return exposureTime;
+    }
 
-	/**
-	 * Legt den Wert der exposureTime-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FloatRange }
-	 * 
-	 */
-	public void setExposureTime(FloatRange value) {
-		this.exposureTime = value;
-	}
+    /**
+     * 设置exposureTime属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FloatRange }
+     *     
+     */
+    public void setExposureTime(FloatRange value) {
+        this.exposureTime = value;
+    }
 
-	/**
-	 * Ruft den Wert der gain-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FloatRange }
-	 * 
-	 */
-	public FloatRange getGain() {
-		return gain;
-	}
+    /**
+     * 获取gain属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link FloatRange }
+     *     
+     */
+    public FloatRange getGain() {
+        return gain;
+    }
 
-	/**
-	 * Legt den Wert der gain-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FloatRange }
-	 * 
-	 */
-	public void setGain(FloatRange value) {
-		this.gain = value;
-	}
+    /**
+     * 设置gain属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FloatRange }
+     *     
+     */
+    public void setGain(FloatRange value) {
+        this.gain = value;
+    }
 
-	/**
-	 * Ruft den Wert der iris-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FloatRange }
-	 * 
-	 */
-	public FloatRange getIris() {
-		return iris;
-	}
+    /**
+     * 获取iris属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link FloatRange }
+     *     
+     */
+    public FloatRange getIris() {
+        return iris;
+    }
 
-	/**
-	 * Legt den Wert der iris-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FloatRange }
-	 * 
-	 */
-	public void setIris(FloatRange value) {
-		this.iris = value;
-	}
+    /**
+     * 设置iris属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FloatRange }
+     *     
+     */
+    public void setIris(FloatRange value) {
+        this.iris = value;
+    }
 
 }

@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.oasis_open.docs.wsn.b_2;
 
@@ -17,84 +18,92 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.w3c.dom.Element;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 anonymous complex type.
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType>
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="Topic" type="{http://docs.oasis-open.org/wsn/b-2}TopicExpressionType"/>
- *         <any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Topic" type="{http://docs.oasis-open.org/wsn/b-2}TopicExpressionType"/&gt;
+ *         &lt;any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "topic", "any" })
+@XmlType(name = "", propOrder = {
+    "topic",
+    "any"
+})
 @XmlRootElement(name = "GetCurrentMessage")
 public class GetCurrentMessage {
 
-	@XmlElement(name = "Topic", required = true)
-	protected TopicExpressionType topic;
-	@XmlAnyElement(lax = true)
-	protected List<Object> any;
+    @XmlElement(name = "Topic", required = true)
+    protected TopicExpressionType topic;
+    @XmlAnyElement(lax = true)
+    protected List<Object> any;
 
-	/**
-	 * Ruft den Wert der topic-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link TopicExpressionType }
-	 * 
-	 */
-	public TopicExpressionType getTopic() {
-		return topic;
-	}
+    /**
+     * 获取topic属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link TopicExpressionType }
+     *     
+     */
+    public TopicExpressionType getTopic() {
+        return topic;
+    }
 
-	/**
-	 * Legt den Wert der topic-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link TopicExpressionType }
-	 * 
-	 */
-	public void setTopic(TopicExpressionType value) {
-		this.topic = value;
-	}
+    /**
+     * 设置topic属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TopicExpressionType }
+     *     
+     */
+    public void setTopic(TopicExpressionType value) {
+        this.topic = value;
+    }
 
-	/**
-	 * Gets the value of the any property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the any property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getAny().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link Element } {@link Object }
-	 * 
-	 * 
-	 */
-	public List<Object> getAny() {
-		if (any == null) {
-			any = new ArrayList<Object>();
-		}
-		return this.any;
-	}
+    /**
+     * Gets the value of the any property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the any property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAny().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Object }
+     * {@link Element }
+     * 
+     * 
+     */
+    public List<Object> getAny() {
+        if (any == null) {
+            any = new ArrayList<Object>();
+        }
+        return this.any;
+    }
 
 }

@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -12,72 +13,77 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 SecurityCapabilitiesExtension complex type.
+ * <p>SecurityCapabilitiesExtension complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="SecurityCapabilitiesExtension">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="TLS1.0" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="Extension" type="{http://www.onvif.org/ver10/schema}SecurityCapabilitiesExtension2" minOccurs="0"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="SecurityCapabilitiesExtension"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="TLS1.0" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="Extension" type="{http://www.onvif.org/ver10/schema}SecurityCapabilitiesExtension2" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SecurityCapabilitiesExtension", propOrder = { "tls10", "extension" })
+@XmlType(name = "SecurityCapabilitiesExtension", propOrder = {
+    "tls10",
+    "extension"
+})
 public class SecurityCapabilitiesExtension {
 
-	@XmlElement(name = "TLS1.0")
-	protected boolean tls10;
-	@XmlElement(name = "Extension")
-	protected SecurityCapabilitiesExtension2 extension;
+    @XmlElement(name = "TLS1.0")
+    protected boolean tls10;
+    @XmlElement(name = "Extension")
+    protected SecurityCapabilitiesExtension2 extension;
 
-	/**
-	 * Ruft den Wert der tls10-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isTLS10() {
-		return tls10;
-	}
+    /**
+     * 获取tls10属性的值。
+     * 
+     */
+    public boolean isTLS10() {
+        return tls10;
+    }
 
-	/**
-	 * Legt den Wert der tls10-Eigenschaft fest.
-	 * 
-	 */
-	public void setTLS10(boolean value) {
-		this.tls10 = value;
-	}
+    /**
+     * 设置tls10属性的值。
+     * 
+     */
+    public void setTLS10(boolean value) {
+        this.tls10 = value;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link SecurityCapabilitiesExtension2 }
-	 * 
-	 */
-	public SecurityCapabilitiesExtension2 getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link SecurityCapabilitiesExtension2 }
+     *     
+     */
+    public SecurityCapabilitiesExtension2 getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link SecurityCapabilitiesExtension2 }
-	 * 
-	 */
-	public void setExtension(SecurityCapabilitiesExtension2 value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SecurityCapabilitiesExtension2 }
+     *     
+     */
+    public void setExtension(SecurityCapabilitiesExtension2 value) {
+        this.extension = value;
+    }
 
 }

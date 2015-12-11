@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -16,107 +17,119 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import org.w3c.dom.Element;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 ImagingOptions20Extension complex type.
+ * <p>ImagingOptions20Extension complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="ImagingOptions20Extension">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="ImageStabilization" type="{http://www.onvif.org/ver10/schema}ImageStabilizationOptions" minOccurs="0"/>
- *         <element name="Extension" type="{http://www.onvif.org/ver10/schema}ImagingOptions20Extension2" minOccurs="0"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="ImagingOptions20Extension"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="ImageStabilization" type="{http://www.onvif.org/ver10/schema}ImageStabilizationOptions" minOccurs="0"/&gt;
+ *         &lt;element name="Extension" type="{http://www.onvif.org/ver10/schema}ImagingOptions20Extension2" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ImagingOptions20Extension", propOrder = { "any", "imageStabilization", "extension" })
+@XmlType(name = "ImagingOptions20Extension", propOrder = {
+    "any",
+    "imageStabilization",
+    "extension"
+})
 public class ImagingOptions20Extension {
 
-	@XmlAnyElement(lax = true)
-	protected List<java.lang.Object> any;
-	@XmlElement(name = "ImageStabilization")
-	protected ImageStabilizationOptions imageStabilization;
-	@XmlElement(name = "Extension")
-	protected ImagingOptions20Extension2 extension;
+    @XmlAnyElement(lax = true)
+    protected List<java.lang.Object> any;
+    @XmlElement(name = "ImageStabilization")
+    protected ImageStabilizationOptions imageStabilization;
+    @XmlElement(name = "Extension")
+    protected ImagingOptions20Extension2 extension;
 
-	/**
-	 * Gets the value of the any property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the any property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getAny().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link Element } {@link java.lang.Object }
-	 * 
-	 * 
-	 */
-	public List<java.lang.Object> getAny() {
-		if (any == null) {
-			any = new ArrayList<java.lang.Object>();
-		}
-		return this.any;
-	}
+    /**
+     * Gets the value of the any property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the any property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAny().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link java.lang.Object }
+     * {@link Element }
+     * 
+     * 
+     */
+    public List<java.lang.Object> getAny() {
+        if (any == null) {
+            any = new ArrayList<java.lang.Object>();
+        }
+        return this.any;
+    }
 
-	/**
-	 * Ruft den Wert der imageStabilization-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link ImageStabilizationOptions }
-	 * 
-	 */
-	public ImageStabilizationOptions getImageStabilization() {
-		return imageStabilization;
-	}
+    /**
+     * 获取imageStabilization属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link ImageStabilizationOptions }
+     *     
+     */
+    public ImageStabilizationOptions getImageStabilization() {
+        return imageStabilization;
+    }
 
-	/**
-	 * Legt den Wert der imageStabilization-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link ImageStabilizationOptions }
-	 * 
-	 */
-	public void setImageStabilization(ImageStabilizationOptions value) {
-		this.imageStabilization = value;
-	}
+    /**
+     * 设置imageStabilization属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ImageStabilizationOptions }
+     *     
+     */
+    public void setImageStabilization(ImageStabilizationOptions value) {
+        this.imageStabilization = value;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link ImagingOptions20Extension2 }
-	 * 
-	 */
-	public ImagingOptions20Extension2 getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link ImagingOptions20Extension2 }
+     *     
+     */
+    public ImagingOptions20Extension2 getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link ImagingOptions20Extension2 }
-	 * 
-	 */
-	public void setExtension(ImagingOptions20Extension2 value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ImagingOptions20Extension2 }
+     *     
+     */
+    public void setExtension(ImagingOptions20Extension2 value) {
+        this.extension = value;
+    }
 
 }

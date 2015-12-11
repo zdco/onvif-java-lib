@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -18,157 +19,174 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
+
 /**
  * A structure for defining a limited scope when searching in recorded data.
  * 
- * <p>
- * Java-Klasse f锟絩 SearchScope complex type.
+ * <p>SearchScope complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="SearchScope">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="IncludedSources" type="{http://www.onvif.org/ver10/schema}SourceReference" maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="IncludedRecordings" type="{http://www.onvif.org/ver10/schema}RecordingReference" maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="RecordingInformationFilter" type="{http://www.onvif.org/ver10/schema}XPathExpression" minOccurs="0"/>
- *         <element name="Extension" type="{http://www.onvif.org/ver10/schema}SearchScopeExtension" minOccurs="0"/>
- *       </sequence>
- *       <anyAttribute processContents='lax'/>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="SearchScope"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="IncludedSources" type="{http://www.onvif.org/ver10/schema}SourceReference" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="IncludedRecordings" type="{http://www.onvif.org/ver10/schema}RecordingReference" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="RecordingInformationFilter" type="{http://www.onvif.org/ver10/schema}XPathExpression" minOccurs="0"/&gt;
+ *         &lt;element name="Extension" type="{http://www.onvif.org/ver10/schema}SearchScopeExtension" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SearchScope", propOrder = { "includedSources", "includedRecordings", "recordingInformationFilter", "extension" })
+@XmlType(name = "SearchScope", propOrder = {
+    "includedSources",
+    "includedRecordings",
+    "recordingInformationFilter",
+    "extension"
+})
 public class SearchScope {
 
-	@XmlElement(name = "IncludedSources")
-	protected List<SourceReference> includedSources;
-	@XmlElement(name = "IncludedRecordings")
-	protected List<String> includedRecordings;
-	@XmlElement(name = "RecordingInformationFilter")
-	protected String recordingInformationFilter;
-	@XmlElement(name = "Extension")
-	protected SearchScopeExtension extension;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "IncludedSources")
+    protected List<SourceReference> includedSources;
+    @XmlElement(name = "IncludedRecordings")
+    protected List<String> includedRecordings;
+    @XmlElement(name = "RecordingInformationFilter")
+    protected String recordingInformationFilter;
+    @XmlElement(name = "Extension")
+    protected SearchScopeExtension extension;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Gets the value of the includedSources property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the includedSources property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getIncludedSources().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link SourceReference }
-	 * 
-	 * 
-	 */
-	public List<SourceReference> getIncludedSources() {
-		if (includedSources == null) {
-			includedSources = new ArrayList<SourceReference>();
-		}
-		return this.includedSources;
-	}
+    /**
+     * Gets the value of the includedSources property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the includedSources property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getIncludedSources().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link SourceReference }
+     * 
+     * 
+     */
+    public List<SourceReference> getIncludedSources() {
+        if (includedSources == null) {
+            includedSources = new ArrayList<SourceReference>();
+        }
+        return this.includedSources;
+    }
 
-	/**
-	 * Gets the value of the includedRecordings property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the includedRecordings property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getIncludedRecordings().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link String }
-	 * 
-	 * 
-	 */
-	public List<String> getIncludedRecordings() {
-		if (includedRecordings == null) {
-			includedRecordings = new ArrayList<String>();
-		}
-		return this.includedRecordings;
-	}
+    /**
+     * Gets the value of the includedRecordings property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the includedRecordings property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getIncludedRecordings().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
+     */
+    public List<String> getIncludedRecordings() {
+        if (includedRecordings == null) {
+            includedRecordings = new ArrayList<String>();
+        }
+        return this.includedRecordings;
+    }
 
-	/**
-	 * Ruft den Wert der recordingInformationFilter-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getRecordingInformationFilter() {
-		return recordingInformationFilter;
-	}
+    /**
+     * 获取recordingInformationFilter属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getRecordingInformationFilter() {
+        return recordingInformationFilter;
+    }
 
-	/**
-	 * Legt den Wert der recordingInformationFilter-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setRecordingInformationFilter(String value) {
-		this.recordingInformationFilter = value;
-	}
+    /**
+     * 设置recordingInformationFilter属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setRecordingInformationFilter(String value) {
+        this.recordingInformationFilter = value;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link SearchScopeExtension }
-	 * 
-	 */
-	public SearchScopeExtension getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link SearchScopeExtension }
+     *     
+     */
+    public SearchScopeExtension getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link SearchScopeExtension }
-	 * 
-	 */
-	public void setExtension(SearchScopeExtension value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SearchScopeExtension }
+     *     
+     */
+    public void setExtension(SearchScopeExtension value) {
+        this.extension = value;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

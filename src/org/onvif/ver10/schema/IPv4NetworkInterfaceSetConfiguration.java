@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -14,107 +15,118 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 IPv4NetworkInterfaceSetConfiguration complex type.
+ * <p>IPv4NetworkInterfaceSetConfiguration complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="IPv4NetworkInterfaceSetConfiguration">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="Enabled" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         <element name="Manual" type="{http://www.onvif.org/ver10/schema}PrefixedIPv4Address" maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="DHCP" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="IPv4NetworkInterfaceSetConfiguration"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Enabled" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *         &lt;element name="Manual" type="{http://www.onvif.org/ver10/schema}PrefixedIPv4Address" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="DHCP" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IPv4NetworkInterfaceSetConfiguration", propOrder = { "enabled", "manual", "dhcp" })
+@XmlType(name = "IPv4NetworkInterfaceSetConfiguration", propOrder = {
+    "enabled",
+    "manual",
+    "dhcp"
+})
 public class IPv4NetworkInterfaceSetConfiguration {
 
-	@XmlElement(name = "Enabled")
-	protected Boolean enabled;
-	@XmlElement(name = "Manual")
-	protected List<PrefixedIPv4Address> manual;
-	@XmlElement(name = "DHCP")
-	protected Boolean dhcp;
+    @XmlElement(name = "Enabled")
+    protected Boolean enabled;
+    @XmlElement(name = "Manual")
+    protected List<PrefixedIPv4Address> manual;
+    @XmlElement(name = "DHCP")
+    protected Boolean dhcp;
 
-	/**
-	 * Ruft den Wert der enabled-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Boolean }
-	 * 
-	 */
-	public Boolean isEnabled() {
-		return enabled;
-	}
+    /**
+     * 获取enabled属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isEnabled() {
+        return enabled;
+    }
 
-	/**
-	 * Legt den Wert der enabled-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Boolean }
-	 * 
-	 */
-	public void setEnabled(Boolean value) {
-		this.enabled = value;
-	}
+    /**
+     * 设置enabled属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setEnabled(Boolean value) {
+        this.enabled = value;
+    }
 
-	/**
-	 * Gets the value of the manual property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the manual property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getManual().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link PrefixedIPv4Address }
-	 * 
-	 * 
-	 */
-	public List<PrefixedIPv4Address> getManual() {
-		if (manual == null) {
-			manual = new ArrayList<PrefixedIPv4Address>();
-		}
-		return this.manual;
-	}
+    /**
+     * Gets the value of the manual property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the manual property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getManual().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PrefixedIPv4Address }
+     * 
+     * 
+     */
+    public List<PrefixedIPv4Address> getManual() {
+        if (manual == null) {
+            manual = new ArrayList<PrefixedIPv4Address>();
+        }
+        return this.manual;
+    }
 
-	/**
-	 * Ruft den Wert der dhcp-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Boolean }
-	 * 
-	 */
-	public Boolean isDHCP() {
-		return dhcp;
-	}
+    /**
+     * 获取dhcp属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isDHCP() {
+        return dhcp;
+    }
 
-	/**
-	 * Legt den Wert der dhcp-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Boolean }
-	 * 
-	 */
-	public void setDHCP(Boolean value) {
-		this.dhcp = value;
-	}
+    /**
+     * 设置dhcp属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setDHCP(Boolean value) {
+        this.dhcp = value;
+    }
 
 }

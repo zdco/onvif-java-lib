@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -16,167 +17,190 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 Appearance complex type.
+ * <p>Appearance complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="Appearance">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="Transformation" type="{http://www.onvif.org/ver10/schema}Transformation" minOccurs="0"/>
- *         <element name="Shape" type="{http://www.onvif.org/ver10/schema}ShapeDescriptor" minOccurs="0"/>
- *         <element name="Color" type="{http://www.onvif.org/ver10/schema}ColorDescriptor" minOccurs="0"/>
- *         <element name="Class" type="{http://www.onvif.org/ver10/schema}ClassDescriptor" minOccurs="0"/>
- *         <element name="Extension" type="{http://www.onvif.org/ver10/schema}AppearanceExtension" minOccurs="0"/>
- *       </sequence>
- *       <anyAttribute processContents='lax'/>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="Appearance"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Transformation" type="{http://www.onvif.org/ver10/schema}Transformation" minOccurs="0"/&gt;
+ *         &lt;element name="Shape" type="{http://www.onvif.org/ver10/schema}ShapeDescriptor" minOccurs="0"/&gt;
+ *         &lt;element name="Color" type="{http://www.onvif.org/ver10/schema}ColorDescriptor" minOccurs="0"/&gt;
+ *         &lt;element name="Class" type="{http://www.onvif.org/ver10/schema}ClassDescriptor" minOccurs="0"/&gt;
+ *         &lt;element name="Extension" type="{http://www.onvif.org/ver10/schema}AppearanceExtension" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Appearance", propOrder = { "transformation", "shape", "color", "clazz", "extension" })
+@XmlType(name = "Appearance", propOrder = {
+    "transformation",
+    "shape",
+    "color",
+    "clazz",
+    "extension"
+})
 public class Appearance {
 
-	@XmlElement(name = "Transformation")
-	protected Transformation transformation;
-	@XmlElement(name = "Shape")
-	protected ShapeDescriptor shape;
-	@XmlElement(name = "Color")
-	protected ColorDescriptor color;
-	@XmlElement(name = "Class")
-	protected ClassDescriptor clazz;
-	@XmlElement(name = "Extension")
-	protected AppearanceExtension extension;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "Transformation")
+    protected Transformation transformation;
+    @XmlElement(name = "Shape")
+    protected ShapeDescriptor shape;
+    @XmlElement(name = "Color")
+    protected ColorDescriptor color;
+    @XmlElement(name = "Class")
+    protected ClassDescriptor clazz;
+    @XmlElement(name = "Extension")
+    protected AppearanceExtension extension;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der transformation-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Transformation }
-	 * 
-	 */
-	public Transformation getTransformation() {
-		return transformation;
-	}
+    /**
+     * 获取transformation属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Transformation }
+     *     
+     */
+    public Transformation getTransformation() {
+        return transformation;
+    }
 
-	/**
-	 * Legt den Wert der transformation-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Transformation }
-	 * 
-	 */
-	public void setTransformation(Transformation value) {
-		this.transformation = value;
-	}
+    /**
+     * 设置transformation属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Transformation }
+     *     
+     */
+    public void setTransformation(Transformation value) {
+        this.transformation = value;
+    }
 
-	/**
-	 * Ruft den Wert der shape-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link ShapeDescriptor }
-	 * 
-	 */
-	public ShapeDescriptor getShape() {
-		return shape;
-	}
+    /**
+     * 获取shape属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link ShapeDescriptor }
+     *     
+     */
+    public ShapeDescriptor getShape() {
+        return shape;
+    }
 
-	/**
-	 * Legt den Wert der shape-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link ShapeDescriptor }
-	 * 
-	 */
-	public void setShape(ShapeDescriptor value) {
-		this.shape = value;
-	}
+    /**
+     * 设置shape属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ShapeDescriptor }
+     *     
+     */
+    public void setShape(ShapeDescriptor value) {
+        this.shape = value;
+    }
 
-	/**
-	 * Ruft den Wert der color-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link ColorDescriptor }
-	 * 
-	 */
-	public ColorDescriptor getColor() {
-		return color;
-	}
+    /**
+     * 获取color属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link ColorDescriptor }
+     *     
+     */
+    public ColorDescriptor getColor() {
+        return color;
+    }
 
-	/**
-	 * Legt den Wert der color-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link ColorDescriptor }
-	 * 
-	 */
-	public void setColor(ColorDescriptor value) {
-		this.color = value;
-	}
+    /**
+     * 设置color属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ColorDescriptor }
+     *     
+     */
+    public void setColor(ColorDescriptor value) {
+        this.color = value;
+    }
 
-	/**
-	 * Ruft den Wert der clazz-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link ClassDescriptor }
-	 * 
-	 */
-	public ClassDescriptor getClazz() {
-		return clazz;
-	}
+    /**
+     * 获取clazz属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link ClassDescriptor }
+     *     
+     */
+    public ClassDescriptor getClazz() {
+        return clazz;
+    }
 
-	/**
-	 * Legt den Wert der clazz-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link ClassDescriptor }
-	 * 
-	 */
-	public void setClazz(ClassDescriptor value) {
-		this.clazz = value;
-	}
+    /**
+     * 设置clazz属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ClassDescriptor }
+     *     
+     */
+    public void setClazz(ClassDescriptor value) {
+        this.clazz = value;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link AppearanceExtension }
-	 * 
-	 */
-	public AppearanceExtension getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link AppearanceExtension }
+     *     
+     */
+    public AppearanceExtension getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link AppearanceExtension }
-	 * 
-	 */
-	public void setExtension(AppearanceExtension value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AppearanceExtension }
+     *     
+     */
+    public void setExtension(AppearanceExtension value) {
+        this.extension = value;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

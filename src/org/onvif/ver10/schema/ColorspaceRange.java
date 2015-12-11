@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -17,144 +18,163 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 ColorspaceRange complex type.
+ * <p>ColorspaceRange complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="ColorspaceRange">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="X" type="{http://www.onvif.org/ver10/schema}FloatRange"/>
- *         <element name="Y" type="{http://www.onvif.org/ver10/schema}FloatRange"/>
- *         <element name="Z" type="{http://www.onvif.org/ver10/schema}FloatRange"/>
- *         <element name="Colorspace" type="{http://www.w3.org/2001/XMLSchema}anyURI"/>
- *       </sequence>
- *       <anyAttribute processContents='lax'/>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="ColorspaceRange"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="X" type="{http://www.onvif.org/ver10/schema}FloatRange"/&gt;
+ *         &lt;element name="Y" type="{http://www.onvif.org/ver10/schema}FloatRange"/&gt;
+ *         &lt;element name="Z" type="{http://www.onvif.org/ver10/schema}FloatRange"/&gt;
+ *         &lt;element name="Colorspace" type="{http://www.w3.org/2001/XMLSchema}anyURI"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ColorspaceRange", propOrder = { "x", "y", "z", "colorspace" })
+@XmlType(name = "ColorspaceRange", propOrder = {
+    "x",
+    "y",
+    "z",
+    "colorspace"
+})
 public class ColorspaceRange {
 
-	@XmlElement(name = "X", required = true)
-	protected FloatRange x;
-	@XmlElement(name = "Y", required = true)
-	protected FloatRange y;
-	@XmlElement(name = "Z", required = true)
-	protected FloatRange z;
-	@XmlElement(name = "Colorspace", required = true)
-	@XmlSchemaType(name = "anyURI")
-	protected String colorspace;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "X", required = true)
+    protected FloatRange x;
+    @XmlElement(name = "Y", required = true)
+    protected FloatRange y;
+    @XmlElement(name = "Z", required = true)
+    protected FloatRange z;
+    @XmlElement(name = "Colorspace", required = true)
+    @XmlSchemaType(name = "anyURI")
+    protected String colorspace;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der x-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FloatRange }
-	 * 
-	 */
-	public FloatRange getX() {
-		return x;
-	}
+    /**
+     * 获取x属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link FloatRange }
+     *     
+     */
+    public FloatRange getX() {
+        return x;
+    }
 
-	/**
-	 * Legt den Wert der x-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FloatRange }
-	 * 
-	 */
-	public void setX(FloatRange value) {
-		this.x = value;
-	}
+    /**
+     * 设置x属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FloatRange }
+     *     
+     */
+    public void setX(FloatRange value) {
+        this.x = value;
+    }
 
-	/**
-	 * Ruft den Wert der y-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FloatRange }
-	 * 
-	 */
-	public FloatRange getY() {
-		return y;
-	}
+    /**
+     * 获取y属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link FloatRange }
+     *     
+     */
+    public FloatRange getY() {
+        return y;
+    }
 
-	/**
-	 * Legt den Wert der y-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FloatRange }
-	 * 
-	 */
-	public void setY(FloatRange value) {
-		this.y = value;
-	}
+    /**
+     * 设置y属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FloatRange }
+     *     
+     */
+    public void setY(FloatRange value) {
+        this.y = value;
+    }
 
-	/**
-	 * Ruft den Wert der z-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FloatRange }
-	 * 
-	 */
-	public FloatRange getZ() {
-		return z;
-	}
+    /**
+     * 获取z属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link FloatRange }
+     *     
+     */
+    public FloatRange getZ() {
+        return z;
+    }
 
-	/**
-	 * Legt den Wert der z-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FloatRange }
-	 * 
-	 */
-	public void setZ(FloatRange value) {
-		this.z = value;
-	}
+    /**
+     * 设置z属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FloatRange }
+     *     
+     */
+    public void setZ(FloatRange value) {
+        this.z = value;
+    }
 
-	/**
-	 * Ruft den Wert der colorspace-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getColorspace() {
-		return colorspace;
-	}
+    /**
+     * 获取colorspace属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getColorspace() {
+        return colorspace;
+    }
 
-	/**
-	 * Legt den Wert der colorspace-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setColorspace(String value) {
-		this.colorspace = value;
-	}
+    /**
+     * 设置colorspace属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setColorspace(String value) {
+        this.colorspace = value;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -12,24 +13,23 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 Rectangle complex type.
+ * <p>Rectangle complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="Rectangle">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <attribute name="bottom" type="{http://www.w3.org/2001/XMLSchema}float" />
- *       <attribute name="top" type="{http://www.w3.org/2001/XMLSchema}float" />
- *       <attribute name="right" type="{http://www.w3.org/2001/XMLSchema}float" />
- *       <attribute name="left" type="{http://www.w3.org/2001/XMLSchema}float" />
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="Rectangle"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;attribute name="bottom" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+ *       &lt;attribute name="top" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+ *       &lt;attribute name="right" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+ *       &lt;attribute name="left" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -38,97 +38,109 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Rectangle")
 public class Rectangle {
 
-	@XmlAttribute(name = "bottom")
-	protected Float bottom;
-	@XmlAttribute(name = "top")
-	protected Float top;
-	@XmlAttribute(name = "right")
-	protected Float right;
-	@XmlAttribute(name = "left")
-	protected Float left;
+    @XmlAttribute(name = "bottom")
+    protected Float bottom;
+    @XmlAttribute(name = "top")
+    protected Float top;
+    @XmlAttribute(name = "right")
+    protected Float right;
+    @XmlAttribute(name = "left")
+    protected Float left;
 
-	/**
-	 * Ruft den Wert der bottom-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Float }
-	 * 
-	 */
-	public Float getBottom() {
-		return bottom;
-	}
+    /**
+     * 获取bottom属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Float }
+     *     
+     */
+    public Float getBottom() {
+        return bottom;
+    }
 
-	/**
-	 * Legt den Wert der bottom-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Float }
-	 * 
-	 */
-	public void setBottom(Float value) {
-		this.bottom = value;
-	}
+    /**
+     * 设置bottom属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Float }
+     *     
+     */
+    public void setBottom(Float value) {
+        this.bottom = value;
+    }
 
-	/**
-	 * Ruft den Wert der top-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Float }
-	 * 
-	 */
-	public Float getTop() {
-		return top;
-	}
+    /**
+     * 获取top属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Float }
+     *     
+     */
+    public Float getTop() {
+        return top;
+    }
 
-	/**
-	 * Legt den Wert der top-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Float }
-	 * 
-	 */
-	public void setTop(Float value) {
-		this.top = value;
-	}
+    /**
+     * 设置top属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Float }
+     *     
+     */
+    public void setTop(Float value) {
+        this.top = value;
+    }
 
-	/**
-	 * Ruft den Wert der right-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Float }
-	 * 
-	 */
-	public Float getRight() {
-		return right;
-	}
+    /**
+     * 获取right属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Float }
+     *     
+     */
+    public Float getRight() {
+        return right;
+    }
 
-	/**
-	 * Legt den Wert der right-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Float }
-	 * 
-	 */
-	public void setRight(Float value) {
-		this.right = value;
-	}
+    /**
+     * 设置right属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Float }
+     *     
+     */
+    public void setRight(Float value) {
+        this.right = value;
+    }
 
-	/**
-	 * Ruft den Wert der left-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Float }
-	 * 
-	 */
-	public Float getLeft() {
-		return left;
-	}
+    /**
+     * 获取left属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Float }
+     *     
+     */
+    public Float getLeft() {
+        return left;
+    }
 
-	/**
-	 * Legt den Wert der left-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Float }
-	 * 
-	 */
-	public void setLeft(Float value) {
-		this.left = value;
-	}
+    /**
+     * 设置left属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Float }
+     *     
+     */
+    public void setLeft(Float value) {
+        this.left = value;
+    }
 
 }

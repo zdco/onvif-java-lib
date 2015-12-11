@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -14,101 +15,111 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 Config complex type.
+ * <p>Config complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="Config">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="Parameters" type="{http://www.onvif.org/ver10/schema}ItemList"/>
- *       </sequence>
- *       <attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       <attribute name="Type" use="required" type="{http://www.w3.org/2001/XMLSchema}QName" />
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="Config"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Parameters" type="{http://www.onvif.org/ver10/schema}ItemList"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="Type" use="required" type="{http://www.w3.org/2001/XMLSchema}QName" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Config", propOrder = { "parameters" })
+@XmlType(name = "Config", propOrder = {
+    "parameters"
+})
 public class Config {
 
-	@XmlElement(name = "Parameters", required = true)
-	protected ItemList parameters;
-	@XmlAttribute(name = "Name", required = true)
-	protected String name;
-	@XmlAttribute(name = "Type", required = true)
-	protected QName type;
+    @XmlElement(name = "Parameters", required = true)
+    protected ItemList parameters;
+    @XmlAttribute(name = "Name", required = true)
+    protected String name;
+    @XmlAttribute(name = "Type", required = true)
+    protected QName type;
 
-	/**
-	 * Ruft den Wert der parameters-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link ItemList }
-	 * 
-	 */
-	public ItemList getParameters() {
-		return parameters;
-	}
+    /**
+     * 获取parameters属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link ItemList }
+     *     
+     */
+    public ItemList getParameters() {
+        return parameters;
+    }
 
-	/**
-	 * Legt den Wert der parameters-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link ItemList }
-	 * 
-	 */
-	public void setParameters(ItemList value) {
-		this.parameters = value;
-	}
+    /**
+     * 设置parameters属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ItemList }
+     *     
+     */
+    public void setParameters(ItemList value) {
+        this.parameters = value;
+    }
 
-	/**
-	 * Ruft den Wert der name-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getName() {
-		return name;
-	}
+    /**
+     * 获取name属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getName() {
+        return name;
+    }
 
-	/**
-	 * Legt den Wert der name-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setName(String value) {
-		this.name = value;
-	}
+    /**
+     * 设置name属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setName(String value) {
+        this.name = value;
+    }
 
-	/**
-	 * Ruft den Wert der type-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link QName }
-	 * 
-	 */
-	public QName getType() {
-		return type;
-	}
+    /**
+     * 获取type属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link QName }
+     *     
+     */
+    public QName getType() {
+        return type;
+    }
 
-	/**
-	 * Legt den Wert der type-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link QName }
-	 * 
-	 */
-	public void setType(QName value) {
-		this.type = value;
-	}
+    /**
+     * 设置type属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link QName }
+     *     
+     */
+    public void setType(QName value) {
+        this.type = value;
+    }
 
 }

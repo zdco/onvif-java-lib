@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -13,191 +14,217 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAnyAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
+
 
 /**
  * General date time inforamtion returned by the GetSystemDateTime method.
  * 
- * <p>
- * Java-Klasse f锟絩 SystemDateTime complex type.
+ * <p>SystemDateTime complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="SystemDateTime">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="DateTimeType" type="{http://www.onvif.org/ver10/schema}SetDateTimeType"/>
- *         <element name="DaylightSavings" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="TimeZone" type="{http://www.onvif.org/ver10/schema}TimeZone" minOccurs="0"/>
- *         <element name="UTCDateTime" type="{http://www.onvif.org/ver10/schema}DateTime" minOccurs="0"/>
- *         <element name="LocalDateTime" type="{http://www.onvif.org/ver10/schema}DateTime" minOccurs="0"/>
- *         <element name="Extension" type="{http://www.onvif.org/ver10/schema}SystemDateTimeExtension" minOccurs="0"/>
- *       </sequence>
- *       <anyAttribute processContents='lax'/>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="SystemDateTime"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="DateTimeType" type="{http://www.onvif.org/ver10/schema}SetDateTimeType"/&gt;
+ *         &lt;element name="DaylightSavings" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="TimeZone" type="{http://www.onvif.org/ver10/schema}TimeZone" minOccurs="0"/&gt;
+ *         &lt;element name="UTCDateTime" type="{http://www.onvif.org/ver10/schema}DateTime" minOccurs="0"/&gt;
+ *         &lt;element name="LocalDateTime" type="{http://www.onvif.org/ver10/schema}DateTime" minOccurs="0"/&gt;
+ *         &lt;element name="Extension" type="{http://www.onvif.org/ver10/schema}SystemDateTimeExtension" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SystemDateTime", propOrder = { "dateTimeType", "daylightSavings", "timeZone", "utcDateTime", "localDateTime", "extension" })
+@XmlType(name = "SystemDateTime", propOrder = {
+    "dateTimeType",
+    "daylightSavings",
+    "timeZone",
+    "utcDateTime",
+    "localDateTime",
+    "extension"
+})
 public class SystemDateTime {
 
-	@XmlElement(name = "DateTimeType", required = true)
-	protected SetDateTimeType dateTimeType;
-	@XmlElement(name = "DaylightSavings")
-	protected boolean daylightSavings;
-	@XmlElement(name = "TimeZone")
-	protected TimeZone timeZone;
-	@XmlElement(name = "UTCDateTime")
-	protected DateTime utcDateTime;
-	@XmlElement(name = "LocalDateTime")
-	protected DateTime localDateTime;
-	@XmlElement(name = "Extension")
-	protected SystemDateTimeExtension extension;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "DateTimeType", required = true)
+    @XmlSchemaType(name = "string")
+    protected SetDateTimeType dateTimeType;
+    @XmlElement(name = "DaylightSavings")
+    protected boolean daylightSavings;
+    @XmlElement(name = "TimeZone")
+    protected TimeZone timeZone;
+    @XmlElement(name = "UTCDateTime")
+    protected DateTime utcDateTime;
+    @XmlElement(name = "LocalDateTime")
+    protected DateTime localDateTime;
+    @XmlElement(name = "Extension")
+    protected SystemDateTimeExtension extension;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der dateTimeType-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link SetDateTimeType }
-	 * 
-	 */
-	public SetDateTimeType getDateTimeType() {
-		return dateTimeType;
-	}
+    /**
+     * 获取dateTimeType属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link SetDateTimeType }
+     *     
+     */
+    public SetDateTimeType getDateTimeType() {
+        return dateTimeType;
+    }
 
-	/**
-	 * Legt den Wert der dateTimeType-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link SetDateTimeType }
-	 * 
-	 */
-	public void setDateTimeType(SetDateTimeType value) {
-		this.dateTimeType = value;
-	}
+    /**
+     * 设置dateTimeType属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SetDateTimeType }
+     *     
+     */
+    public void setDateTimeType(SetDateTimeType value) {
+        this.dateTimeType = value;
+    }
 
-	/**
-	 * Ruft den Wert der daylightSavings-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isDaylightSavings() {
-		return daylightSavings;
-	}
+    /**
+     * 获取daylightSavings属性的值。
+     * 
+     */
+    public boolean isDaylightSavings() {
+        return daylightSavings;
+    }
 
-	/**
-	 * Legt den Wert der daylightSavings-Eigenschaft fest.
-	 * 
-	 */
-	public void setDaylightSavings(boolean value) {
-		this.daylightSavings = value;
-	}
+    /**
+     * 设置daylightSavings属性的值。
+     * 
+     */
+    public void setDaylightSavings(boolean value) {
+        this.daylightSavings = value;
+    }
 
-	/**
-	 * Ruft den Wert der timeZone-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link TimeZone }
-	 * 
-	 */
-	public TimeZone getTimeZone() {
-		return timeZone;
-	}
+    /**
+     * 获取timeZone属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link TimeZone }
+     *     
+     */
+    public TimeZone getTimeZone() {
+        return timeZone;
+    }
 
-	/**
-	 * Legt den Wert der timeZone-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link TimeZone }
-	 * 
-	 */
-	public void setTimeZone(TimeZone value) {
-		this.timeZone = value;
-	}
+    /**
+     * 设置timeZone属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TimeZone }
+     *     
+     */
+    public void setTimeZone(TimeZone value) {
+        this.timeZone = value;
+    }
 
-	/**
-	 * Ruft den Wert der utcDateTime-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link DateTime }
-	 * 
-	 */
-	public DateTime getUTCDateTime() {
-		return utcDateTime;
-	}
+    /**
+     * 获取utcDateTime属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link DateTime }
+     *     
+     */
+    public DateTime getUTCDateTime() {
+        return utcDateTime;
+    }
 
-	/**
-	 * Legt den Wert der utcDateTime-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link DateTime }
-	 * 
-	 */
-	public void setUTCDateTime(DateTime value) {
-		this.utcDateTime = value;
-	}
+    /**
+     * 设置utcDateTime属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DateTime }
+     *     
+     */
+    public void setUTCDateTime(DateTime value) {
+        this.utcDateTime = value;
+    }
 
-	/**
-	 * Ruft den Wert der localDateTime-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link DateTime }
-	 * 
-	 */
-	public DateTime getLocalDateTime() {
-		return localDateTime;
-	}
+    /**
+     * 获取localDateTime属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link DateTime }
+     *     
+     */
+    public DateTime getLocalDateTime() {
+        return localDateTime;
+    }
 
-	/**
-	 * Legt den Wert der localDateTime-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link DateTime }
-	 * 
-	 */
-	public void setLocalDateTime(DateTime value) {
-		this.localDateTime = value;
-	}
+    /**
+     * 设置localDateTime属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DateTime }
+     *     
+     */
+    public void setLocalDateTime(DateTime value) {
+        this.localDateTime = value;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link SystemDateTimeExtension }
-	 * 
-	 */
-	public SystemDateTimeExtension getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link SystemDateTimeExtension }
+     *     
+     */
+    public SystemDateTimeExtension getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link SystemDateTimeExtension }
-	 * 
-	 */
-	public void setExtension(SystemDateTimeExtension value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SystemDateTimeExtension }
+     *     
+     */
+    public void setExtension(SystemDateTimeExtension value) {
+        this.extension = value;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

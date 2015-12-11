@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -20,254 +21,272 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 SecurityCapabilities complex type.
+ * <p>SecurityCapabilities complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="SecurityCapabilities">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="TLS1.1" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="TLS1.2" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="OnboardKeyGeneration" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="AccessPolicyConfig" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="X.509Token" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="SAMLToken" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="KerberosToken" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="RELToken" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="Extension" type="{http://www.onvif.org/ver10/schema}SecurityCapabilitiesExtension" minOccurs="0"/>
- *       </sequence>
- *       <anyAttribute processContents='lax'/>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="SecurityCapabilities"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="TLS1.1" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="TLS1.2" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="OnboardKeyGeneration" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="AccessPolicyConfig" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="X.509Token" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="SAMLToken" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="KerberosToken" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="RELToken" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="Extension" type="{http://www.onvif.org/ver10/schema}SecurityCapabilitiesExtension" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SecurityCapabilities", propOrder = { "tls11", "tls12", "onboardKeyGeneration", "accessPolicyConfig", "x509Token", "samlToken",
-		"kerberosToken", "relToken", "any", "extension" })
+@XmlType(name = "SecurityCapabilities", propOrder = {
+    "tls11",
+    "tls12",
+    "onboardKeyGeneration",
+    "accessPolicyConfig",
+    "x509Token",
+    "samlToken",
+    "kerberosToken",
+    "relToken",
+    "any",
+    "extension"
+})
 public class SecurityCapabilities {
 
-	@XmlElement(name = "TLS1.1")
-	protected boolean tls11;
-	@XmlElement(name = "TLS1.2")
-	protected boolean tls12;
-	@XmlElement(name = "OnboardKeyGeneration")
-	protected boolean onboardKeyGeneration;
-	@XmlElement(name = "AccessPolicyConfig")
-	protected boolean accessPolicyConfig;
-	@XmlElement(name = "X.509Token")
-	protected boolean x509Token;
-	@XmlElement(name = "SAMLToken")
-	protected boolean samlToken;
-	@XmlElement(name = "KerberosToken")
-	protected boolean kerberosToken;
-	@XmlElement(name = "RELToken")
-	protected boolean relToken;
-	@XmlAnyElement(lax = true)
-	protected List<java.lang.Object> any;
-	@XmlElement(name = "Extension")
-	protected SecurityCapabilitiesExtension extension;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "TLS1.1")
+    protected boolean tls11;
+    @XmlElement(name = "TLS1.2")
+    protected boolean tls12;
+    @XmlElement(name = "OnboardKeyGeneration")
+    protected boolean onboardKeyGeneration;
+    @XmlElement(name = "AccessPolicyConfig")
+    protected boolean accessPolicyConfig;
+    @XmlElement(name = "X.509Token")
+    protected boolean x509Token;
+    @XmlElement(name = "SAMLToken")
+    protected boolean samlToken;
+    @XmlElement(name = "KerberosToken")
+    protected boolean kerberosToken;
+    @XmlElement(name = "RELToken")
+    protected boolean relToken;
+    @XmlAnyElement(lax = true)
+    protected List<java.lang.Object> any;
+    @XmlElement(name = "Extension")
+    protected SecurityCapabilitiesExtension extension;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der tls11-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isTLS11() {
-		return tls11;
-	}
+    /**
+     * 获取tls11属性的值。
+     * 
+     */
+    public boolean isTLS11() {
+        return tls11;
+    }
 
-	/**
-	 * Legt den Wert der tls11-Eigenschaft fest.
-	 * 
-	 */
-	public void setTLS11(boolean value) {
-		this.tls11 = value;
-	}
+    /**
+     * 设置tls11属性的值。
+     * 
+     */
+    public void setTLS11(boolean value) {
+        this.tls11 = value;
+    }
 
-	/**
-	 * Ruft den Wert der tls12-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isTLS12() {
-		return tls12;
-	}
+    /**
+     * 获取tls12属性的值。
+     * 
+     */
+    public boolean isTLS12() {
+        return tls12;
+    }
 
-	/**
-	 * Legt den Wert der tls12-Eigenschaft fest.
-	 * 
-	 */
-	public void setTLS12(boolean value) {
-		this.tls12 = value;
-	}
+    /**
+     * 设置tls12属性的值。
+     * 
+     */
+    public void setTLS12(boolean value) {
+        this.tls12 = value;
+    }
 
-	/**
-	 * Ruft den Wert der onboardKeyGeneration-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isOnboardKeyGeneration() {
-		return onboardKeyGeneration;
-	}
+    /**
+     * 获取onboardKeyGeneration属性的值。
+     * 
+     */
+    public boolean isOnboardKeyGeneration() {
+        return onboardKeyGeneration;
+    }
 
-	/**
-	 * Legt den Wert der onboardKeyGeneration-Eigenschaft fest.
-	 * 
-	 */
-	public void setOnboardKeyGeneration(boolean value) {
-		this.onboardKeyGeneration = value;
-	}
+    /**
+     * 设置onboardKeyGeneration属性的值。
+     * 
+     */
+    public void setOnboardKeyGeneration(boolean value) {
+        this.onboardKeyGeneration = value;
+    }
 
-	/**
-	 * Ruft den Wert der accessPolicyConfig-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isAccessPolicyConfig() {
-		return accessPolicyConfig;
-	}
+    /**
+     * 获取accessPolicyConfig属性的值。
+     * 
+     */
+    public boolean isAccessPolicyConfig() {
+        return accessPolicyConfig;
+    }
 
-	/**
-	 * Legt den Wert der accessPolicyConfig-Eigenschaft fest.
-	 * 
-	 */
-	public void setAccessPolicyConfig(boolean value) {
-		this.accessPolicyConfig = value;
-	}
+    /**
+     * 设置accessPolicyConfig属性的值。
+     * 
+     */
+    public void setAccessPolicyConfig(boolean value) {
+        this.accessPolicyConfig = value;
+    }
 
-	/**
-	 * Ruft den Wert der x509Token-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isX509Token() {
-		return x509Token;
-	}
+    /**
+     * 获取x509Token属性的值。
+     * 
+     */
+    public boolean isX509Token() {
+        return x509Token;
+    }
 
-	/**
-	 * Legt den Wert der x509Token-Eigenschaft fest.
-	 * 
-	 */
-	public void setX509Token(boolean value) {
-		this.x509Token = value;
-	}
+    /**
+     * 设置x509Token属性的值。
+     * 
+     */
+    public void setX509Token(boolean value) {
+        this.x509Token = value;
+    }
 
-	/**
-	 * Ruft den Wert der samlToken-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isSAMLToken() {
-		return samlToken;
-	}
+    /**
+     * 获取samlToken属性的值。
+     * 
+     */
+    public boolean isSAMLToken() {
+        return samlToken;
+    }
 
-	/**
-	 * Legt den Wert der samlToken-Eigenschaft fest.
-	 * 
-	 */
-	public void setSAMLToken(boolean value) {
-		this.samlToken = value;
-	}
+    /**
+     * 设置samlToken属性的值。
+     * 
+     */
+    public void setSAMLToken(boolean value) {
+        this.samlToken = value;
+    }
 
-	/**
-	 * Ruft den Wert der kerberosToken-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isKerberosToken() {
-		return kerberosToken;
-	}
+    /**
+     * 获取kerberosToken属性的值。
+     * 
+     */
+    public boolean isKerberosToken() {
+        return kerberosToken;
+    }
 
-	/**
-	 * Legt den Wert der kerberosToken-Eigenschaft fest.
-	 * 
-	 */
-	public void setKerberosToken(boolean value) {
-		this.kerberosToken = value;
-	}
+    /**
+     * 设置kerberosToken属性的值。
+     * 
+     */
+    public void setKerberosToken(boolean value) {
+        this.kerberosToken = value;
+    }
 
-	/**
-	 * Ruft den Wert der relToken-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isRELToken() {
-		return relToken;
-	}
+    /**
+     * 获取relToken属性的值。
+     * 
+     */
+    public boolean isRELToken() {
+        return relToken;
+    }
 
-	/**
-	 * Legt den Wert der relToken-Eigenschaft fest.
-	 * 
-	 */
-	public void setRELToken(boolean value) {
-		this.relToken = value;
-	}
+    /**
+     * 设置relToken属性的值。
+     * 
+     */
+    public void setRELToken(boolean value) {
+        this.relToken = value;
+    }
 
-	/**
-	 * Gets the value of the any property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the any property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getAny().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link Element } {@link java.lang.Object }
-	 * 
-	 * 
-	 */
-	public List<java.lang.Object> getAny() {
-		if (any == null) {
-			any = new ArrayList<java.lang.Object>();
-		}
-		return this.any;
-	}
+    /**
+     * Gets the value of the any property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the any property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAny().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link java.lang.Object }
+     * {@link Element }
+     * 
+     * 
+     */
+    public List<java.lang.Object> getAny() {
+        if (any == null) {
+            any = new ArrayList<java.lang.Object>();
+        }
+        return this.any;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link SecurityCapabilitiesExtension }
-	 * 
-	 */
-	public SecurityCapabilitiesExtension getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link SecurityCapabilitiesExtension }
+     *     
+     */
+    public SecurityCapabilitiesExtension getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link SecurityCapabilitiesExtension }
-	 * 
-	 */
-	public void setExtension(SecurityCapabilitiesExtension value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SecurityCapabilitiesExtension }
+     *     
+     */
+    public void setExtension(SecurityCapabilitiesExtension value) {
+        this.extension = value;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -11,23 +12,21 @@ import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 IPv6DHCPConfiguration.
+ * <p>IPv6DHCPConfiguration的 Java 类。
  * 
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
- * <p>
- * 
  * <pre>
- * <simpleType name="IPv6DHCPConfiguration">
- *   <restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     <enumeration value="Auto"/>
- *     <enumeration value="Stateful"/>
- *     <enumeration value="Stateless"/>
- *     <enumeration value="Off"/>
- *   </restriction>
- * </simpleType>
+ * &lt;simpleType name="IPv6DHCPConfiguration"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="Auto"/&gt;
+ *     &lt;enumeration value="Stateful"/&gt;
+ *     &lt;enumeration value="Stateless"/&gt;
+ *     &lt;enumeration value="Off"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */
@@ -35,28 +34,31 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum IPv6DHCPConfiguration {
 
-	@XmlEnumValue("Auto")
-	AUTO("Auto"), @XmlEnumValue("Stateful")
-	STATEFUL("Stateful"), @XmlEnumValue("Stateless")
-	STATELESS("Stateless"), @XmlEnumValue("Off")
-	OFF("Off");
-	private final String value;
+    @XmlEnumValue("Auto")
+    AUTO("Auto"),
+    @XmlEnumValue("Stateful")
+    STATEFUL("Stateful"),
+    @XmlEnumValue("Stateless")
+    STATELESS("Stateless"),
+    @XmlEnumValue("Off")
+    OFF("Off");
+    private final String value;
 
-	IPv6DHCPConfiguration(String v) {
-		value = v;
-	}
+    IPv6DHCPConfiguration(String v) {
+        value = v;
+    }
 
-	public String value() {
-		return value;
-	}
+    public String value() {
+        return value;
+    }
 
-	public static IPv6DHCPConfiguration fromValue(String v) {
-		for (IPv6DHCPConfiguration c : IPv6DHCPConfiguration.values()) {
-			if (c.value.equals(v)) {
-				return c;
-			}
-		}
-		throw new IllegalArgumentException(v);
-	}
+    public static IPv6DHCPConfiguration fromValue(String v) {
+        for (IPv6DHCPConfiguration c: IPv6DHCPConfiguration.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
+    }
 
 }

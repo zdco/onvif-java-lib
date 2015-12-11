@@ -9,6 +9,10 @@ import java.util.List;
 import javax.xml.soap.SOAPException;
 
 import org.onvif.ver10.schema.Profile;
+import org.onvif.ver10.schema.StreamSetup;
+import org.onvif.ver10.schema.StreamType;
+import org.onvif.ver10.schema.Transport;
+import org.onvif.ver10.schema.TransportProtocol;
 
 import de.onvif.soap.OnvifDevice;
 
@@ -62,6 +66,14 @@ public class Main {
 				case "profiles":
 					List<Profile> profiles = cam.getDevices().getProfiles();
 					System.out.println("Number of profiles: " + profiles.size());
+					break;
+				case "uri":
+					StreamSetup streamSetup = new StreamSetup();
+					streamSetup.setStream(StreamType.RTP_UNICAST);
+					Transport transport = new Transport();
+					transport.setProtocol(TransportProtocol.RTSP);
+					streamSetup.setTransport(transport);
+					System.out.println("Stream uri:" + cam.getMedia().getStreamUri(cam.getDevices().getProfiles().get(0), streamSetup));
 					break;
 				case "info":
 					System.out.println(INFO);

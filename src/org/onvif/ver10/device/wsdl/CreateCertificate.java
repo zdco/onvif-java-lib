@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:30:43 PM CST 
 //
+
 
 package org.onvif.ver10.device.wsdl;
 
@@ -17,130 +18,146 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 anonymous complex type.
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType>
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="CertificateID" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
- *         <element name="Subject" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         <element name="ValidNotBefore" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
- *         <element name="ValidNotAfter" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="CertificateID" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/&gt;
+ *         &lt;element name="Subject" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="ValidNotBefore" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
+ *         &lt;element name="ValidNotAfter" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "certificateID", "subject", "validNotBefore", "validNotAfter" })
+@XmlType(name = "", propOrder = {
+    "certificateID",
+    "subject",
+    "validNotBefore",
+    "validNotAfter"
+})
 @XmlRootElement(name = "CreateCertificate")
 public class CreateCertificate {
 
-	@XmlElement(name = "CertificateID")
-	@XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-	@XmlSchemaType(name = "token")
-	protected String certificateID;
-	@XmlElement(name = "Subject")
-	protected String subject;
-	@XmlElement(name = "ValidNotBefore")
-	@XmlSchemaType(name = "dateTime")
-	protected XMLGregorianCalendar validNotBefore;
-	@XmlElement(name = "ValidNotAfter")
-	@XmlSchemaType(name = "dateTime")
-	protected XMLGregorianCalendar validNotAfter;
+    @XmlElement(name = "CertificateID")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "token")
+    protected String certificateID;
+    @XmlElement(name = "Subject")
+    protected String subject;
+    @XmlElement(name = "ValidNotBefore")
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar validNotBefore;
+    @XmlElement(name = "ValidNotAfter")
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar validNotAfter;
 
-	/**
-	 * Ruft den Wert der certificateID-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getCertificateID() {
-		return certificateID;
-	}
+    /**
+     * 获取certificateID属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCertificateID() {
+        return certificateID;
+    }
 
-	/**
-	 * Legt den Wert der certificateID-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setCertificateID(String value) {
-		this.certificateID = value;
-	}
+    /**
+     * 设置certificateID属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCertificateID(String value) {
+        this.certificateID = value;
+    }
 
-	/**
-	 * Ruft den Wert der subject-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getSubject() {
-		return subject;
-	}
+    /**
+     * 获取subject属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getSubject() {
+        return subject;
+    }
 
-	/**
-	 * Legt den Wert der subject-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setSubject(String value) {
-		this.subject = value;
-	}
+    /**
+     * 设置subject属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSubject(String value) {
+        this.subject = value;
+    }
 
-	/**
-	 * Ruft den Wert der validNotBefore-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link XMLGregorianCalendar }
-	 * 
-	 */
-	public XMLGregorianCalendar getValidNotBefore() {
-		return validNotBefore;
-	}
+    /**
+     * 获取validNotBefore属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getValidNotBefore() {
+        return validNotBefore;
+    }
 
-	/**
-	 * Legt den Wert der validNotBefore-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link XMLGregorianCalendar }
-	 * 
-	 */
-	public void setValidNotBefore(XMLGregorianCalendar value) {
-		this.validNotBefore = value;
-	}
+    /**
+     * 设置validNotBefore属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setValidNotBefore(XMLGregorianCalendar value) {
+        this.validNotBefore = value;
+    }
 
-	/**
-	 * Ruft den Wert der validNotAfter-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link XMLGregorianCalendar }
-	 * 
-	 */
-	public XMLGregorianCalendar getValidNotAfter() {
-		return validNotAfter;
-	}
+    /**
+     * 获取validNotAfter属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getValidNotAfter() {
+        return validNotAfter;
+    }
 
-	/**
-	 * Legt den Wert der validNotAfter-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link XMLGregorianCalendar }
-	 * 
-	 */
-	public void setValidNotAfter(XMLGregorianCalendar value) {
-		this.validNotAfter = value;
-	}
+    /**
+     * 设置validNotAfter属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setValidNotAfter(XMLGregorianCalendar value) {
+        this.validNotAfter = value;
+    }
 
 }

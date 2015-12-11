@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -16,215 +17,246 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 Capabilities complex type.
+ * <p>Capabilities complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="Capabilities">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="Analytics" type="{http://www.onvif.org/ver10/schema}AnalyticsCapabilities" minOccurs="0"/>
- *         <element name="Device" type="{http://www.onvif.org/ver10/schema}DeviceCapabilities" minOccurs="0"/>
- *         <element name="Events" type="{http://www.onvif.org/ver10/schema}EventCapabilities" minOccurs="0"/>
- *         <element name="Imaging" type="{http://www.onvif.org/ver10/schema}ImagingCapabilities" minOccurs="0"/>
- *         <element name="Media" type="{http://www.onvif.org/ver10/schema}MediaCapabilities" minOccurs="0"/>
- *         <element name="PTZ" type="{http://www.onvif.org/ver10/schema}PTZCapabilities" minOccurs="0"/>
- *         <element name="Extension" type="{http://www.onvif.org/ver10/schema}CapabilitiesExtension" minOccurs="0"/>
- *       </sequence>
- *       <anyAttribute processContents='lax'/>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="Capabilities"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Analytics" type="{http://www.onvif.org/ver10/schema}AnalyticsCapabilities" minOccurs="0"/&gt;
+ *         &lt;element name="Device" type="{http://www.onvif.org/ver10/schema}DeviceCapabilities" minOccurs="0"/&gt;
+ *         &lt;element name="Events" type="{http://www.onvif.org/ver10/schema}EventCapabilities" minOccurs="0"/&gt;
+ *         &lt;element name="Imaging" type="{http://www.onvif.org/ver10/schema}ImagingCapabilities" minOccurs="0"/&gt;
+ *         &lt;element name="Media" type="{http://www.onvif.org/ver10/schema}MediaCapabilities" minOccurs="0"/&gt;
+ *         &lt;element name="PTZ" type="{http://www.onvif.org/ver10/schema}PTZCapabilities" minOccurs="0"/&gt;
+ *         &lt;element name="Extension" type="{http://www.onvif.org/ver10/schema}CapabilitiesExtension" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Capabilities", propOrder = { "analytics", "device", "events", "imaging", "media", "ptz", "extension" })
+@XmlType(name = "Capabilities", propOrder = {
+    "analytics",
+    "device",
+    "events",
+    "imaging",
+    "media",
+    "ptz",
+    "extension"
+})
 public class Capabilities {
 
-	@XmlElement(name = "Analytics")
-	protected AnalyticsCapabilities analytics;
-	@XmlElement(name = "Device")
-	protected DeviceCapabilities device;
-	@XmlElement(name = "Events")
-	protected EventCapabilities events;
-	@XmlElement(name = "Imaging")
-	protected ImagingCapabilities imaging;
-	@XmlElement(name = "Media")
-	protected MediaCapabilities media;
-	@XmlElement(name = "PTZ")
-	protected PTZCapabilities ptz;
-	@XmlElement(name = "Extension")
-	protected CapabilitiesExtension extension;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "Analytics")
+    protected AnalyticsCapabilities analytics;
+    @XmlElement(name = "Device")
+    protected DeviceCapabilities device;
+    @XmlElement(name = "Events")
+    protected EventCapabilities events;
+    @XmlElement(name = "Imaging")
+    protected ImagingCapabilities imaging;
+    @XmlElement(name = "Media")
+    protected MediaCapabilities media;
+    @XmlElement(name = "PTZ")
+    protected PTZCapabilities ptz;
+    @XmlElement(name = "Extension")
+    protected CapabilitiesExtension extension;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der analytics-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link AnalyticsCapabilities }
-	 * 
-	 */
-	public AnalyticsCapabilities getAnalytics() {
-		return analytics;
-	}
+    /**
+     * 获取analytics属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link AnalyticsCapabilities }
+     *     
+     */
+    public AnalyticsCapabilities getAnalytics() {
+        return analytics;
+    }
 
-	/**
-	 * Legt den Wert der analytics-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link AnalyticsCapabilities }
-	 * 
-	 */
-	public void setAnalytics(AnalyticsCapabilities value) {
-		this.analytics = value;
-	}
+    /**
+     * 设置analytics属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AnalyticsCapabilities }
+     *     
+     */
+    public void setAnalytics(AnalyticsCapabilities value) {
+        this.analytics = value;
+    }
 
-	/**
-	 * Ruft den Wert der device-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link DeviceCapabilities }
-	 * 
-	 */
-	public DeviceCapabilities getDevice() {
-		return device;
-	}
+    /**
+     * 获取device属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link DeviceCapabilities }
+     *     
+     */
+    public DeviceCapabilities getDevice() {
+        return device;
+    }
 
-	/**
-	 * Legt den Wert der device-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link DeviceCapabilities }
-	 * 
-	 */
-	public void setDevice(DeviceCapabilities value) {
-		this.device = value;
-	}
+    /**
+     * 设置device属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DeviceCapabilities }
+     *     
+     */
+    public void setDevice(DeviceCapabilities value) {
+        this.device = value;
+    }
 
-	/**
-	 * Ruft den Wert der events-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link EventCapabilities }
-	 * 
-	 */
-	public EventCapabilities getEvents() {
-		return events;
-	}
+    /**
+     * 获取events属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link EventCapabilities }
+     *     
+     */
+    public EventCapabilities getEvents() {
+        return events;
+    }
 
-	/**
-	 * Legt den Wert der events-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link EventCapabilities }
-	 * 
-	 */
-	public void setEvents(EventCapabilities value) {
-		this.events = value;
-	}
+    /**
+     * 设置events属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link EventCapabilities }
+     *     
+     */
+    public void setEvents(EventCapabilities value) {
+        this.events = value;
+    }
 
-	/**
-	 * Ruft den Wert der imaging-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link ImagingCapabilities }
-	 * 
-	 */
-	public ImagingCapabilities getImaging() {
-		return imaging;
-	}
+    /**
+     * 获取imaging属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link ImagingCapabilities }
+     *     
+     */
+    public ImagingCapabilities getImaging() {
+        return imaging;
+    }
 
-	/**
-	 * Legt den Wert der imaging-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link ImagingCapabilities }
-	 * 
-	 */
-	public void setImaging(ImagingCapabilities value) {
-		this.imaging = value;
-	}
+    /**
+     * 设置imaging属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ImagingCapabilities }
+     *     
+     */
+    public void setImaging(ImagingCapabilities value) {
+        this.imaging = value;
+    }
 
-	/**
-	 * Ruft den Wert der media-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link MediaCapabilities }
-	 * 
-	 */
-	public MediaCapabilities getMedia() {
-		return media;
-	}
+    /**
+     * 获取media属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link MediaCapabilities }
+     *     
+     */
+    public MediaCapabilities getMedia() {
+        return media;
+    }
 
-	/**
-	 * Legt den Wert der media-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link MediaCapabilities }
-	 * 
-	 */
-	public void setMedia(MediaCapabilities value) {
-		this.media = value;
-	}
+    /**
+     * 设置media属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MediaCapabilities }
+     *     
+     */
+    public void setMedia(MediaCapabilities value) {
+        this.media = value;
+    }
 
-	/**
-	 * Ruft den Wert der ptz-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link PTZCapabilities }
-	 * 
-	 */
-	public PTZCapabilities getPTZ() {
-		return ptz;
-	}
+    /**
+     * 获取ptz属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link PTZCapabilities }
+     *     
+     */
+    public PTZCapabilities getPTZ() {
+        return ptz;
+    }
 
-	/**
-	 * Legt den Wert der ptz-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link PTZCapabilities }
-	 * 
-	 */
-	public void setPTZ(PTZCapabilities value) {
-		this.ptz = value;
-	}
+    /**
+     * 设置ptz属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PTZCapabilities }
+     *     
+     */
+    public void setPTZ(PTZCapabilities value) {
+        this.ptz = value;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link CapabilitiesExtension }
-	 * 
-	 */
-	public CapabilitiesExtension getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link CapabilitiesExtension }
+     *     
+     */
+    public CapabilitiesExtension getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link CapabilitiesExtension }
-	 * 
-	 */
-	public void setExtension(CapabilitiesExtension value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CapabilitiesExtension }
+     *     
+     */
+    public void setExtension(CapabilitiesExtension value) {
+        this.extension = value;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

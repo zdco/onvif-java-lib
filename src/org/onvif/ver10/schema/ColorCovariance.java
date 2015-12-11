@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -13,27 +14,26 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 ColorCovariance complex type.
+ * <p>ColorCovariance complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="ColorCovariance">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <attribute name="XX" use="required" type="{http://www.w3.org/2001/XMLSchema}float" />
- *       <attribute name="YY" use="required" type="{http://www.w3.org/2001/XMLSchema}float" />
- *       <attribute name="ZZ" use="required" type="{http://www.w3.org/2001/XMLSchema}float" />
- *       <attribute name="XY" type="{http://www.w3.org/2001/XMLSchema}float" />
- *       <attribute name="XZ" type="{http://www.w3.org/2001/XMLSchema}float" />
- *       <attribute name="YZ" type="{http://www.w3.org/2001/XMLSchema}float" />
- *       <attribute name="Colorspace" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="ColorCovariance"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;attribute name="XX" use="required" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+ *       &lt;attribute name="YY" use="required" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+ *       &lt;attribute name="ZZ" use="required" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+ *       &lt;attribute name="XY" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+ *       &lt;attribute name="XZ" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+ *       &lt;attribute name="YZ" type="{http://www.w3.org/2001/XMLSchema}float" /&gt;
+ *       &lt;attribute name="Colorspace" type="{http://www.w3.org/2001/XMLSchema}anyURI" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -42,152 +42,164 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ColorCovariance")
 public class ColorCovariance {
 
-	@XmlAttribute(name = "XX", required = true)
-	protected float xx;
-	@XmlAttribute(name = "YY", required = true)
-	protected float yy;
-	@XmlAttribute(name = "ZZ", required = true)
-	protected float zz;
-	@XmlAttribute(name = "XY")
-	protected Float xy;
-	@XmlAttribute(name = "XZ")
-	protected Float xz;
-	@XmlAttribute(name = "YZ")
-	protected Float yz;
-	@XmlAttribute(name = "Colorspace")
-	@XmlSchemaType(name = "anyURI")
-	protected String colorspace;
+    @XmlAttribute(name = "XX", required = true)
+    protected float xx;
+    @XmlAttribute(name = "YY", required = true)
+    protected float yy;
+    @XmlAttribute(name = "ZZ", required = true)
+    protected float zz;
+    @XmlAttribute(name = "XY")
+    protected Float xy;
+    @XmlAttribute(name = "XZ")
+    protected Float xz;
+    @XmlAttribute(name = "YZ")
+    protected Float yz;
+    @XmlAttribute(name = "Colorspace")
+    @XmlSchemaType(name = "anyURI")
+    protected String colorspace;
 
-	/**
-	 * Ruft den Wert der xx-Eigenschaft ab.
-	 * 
-	 */
-	public float getXX() {
-		return xx;
-	}
+    /**
+     * 获取xx属性的值。
+     * 
+     */
+    public float getXX() {
+        return xx;
+    }
 
-	/**
-	 * Legt den Wert der xx-Eigenschaft fest.
-	 * 
-	 */
-	public void setXX(float value) {
-		this.xx = value;
-	}
+    /**
+     * 设置xx属性的值。
+     * 
+     */
+    public void setXX(float value) {
+        this.xx = value;
+    }
 
-	/**
-	 * Ruft den Wert der yy-Eigenschaft ab.
-	 * 
-	 */
-	public float getYY() {
-		return yy;
-	}
+    /**
+     * 获取yy属性的值。
+     * 
+     */
+    public float getYY() {
+        return yy;
+    }
 
-	/**
-	 * Legt den Wert der yy-Eigenschaft fest.
-	 * 
-	 */
-	public void setYY(float value) {
-		this.yy = value;
-	}
+    /**
+     * 设置yy属性的值。
+     * 
+     */
+    public void setYY(float value) {
+        this.yy = value;
+    }
 
-	/**
-	 * Ruft den Wert der zz-Eigenschaft ab.
-	 * 
-	 */
-	public float getZZ() {
-		return zz;
-	}
+    /**
+     * 获取zz属性的值。
+     * 
+     */
+    public float getZZ() {
+        return zz;
+    }
 
-	/**
-	 * Legt den Wert der zz-Eigenschaft fest.
-	 * 
-	 */
-	public void setZZ(float value) {
-		this.zz = value;
-	}
+    /**
+     * 设置zz属性的值。
+     * 
+     */
+    public void setZZ(float value) {
+        this.zz = value;
+    }
 
-	/**
-	 * Ruft den Wert der xy-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Float }
-	 * 
-	 */
-	public Float getXY() {
-		return xy;
-	}
+    /**
+     * 获取xy属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Float }
+     *     
+     */
+    public Float getXY() {
+        return xy;
+    }
 
-	/**
-	 * Legt den Wert der xy-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Float }
-	 * 
-	 */
-	public void setXY(Float value) {
-		this.xy = value;
-	}
+    /**
+     * 设置xy属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Float }
+     *     
+     */
+    public void setXY(Float value) {
+        this.xy = value;
+    }
 
-	/**
-	 * Ruft den Wert der xz-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Float }
-	 * 
-	 */
-	public Float getXZ() {
-		return xz;
-	}
+    /**
+     * 获取xz属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Float }
+     *     
+     */
+    public Float getXZ() {
+        return xz;
+    }
 
-	/**
-	 * Legt den Wert der xz-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Float }
-	 * 
-	 */
-	public void setXZ(Float value) {
-		this.xz = value;
-	}
+    /**
+     * 设置xz属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Float }
+     *     
+     */
+    public void setXZ(Float value) {
+        this.xz = value;
+    }
 
-	/**
-	 * Ruft den Wert der yz-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Float }
-	 * 
-	 */
-	public Float getYZ() {
-		return yz;
-	}
+    /**
+     * 获取yz属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Float }
+     *     
+     */
+    public Float getYZ() {
+        return yz;
+    }
 
-	/**
-	 * Legt den Wert der yz-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Float }
-	 * 
-	 */
-	public void setYZ(Float value) {
-		this.yz = value;
-	}
+    /**
+     * 设置yz属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Float }
+     *     
+     */
+    public void setYZ(Float value) {
+        this.yz = value;
+    }
 
-	/**
-	 * Ruft den Wert der colorspace-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getColorspace() {
-		return colorspace;
-	}
+    /**
+     * 获取colorspace属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getColorspace() {
+        return colorspace;
+    }
 
-	/**
-	 * Legt den Wert der colorspace-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setColorspace(String value) {
-		this.colorspace = value;
-	}
+    /**
+     * 设置colorspace属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setColorspace(String value) {
+        this.colorspace = value;
+    }
 
 }

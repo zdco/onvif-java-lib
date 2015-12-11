@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -12,349 +13,482 @@ import java.util.Map;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAnyAttribute;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 import javax.xml.namespace.QName;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 PTZConfiguration complex type.
+ * <p>PTZConfiguration complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="PTZConfiguration">
- *   <complexContent>
- *     <extension base="{http://www.onvif.org/ver10/schema}ConfigurationEntity">
- *       <sequence>
- *         <element name="NodeToken" type="{http://www.onvif.org/ver10/schema}ReferenceToken"/>
- *         <element name="DefaultAbsolutePantTiltPositionSpace" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *         <element name="DefaultAbsoluteZoomPositionSpace" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *         <element name="DefaultRelativePanTiltTranslationSpace" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *         <element name="DefaultRelativeZoomTranslationSpace" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *         <element name="DefaultContinuousPanTiltVelocitySpace" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *         <element name="DefaultContinuousZoomVelocitySpace" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *         <element name="DefaultPTZSpeed" type="{http://www.onvif.org/ver10/schema}PTZSpeed" minOccurs="0"/>
- *         <element name="DefaultPTZTimeout" type="{http://www.w3.org/2001/XMLSchema}duration" minOccurs="0"/>
- *         <element name="PanTiltLimits" type="{http://www.onvif.org/ver10/schema}PanTiltLimits" minOccurs="0"/>
- *         <element name="ZoomLimits" type="{http://www.onvif.org/ver10/schema}ZoomLimits" minOccurs="0"/>
- *         <element name="Extension" type="{http://www.onvif.org/ver10/schema}PTZConfigurationExtension" minOccurs="0"/>
- *       </sequence>
- *       <anyAttribute processContents='lax'/>
- *     </extension>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="PTZConfiguration"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.onvif.org/ver10/schema}ConfigurationEntity"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="NodeToken" type="{http://www.onvif.org/ver10/schema}ReferenceToken"/&gt;
+ *         &lt;element name="DefaultAbsolutePantTiltPositionSpace" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
+ *         &lt;element name="DefaultAbsoluteZoomPositionSpace" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
+ *         &lt;element name="DefaultRelativePanTiltTranslationSpace" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
+ *         &lt;element name="DefaultRelativeZoomTranslationSpace" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
+ *         &lt;element name="DefaultContinuousPanTiltVelocitySpace" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
+ *         &lt;element name="DefaultContinuousZoomVelocitySpace" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
+ *         &lt;element name="DefaultPTZSpeed" type="{http://www.onvif.org/ver10/schema}PTZSpeed" minOccurs="0"/&gt;
+ *         &lt;element name="DefaultPTZTimeout" type="{http://www.w3.org/2001/XMLSchema}duration" minOccurs="0"/&gt;
+ *         &lt;element name="PanTiltLimits" type="{http://www.onvif.org/ver10/schema}PanTiltLimits" minOccurs="0"/&gt;
+ *         &lt;element name="ZoomLimits" type="{http://www.onvif.org/ver10/schema}ZoomLimits" minOccurs="0"/&gt;
+ *         &lt;element name="Extension" type="{http://www.onvif.org/ver10/schema}PTZConfigurationExtension" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="MoveRamp" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *       &lt;attribute name="PresetRamp" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *       &lt;attribute name="PresetTourRamp" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PTZConfiguration", propOrder = { "nodeToken", "defaultAbsolutePantTiltPositionSpace", "defaultAbsoluteZoomPositionSpace",
-		"defaultRelativePanTiltTranslationSpace", "defaultRelativeZoomTranslationSpace", "defaultContinuousPanTiltVelocitySpace",
-		"defaultContinuousZoomVelocitySpace", "defaultPTZSpeed", "defaultPTZTimeout", "panTiltLimits", "zoomLimits", "extension" })
-public class PTZConfiguration extends ConfigurationEntity {
+@XmlType(name = "PTZConfiguration", propOrder = {
+    "nodeToken",
+    "defaultAbsolutePantTiltPositionSpace",
+    "defaultAbsoluteZoomPositionSpace",
+    "defaultRelativePanTiltTranslationSpace",
+    "defaultRelativeZoomTranslationSpace",
+    "defaultContinuousPanTiltVelocitySpace",
+    "defaultContinuousZoomVelocitySpace",
+    "defaultPTZSpeed",
+    "defaultPTZTimeout",
+    "panTiltLimits",
+    "zoomLimits",
+    "extension"
+})
+public class PTZConfiguration
+    extends ConfigurationEntity
+{
 
-	@XmlElement(name = "NodeToken", required = true)
-	protected String nodeToken;
-	@XmlElement(name = "DefaultAbsolutePantTiltPositionSpace")
-	@XmlSchemaType(name = "anyURI")
-	protected String defaultAbsolutePantTiltPositionSpace;
-	@XmlElement(name = "DefaultAbsoluteZoomPositionSpace")
-	@XmlSchemaType(name = "anyURI")
-	protected String defaultAbsoluteZoomPositionSpace;
-	@XmlElement(name = "DefaultRelativePanTiltTranslationSpace")
-	@XmlSchemaType(name = "anyURI")
-	protected String defaultRelativePanTiltTranslationSpace;
-	@XmlElement(name = "DefaultRelativeZoomTranslationSpace")
-	@XmlSchemaType(name = "anyURI")
-	protected String defaultRelativeZoomTranslationSpace;
-	@XmlElement(name = "DefaultContinuousPanTiltVelocitySpace")
-	@XmlSchemaType(name = "anyURI")
-	protected String defaultContinuousPanTiltVelocitySpace;
-	@XmlElement(name = "DefaultContinuousZoomVelocitySpace")
-	@XmlSchemaType(name = "anyURI")
-	protected String defaultContinuousZoomVelocitySpace;
-	@XmlElement(name = "DefaultPTZSpeed")
-	protected PTZSpeed defaultPTZSpeed;
-	@XmlElement(name = "DefaultPTZTimeout")
-	protected Duration defaultPTZTimeout;
-	@XmlElement(name = "PanTiltLimits")
-	protected PanTiltLimits panTiltLimits;
-	@XmlElement(name = "ZoomLimits")
-	protected ZoomLimits zoomLimits;
-	@XmlElement(name = "Extension")
-	protected PTZConfigurationExtension extension;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "NodeToken", required = true)
+    protected String nodeToken;
+    @XmlElement(name = "DefaultAbsolutePantTiltPositionSpace")
+    @XmlSchemaType(name = "anyURI")
+    protected String defaultAbsolutePantTiltPositionSpace;
+    @XmlElement(name = "DefaultAbsoluteZoomPositionSpace")
+    @XmlSchemaType(name = "anyURI")
+    protected String defaultAbsoluteZoomPositionSpace;
+    @XmlElement(name = "DefaultRelativePanTiltTranslationSpace")
+    @XmlSchemaType(name = "anyURI")
+    protected String defaultRelativePanTiltTranslationSpace;
+    @XmlElement(name = "DefaultRelativeZoomTranslationSpace")
+    @XmlSchemaType(name = "anyURI")
+    protected String defaultRelativeZoomTranslationSpace;
+    @XmlElement(name = "DefaultContinuousPanTiltVelocitySpace")
+    @XmlSchemaType(name = "anyURI")
+    protected String defaultContinuousPanTiltVelocitySpace;
+    @XmlElement(name = "DefaultContinuousZoomVelocitySpace")
+    @XmlSchemaType(name = "anyURI")
+    protected String defaultContinuousZoomVelocitySpace;
+    @XmlElement(name = "DefaultPTZSpeed")
+    protected PTZSpeed defaultPTZSpeed;
+    @XmlElement(name = "DefaultPTZTimeout")
+    protected Duration defaultPTZTimeout;
+    @XmlElement(name = "PanTiltLimits")
+    protected PanTiltLimits panTiltLimits;
+    @XmlElement(name = "ZoomLimits")
+    protected ZoomLimits zoomLimits;
+    @XmlElement(name = "Extension")
+    protected PTZConfigurationExtension extension;
+    @XmlAttribute(name = "MoveRamp")
+    protected Integer moveRamp;
+    @XmlAttribute(name = "PresetRamp")
+    protected Integer presetRamp;
+    @XmlAttribute(name = "PresetTourRamp")
+    protected Integer presetTourRamp;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der nodeToken-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getNodeToken() {
-		return nodeToken;
-	}
+    /**
+     * 获取nodeToken属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getNodeToken() {
+        return nodeToken;
+    }
 
-	/**
-	 * Legt den Wert der nodeToken-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setNodeToken(String value) {
-		this.nodeToken = value;
-	}
+    /**
+     * 设置nodeToken属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setNodeToken(String value) {
+        this.nodeToken = value;
+    }
 
-	/**
-	 * Ruft den Wert der defaultAbsolutePantTiltPositionSpace-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getDefaultAbsolutePantTiltPositionSpace() {
-		return defaultAbsolutePantTiltPositionSpace;
-	}
+    /**
+     * 获取defaultAbsolutePantTiltPositionSpace属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDefaultAbsolutePantTiltPositionSpace() {
+        return defaultAbsolutePantTiltPositionSpace;
+    }
 
-	/**
-	 * Legt den Wert der defaultAbsolutePantTiltPositionSpace-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setDefaultAbsolutePantTiltPositionSpace(String value) {
-		this.defaultAbsolutePantTiltPositionSpace = value;
-	}
+    /**
+     * 设置defaultAbsolutePantTiltPositionSpace属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDefaultAbsolutePantTiltPositionSpace(String value) {
+        this.defaultAbsolutePantTiltPositionSpace = value;
+    }
 
-	/**
-	 * Ruft den Wert der defaultAbsoluteZoomPositionSpace-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getDefaultAbsoluteZoomPositionSpace() {
-		return defaultAbsoluteZoomPositionSpace;
-	}
+    /**
+     * 获取defaultAbsoluteZoomPositionSpace属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDefaultAbsoluteZoomPositionSpace() {
+        return defaultAbsoluteZoomPositionSpace;
+    }
 
-	/**
-	 * Legt den Wert der defaultAbsoluteZoomPositionSpace-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setDefaultAbsoluteZoomPositionSpace(String value) {
-		this.defaultAbsoluteZoomPositionSpace = value;
-	}
+    /**
+     * 设置defaultAbsoluteZoomPositionSpace属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDefaultAbsoluteZoomPositionSpace(String value) {
+        this.defaultAbsoluteZoomPositionSpace = value;
+    }
 
-	/**
-	 * Ruft den Wert der defaultRelativePanTiltTranslationSpace-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getDefaultRelativePanTiltTranslationSpace() {
-		return defaultRelativePanTiltTranslationSpace;
-	}
+    /**
+     * 获取defaultRelativePanTiltTranslationSpace属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDefaultRelativePanTiltTranslationSpace() {
+        return defaultRelativePanTiltTranslationSpace;
+    }
 
-	/**
-	 * Legt den Wert der defaultRelativePanTiltTranslationSpace-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setDefaultRelativePanTiltTranslationSpace(String value) {
-		this.defaultRelativePanTiltTranslationSpace = value;
-	}
+    /**
+     * 设置defaultRelativePanTiltTranslationSpace属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDefaultRelativePanTiltTranslationSpace(String value) {
+        this.defaultRelativePanTiltTranslationSpace = value;
+    }
 
-	/**
-	 * Ruft den Wert der defaultRelativeZoomTranslationSpace-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getDefaultRelativeZoomTranslationSpace() {
-		return defaultRelativeZoomTranslationSpace;
-	}
+    /**
+     * 获取defaultRelativeZoomTranslationSpace属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDefaultRelativeZoomTranslationSpace() {
+        return defaultRelativeZoomTranslationSpace;
+    }
 
-	/**
-	 * Legt den Wert der defaultRelativeZoomTranslationSpace-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setDefaultRelativeZoomTranslationSpace(String value) {
-		this.defaultRelativeZoomTranslationSpace = value;
-	}
+    /**
+     * 设置defaultRelativeZoomTranslationSpace属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDefaultRelativeZoomTranslationSpace(String value) {
+        this.defaultRelativeZoomTranslationSpace = value;
+    }
 
-	/**
-	 * Ruft den Wert der defaultContinuousPanTiltVelocitySpace-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getDefaultContinuousPanTiltVelocitySpace() {
-		return defaultContinuousPanTiltVelocitySpace;
-	}
+    /**
+     * 获取defaultContinuousPanTiltVelocitySpace属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDefaultContinuousPanTiltVelocitySpace() {
+        return defaultContinuousPanTiltVelocitySpace;
+    }
 
-	/**
-	 * Legt den Wert der defaultContinuousPanTiltVelocitySpace-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setDefaultContinuousPanTiltVelocitySpace(String value) {
-		this.defaultContinuousPanTiltVelocitySpace = value;
-	}
+    /**
+     * 设置defaultContinuousPanTiltVelocitySpace属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDefaultContinuousPanTiltVelocitySpace(String value) {
+        this.defaultContinuousPanTiltVelocitySpace = value;
+    }
 
-	/**
-	 * Ruft den Wert der defaultContinuousZoomVelocitySpace-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getDefaultContinuousZoomVelocitySpace() {
-		return defaultContinuousZoomVelocitySpace;
-	}
+    /**
+     * 获取defaultContinuousZoomVelocitySpace属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDefaultContinuousZoomVelocitySpace() {
+        return defaultContinuousZoomVelocitySpace;
+    }
 
-	/**
-	 * Legt den Wert der defaultContinuousZoomVelocitySpace-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setDefaultContinuousZoomVelocitySpace(String value) {
-		this.defaultContinuousZoomVelocitySpace = value;
-	}
+    /**
+     * 设置defaultContinuousZoomVelocitySpace属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDefaultContinuousZoomVelocitySpace(String value) {
+        this.defaultContinuousZoomVelocitySpace = value;
+    }
 
-	/**
-	 * Ruft den Wert der defaultPTZSpeed-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link PTZSpeed }
-	 * 
-	 */
-	public PTZSpeed getDefaultPTZSpeed() {
-		return defaultPTZSpeed;
-	}
+    /**
+     * 获取defaultPTZSpeed属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link PTZSpeed }
+     *     
+     */
+    public PTZSpeed getDefaultPTZSpeed() {
+        return defaultPTZSpeed;
+    }
 
-	/**
-	 * Legt den Wert der defaultPTZSpeed-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link PTZSpeed }
-	 * 
-	 */
-	public void setDefaultPTZSpeed(PTZSpeed value) {
-		this.defaultPTZSpeed = value;
-	}
+    /**
+     * 设置defaultPTZSpeed属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PTZSpeed }
+     *     
+     */
+    public void setDefaultPTZSpeed(PTZSpeed value) {
+        this.defaultPTZSpeed = value;
+    }
 
-	/**
-	 * Ruft den Wert der defaultPTZTimeout-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Duration }
-	 * 
-	 */
-	public Duration getDefaultPTZTimeout() {
-		return defaultPTZTimeout;
-	}
+    /**
+     * 获取defaultPTZTimeout属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Duration }
+     *     
+     */
+    public Duration getDefaultPTZTimeout() {
+        return defaultPTZTimeout;
+    }
 
-	/**
-	 * Legt den Wert der defaultPTZTimeout-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Duration }
-	 * 
-	 */
-	public void setDefaultPTZTimeout(Duration value) {
-		this.defaultPTZTimeout = value;
-	}
+    /**
+     * 设置defaultPTZTimeout属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Duration }
+     *     
+     */
+    public void setDefaultPTZTimeout(Duration value) {
+        this.defaultPTZTimeout = value;
+    }
 
-	/**
-	 * Ruft den Wert der panTiltLimits-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link PanTiltLimits }
-	 * 
-	 */
-	public PanTiltLimits getPanTiltLimits() {
-		return panTiltLimits;
-	}
+    /**
+     * 获取panTiltLimits属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link PanTiltLimits }
+     *     
+     */
+    public PanTiltLimits getPanTiltLimits() {
+        return panTiltLimits;
+    }
 
-	/**
-	 * Legt den Wert der panTiltLimits-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link PanTiltLimits }
-	 * 
-	 */
-	public void setPanTiltLimits(PanTiltLimits value) {
-		this.panTiltLimits = value;
-	}
+    /**
+     * 设置panTiltLimits属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PanTiltLimits }
+     *     
+     */
+    public void setPanTiltLimits(PanTiltLimits value) {
+        this.panTiltLimits = value;
+    }
 
-	/**
-	 * Ruft den Wert der zoomLimits-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link ZoomLimits }
-	 * 
-	 */
-	public ZoomLimits getZoomLimits() {
-		return zoomLimits;
-	}
+    /**
+     * 获取zoomLimits属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link ZoomLimits }
+     *     
+     */
+    public ZoomLimits getZoomLimits() {
+        return zoomLimits;
+    }
 
-	/**
-	 * Legt den Wert der zoomLimits-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link ZoomLimits }
-	 * 
-	 */
-	public void setZoomLimits(ZoomLimits value) {
-		this.zoomLimits = value;
-	}
+    /**
+     * 设置zoomLimits属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ZoomLimits }
+     *     
+     */
+    public void setZoomLimits(ZoomLimits value) {
+        this.zoomLimits = value;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link PTZConfigurationExtension }
-	 * 
-	 */
-	public PTZConfigurationExtension getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link PTZConfigurationExtension }
+     *     
+     */
+    public PTZConfigurationExtension getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link PTZConfigurationExtension }
-	 * 
-	 */
-	public void setExtension(PTZConfigurationExtension value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PTZConfigurationExtension }
+     *     
+     */
+    public void setExtension(PTZConfigurationExtension value) {
+        this.extension = value;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * 获取moveRamp属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getMoveRamp() {
+        return moveRamp;
+    }
+
+    /**
+     * 设置moveRamp属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setMoveRamp(Integer value) {
+        this.moveRamp = value;
+    }
+
+    /**
+     * 获取presetRamp属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getPresetRamp() {
+        return presetRamp;
+    }
+
+    /**
+     * 设置presetRamp属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setPresetRamp(Integer value) {
+        this.presetRamp = value;
+    }
+
+    /**
+     * 获取presetTourRamp属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getPresetTourRamp() {
+        return presetTourRamp;
+    }
+
+    /**
+     * 设置presetTourRamp属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setPresetTourRamp(Integer value) {
+        this.presetTourRamp = value;
+    }
+
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

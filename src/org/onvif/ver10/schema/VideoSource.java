@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -16,140 +17,158 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
+
 /**
  * Representation of a physical video input.
  * 
- * <p>
- * Java-Klasse f锟絩 VideoSource complex type.
+ * <p>VideoSource complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="VideoSource">
- *   <complexContent>
- *     <extension base="{http://www.onvif.org/ver10/schema}DeviceEntity">
- *       <sequence>
- *         <element name="Framerate" type="{http://www.w3.org/2001/XMLSchema}float"/>
- *         <element name="Resolution" type="{http://www.onvif.org/ver10/schema}VideoResolution"/>
- *         <element name="Imaging" type="{http://www.onvif.org/ver10/schema}ImagingSettings" minOccurs="0"/>
- *         <element name="Extension" type="{http://www.onvif.org/ver10/schema}VideoSourceExtension" minOccurs="0"/>
- *       </sequence>
- *       <anyAttribute processContents='lax'/>
- *     </extension>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="VideoSource"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.onvif.org/ver10/schema}DeviceEntity"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Framerate" type="{http://www.w3.org/2001/XMLSchema}float"/&gt;
+ *         &lt;element name="Resolution" type="{http://www.onvif.org/ver10/schema}VideoResolution"/&gt;
+ *         &lt;element name="Imaging" type="{http://www.onvif.org/ver10/schema}ImagingSettings" minOccurs="0"/&gt;
+ *         &lt;element name="Extension" type="{http://www.onvif.org/ver10/schema}VideoSourceExtension" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VideoSource", propOrder = { "framerate", "resolution", "imaging", "extension" })
-public class VideoSource extends DeviceEntity {
+@XmlType(name = "VideoSource", propOrder = {
+    "framerate",
+    "resolution",
+    "imaging",
+    "extension"
+})
+public class VideoSource
+    extends DeviceEntity
+{
 
-	@XmlElement(name = "Framerate")
-	protected float framerate;
-	@XmlElement(name = "Resolution", required = true)
-	protected VideoResolution resolution;
-	@XmlElement(name = "Imaging")
-	protected ImagingSettings imaging;
-	@XmlElement(name = "Extension")
-	protected VideoSourceExtension extension;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "Framerate")
+    protected float framerate;
+    @XmlElement(name = "Resolution", required = true)
+    protected VideoResolution resolution;
+    @XmlElement(name = "Imaging")
+    protected ImagingSettings imaging;
+    @XmlElement(name = "Extension")
+    protected VideoSourceExtension extension;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der framerate-Eigenschaft ab.
-	 * 
-	 */
-	public float getFramerate() {
-		return framerate;
-	}
+    /**
+     * 获取framerate属性的值。
+     * 
+     */
+    public float getFramerate() {
+        return framerate;
+    }
 
-	/**
-	 * Legt den Wert der framerate-Eigenschaft fest.
-	 * 
-	 */
-	public void setFramerate(float value) {
-		this.framerate = value;
-	}
+    /**
+     * 设置framerate属性的值。
+     * 
+     */
+    public void setFramerate(float value) {
+        this.framerate = value;
+    }
 
-	/**
-	 * Ruft den Wert der resolution-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link VideoResolution }
-	 * 
-	 */
-	public VideoResolution getResolution() {
-		return resolution;
-	}
+    /**
+     * 获取resolution属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link VideoResolution }
+     *     
+     */
+    public VideoResolution getResolution() {
+        return resolution;
+    }
 
-	/**
-	 * Legt den Wert der resolution-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link VideoResolution }
-	 * 
-	 */
-	public void setResolution(VideoResolution value) {
-		this.resolution = value;
-	}
+    /**
+     * 设置resolution属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link VideoResolution }
+     *     
+     */
+    public void setResolution(VideoResolution value) {
+        this.resolution = value;
+    }
 
-	/**
-	 * Ruft den Wert der imaging-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link ImagingSettings }
-	 * 
-	 */
-	public ImagingSettings getImaging() {
-		return imaging;
-	}
+    /**
+     * 获取imaging属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link ImagingSettings }
+     *     
+     */
+    public ImagingSettings getImaging() {
+        return imaging;
+    }
 
-	/**
-	 * Legt den Wert der imaging-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link ImagingSettings }
-	 * 
-	 */
-	public void setImaging(ImagingSettings value) {
-		this.imaging = value;
-	}
+    /**
+     * 设置imaging属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ImagingSettings }
+     *     
+     */
+    public void setImaging(ImagingSettings value) {
+        this.imaging = value;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link VideoSourceExtension }
-	 * 
-	 */
-	public VideoSourceExtension getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link VideoSourceExtension }
+     *     
+     */
+    public VideoSourceExtension getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link VideoSourceExtension }
-	 * 
-	 */
-	public void setExtension(VideoSourceExtension value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link VideoSourceExtension }
+     *     
+     */
+    public void setExtension(VideoSourceExtension value) {
+        this.extension = value;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

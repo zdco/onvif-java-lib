@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -12,86 +13,89 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 Time complex type.
+ * <p>Time complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="Time">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="Hour" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         <element name="Minute" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         <element name="Second" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="Time"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Hour" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="Minute" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="Second" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Time", propOrder = { "hour", "minute", "second" })
+@XmlType(name = "Time", propOrder = {
+    "hour",
+    "minute",
+    "second"
+})
 public class Time {
 
-	@XmlElement(name = "Hour")
-	protected int hour;
-	@XmlElement(name = "Minute")
-	protected int minute;
-	@XmlElement(name = "Second")
-	protected int second;
+    @XmlElement(name = "Hour")
+    protected int hour;
+    @XmlElement(name = "Minute")
+    protected int minute;
+    @XmlElement(name = "Second")
+    protected int second;
 
-	/**
-	 * Ruft den Wert der hour-Eigenschaft ab.
-	 * 
-	 */
-	public int getHour() {
-		return hour;
-	}
+    /**
+     * 获取hour属性的值。
+     * 
+     */
+    public int getHour() {
+        return hour;
+    }
 
-	/**
-	 * Legt den Wert der hour-Eigenschaft fest.
-	 * 
-	 */
-	public void setHour(int value) {
-		this.hour = value;
-	}
+    /**
+     * 设置hour属性的值。
+     * 
+     */
+    public void setHour(int value) {
+        this.hour = value;
+    }
 
-	/**
-	 * Ruft den Wert der minute-Eigenschaft ab.
-	 * 
-	 */
-	public int getMinute() {
-		return minute;
-	}
+    /**
+     * 获取minute属性的值。
+     * 
+     */
+    public int getMinute() {
+        return minute;
+    }
 
-	/**
-	 * Legt den Wert der minute-Eigenschaft fest.
-	 * 
-	 */
-	public void setMinute(int value) {
-		this.minute = value;
-	}
+    /**
+     * 设置minute属性的值。
+     * 
+     */
+    public void setMinute(int value) {
+        this.minute = value;
+    }
 
-	/**
-	 * Ruft den Wert der second-Eigenschaft ab.
-	 * 
-	 */
-	public int getSecond() {
-		return second;
-	}
+    /**
+     * 获取second属性的值。
+     * 
+     */
+    public int getSecond() {
+        return second;
+    }
 
-	/**
-	 * Legt den Wert der second-Eigenschaft fest.
-	 * 
-	 */
-	public void setSecond(int value) {
-		this.second = value;
-	}
+    /**
+     * 设置second属性的值。
+     * 
+     */
+    public void setSecond(int value) {
+        this.second = value;
+    }
 
 }

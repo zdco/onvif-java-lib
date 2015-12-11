@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -20,172 +21,184 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 Dot11Capabilities complex type.
+ * <p>Dot11Capabilities complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="Dot11Capabilities">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="TKIP" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="ScanAvailableNetworks" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="MultipleConfiguration" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="AdHocStationMode" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="WEP" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <any processContents='lax' maxOccurs="unbounded" minOccurs="0"/>
- *       </sequence>
- *       <anyAttribute processContents='lax'/>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="Dot11Capabilities"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="TKIP" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="ScanAvailableNetworks" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="MultipleConfiguration" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="AdHocStationMode" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="WEP" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;any processContents='lax' maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Dot11Capabilities", propOrder = { "tkip", "scanAvailableNetworks", "multipleConfiguration", "adHocStationMode", "wep", "any" })
+@XmlType(name = "Dot11Capabilities", propOrder = {
+    "tkip",
+    "scanAvailableNetworks",
+    "multipleConfiguration",
+    "adHocStationMode",
+    "wep",
+    "any"
+})
 public class Dot11Capabilities {
 
-	@XmlElement(name = "TKIP")
-	protected boolean tkip;
-	@XmlElement(name = "ScanAvailableNetworks")
-	protected boolean scanAvailableNetworks;
-	@XmlElement(name = "MultipleConfiguration")
-	protected boolean multipleConfiguration;
-	@XmlElement(name = "AdHocStationMode")
-	protected boolean adHocStationMode;
-	@XmlElement(name = "WEP")
-	protected boolean wep;
-	@XmlAnyElement(lax = true)
-	protected List<java.lang.Object> any;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "TKIP")
+    protected boolean tkip;
+    @XmlElement(name = "ScanAvailableNetworks")
+    protected boolean scanAvailableNetworks;
+    @XmlElement(name = "MultipleConfiguration")
+    protected boolean multipleConfiguration;
+    @XmlElement(name = "AdHocStationMode")
+    protected boolean adHocStationMode;
+    @XmlElement(name = "WEP")
+    protected boolean wep;
+    @XmlAnyElement(lax = true)
+    protected List<java.lang.Object> any;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der tkip-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isTKIP() {
-		return tkip;
-	}
+    /**
+     * 获取tkip属性的值。
+     * 
+     */
+    public boolean isTKIP() {
+        return tkip;
+    }
 
-	/**
-	 * Legt den Wert der tkip-Eigenschaft fest.
-	 * 
-	 */
-	public void setTKIP(boolean value) {
-		this.tkip = value;
-	}
+    /**
+     * 设置tkip属性的值。
+     * 
+     */
+    public void setTKIP(boolean value) {
+        this.tkip = value;
+    }
 
-	/**
-	 * Ruft den Wert der scanAvailableNetworks-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isScanAvailableNetworks() {
-		return scanAvailableNetworks;
-	}
+    /**
+     * 获取scanAvailableNetworks属性的值。
+     * 
+     */
+    public boolean isScanAvailableNetworks() {
+        return scanAvailableNetworks;
+    }
 
-	/**
-	 * Legt den Wert der scanAvailableNetworks-Eigenschaft fest.
-	 * 
-	 */
-	public void setScanAvailableNetworks(boolean value) {
-		this.scanAvailableNetworks = value;
-	}
+    /**
+     * 设置scanAvailableNetworks属性的值。
+     * 
+     */
+    public void setScanAvailableNetworks(boolean value) {
+        this.scanAvailableNetworks = value;
+    }
 
-	/**
-	 * Ruft den Wert der multipleConfiguration-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isMultipleConfiguration() {
-		return multipleConfiguration;
-	}
+    /**
+     * 获取multipleConfiguration属性的值。
+     * 
+     */
+    public boolean isMultipleConfiguration() {
+        return multipleConfiguration;
+    }
 
-	/**
-	 * Legt den Wert der multipleConfiguration-Eigenschaft fest.
-	 * 
-	 */
-	public void setMultipleConfiguration(boolean value) {
-		this.multipleConfiguration = value;
-	}
+    /**
+     * 设置multipleConfiguration属性的值。
+     * 
+     */
+    public void setMultipleConfiguration(boolean value) {
+        this.multipleConfiguration = value;
+    }
 
-	/**
-	 * Ruft den Wert der adHocStationMode-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isAdHocStationMode() {
-		return adHocStationMode;
-	}
+    /**
+     * 获取adHocStationMode属性的值。
+     * 
+     */
+    public boolean isAdHocStationMode() {
+        return adHocStationMode;
+    }
 
-	/**
-	 * Legt den Wert der adHocStationMode-Eigenschaft fest.
-	 * 
-	 */
-	public void setAdHocStationMode(boolean value) {
-		this.adHocStationMode = value;
-	}
+    /**
+     * 设置adHocStationMode属性的值。
+     * 
+     */
+    public void setAdHocStationMode(boolean value) {
+        this.adHocStationMode = value;
+    }
 
-	/**
-	 * Ruft den Wert der wep-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isWEP() {
-		return wep;
-	}
+    /**
+     * 获取wep属性的值。
+     * 
+     */
+    public boolean isWEP() {
+        return wep;
+    }
 
-	/**
-	 * Legt den Wert der wep-Eigenschaft fest.
-	 * 
-	 */
-	public void setWEP(boolean value) {
-		this.wep = value;
-	}
+    /**
+     * 设置wep属性的值。
+     * 
+     */
+    public void setWEP(boolean value) {
+        this.wep = value;
+    }
 
-	/**
-	 * Gets the value of the any property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the any property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getAny().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link Element } {@link java.lang.Object }
-	 * 
-	 * 
-	 */
-	public List<java.lang.Object> getAny() {
-		if (any == null) {
-			any = new ArrayList<java.lang.Object>();
-		}
-		return this.any;
-	}
+    /**
+     * Gets the value of the any property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the any property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAny().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link java.lang.Object }
+     * {@link Element }
+     * 
+     * 
+     */
+    public List<java.lang.Object> getAny() {
+        if (any == null) {
+            any = new ArrayList<java.lang.Object>();
+        }
+        return this.any;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

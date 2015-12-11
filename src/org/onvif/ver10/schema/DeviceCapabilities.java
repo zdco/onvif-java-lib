@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -17,192 +18,219 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 DeviceCapabilities complex type.
+ * <p>DeviceCapabilities complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="DeviceCapabilities">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="XAddr" type="{http://www.w3.org/2001/XMLSchema}anyURI"/>
- *         <element name="Network" type="{http://www.onvif.org/ver10/schema}NetworkCapabilities" minOccurs="0"/>
- *         <element name="System" type="{http://www.onvif.org/ver10/schema}SystemCapabilities" minOccurs="0"/>
- *         <element name="IO" type="{http://www.onvif.org/ver10/schema}IOCapabilities" minOccurs="0"/>
- *         <element name="Security" type="{http://www.onvif.org/ver10/schema}SecurityCapabilities" minOccurs="0"/>
- *         <element name="Extension" type="{http://www.onvif.org/ver10/schema}DeviceCapabilitiesExtension" minOccurs="0"/>
- *       </sequence>
- *       <anyAttribute processContents='lax'/>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="DeviceCapabilities"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="XAddr" type="{http://www.w3.org/2001/XMLSchema}anyURI"/&gt;
+ *         &lt;element name="Network" type="{http://www.onvif.org/ver10/schema}NetworkCapabilities" minOccurs="0"/&gt;
+ *         &lt;element name="System" type="{http://www.onvif.org/ver10/schema}SystemCapabilities" minOccurs="0"/&gt;
+ *         &lt;element name="IO" type="{http://www.onvif.org/ver10/schema}IOCapabilities" minOccurs="0"/&gt;
+ *         &lt;element name="Security" type="{http://www.onvif.org/ver10/schema}SecurityCapabilities" minOccurs="0"/&gt;
+ *         &lt;element name="Extension" type="{http://www.onvif.org/ver10/schema}DeviceCapabilitiesExtension" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DeviceCapabilities", propOrder = { "xAddr", "network", "system", "io", "security", "extension" })
+@XmlType(name = "DeviceCapabilities", propOrder = {
+    "xAddr",
+    "network",
+    "system",
+    "io",
+    "security",
+    "extension"
+})
 public class DeviceCapabilities {
 
-	@XmlElement(name = "XAddr", required = true)
-	@XmlSchemaType(name = "anyURI")
-	protected String xAddr;
-	@XmlElement(name = "Network")
-	protected NetworkCapabilities network;
-	@XmlElement(name = "System")
-	protected SystemCapabilities system;
-	@XmlElement(name = "IO")
-	protected IOCapabilities io;
-	@XmlElement(name = "Security")
-	protected SecurityCapabilities security;
-	@XmlElement(name = "Extension")
-	protected DeviceCapabilitiesExtension extension;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "XAddr", required = true)
+    @XmlSchemaType(name = "anyURI")
+    protected String xAddr;
+    @XmlElement(name = "Network")
+    protected NetworkCapabilities network;
+    @XmlElement(name = "System")
+    protected SystemCapabilities system;
+    @XmlElement(name = "IO")
+    protected IOCapabilities io;
+    @XmlElement(name = "Security")
+    protected SecurityCapabilities security;
+    @XmlElement(name = "Extension")
+    protected DeviceCapabilitiesExtension extension;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der xAddr-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getXAddr() {
-		return xAddr;
-	}
+    /**
+     * 获取xAddr属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getXAddr() {
+        return xAddr;
+    }
 
-	/**
-	 * Legt den Wert der xAddr-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setXAddr(String value) {
-		this.xAddr = value;
-	}
+    /**
+     * 设置xAddr属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setXAddr(String value) {
+        this.xAddr = value;
+    }
 
-	/**
-	 * Ruft den Wert der network-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link NetworkCapabilities }
-	 * 
-	 */
-	public NetworkCapabilities getNetwork() {
-		return network;
-	}
+    /**
+     * 获取network属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link NetworkCapabilities }
+     *     
+     */
+    public NetworkCapabilities getNetwork() {
+        return network;
+    }
 
-	/**
-	 * Legt den Wert der network-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link NetworkCapabilities }
-	 * 
-	 */
-	public void setNetwork(NetworkCapabilities value) {
-		this.network = value;
-	}
+    /**
+     * 设置network属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link NetworkCapabilities }
+     *     
+     */
+    public void setNetwork(NetworkCapabilities value) {
+        this.network = value;
+    }
 
-	/**
-	 * Ruft den Wert der system-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link SystemCapabilities }
-	 * 
-	 */
-	public SystemCapabilities getSystem() {
-		return system;
-	}
+    /**
+     * 获取system属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link SystemCapabilities }
+     *     
+     */
+    public SystemCapabilities getSystem() {
+        return system;
+    }
 
-	/**
-	 * Legt den Wert der system-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link SystemCapabilities }
-	 * 
-	 */
-	public void setSystem(SystemCapabilities value) {
-		this.system = value;
-	}
+    /**
+     * 设置system属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SystemCapabilities }
+     *     
+     */
+    public void setSystem(SystemCapabilities value) {
+        this.system = value;
+    }
 
-	/**
-	 * Ruft den Wert der io-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link IOCapabilities }
-	 * 
-	 */
-	public IOCapabilities getIO() {
-		return io;
-	}
+    /**
+     * 获取io属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link IOCapabilities }
+     *     
+     */
+    public IOCapabilities getIO() {
+        return io;
+    }
 
-	/**
-	 * Legt den Wert der io-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link IOCapabilities }
-	 * 
-	 */
-	public void setIO(IOCapabilities value) {
-		this.io = value;
-	}
+    /**
+     * 设置io属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link IOCapabilities }
+     *     
+     */
+    public void setIO(IOCapabilities value) {
+        this.io = value;
+    }
 
-	/**
-	 * Ruft den Wert der security-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link SecurityCapabilities }
-	 * 
-	 */
-	public SecurityCapabilities getSecurity() {
-		return security;
-	}
+    /**
+     * 获取security属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link SecurityCapabilities }
+     *     
+     */
+    public SecurityCapabilities getSecurity() {
+        return security;
+    }
 
-	/**
-	 * Legt den Wert der security-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link SecurityCapabilities }
-	 * 
-	 */
-	public void setSecurity(SecurityCapabilities value) {
-		this.security = value;
-	}
+    /**
+     * 设置security属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SecurityCapabilities }
+     *     
+     */
+    public void setSecurity(SecurityCapabilities value) {
+        this.security = value;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link DeviceCapabilitiesExtension }
-	 * 
-	 */
-	public DeviceCapabilitiesExtension getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link DeviceCapabilitiesExtension }
+     *     
+     */
+    public DeviceCapabilitiesExtension getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link DeviceCapabilitiesExtension }
-	 * 
-	 */
-	public void setExtension(DeviceCapabilitiesExtension value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DeviceCapabilitiesExtension }
+     *     
+     */
+    public void setExtension(DeviceCapabilitiesExtension value) {
+        this.extension = value;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

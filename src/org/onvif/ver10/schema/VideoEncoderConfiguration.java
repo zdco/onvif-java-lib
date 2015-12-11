@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -16,270 +17,309 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAnyAttribute;
 import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 VideoEncoderConfiguration complex type.
+ * <p>VideoEncoderConfiguration complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="VideoEncoderConfiguration">
- *   <complexContent>
- *     <extension base="{http://www.onvif.org/ver10/schema}ConfigurationEntity">
- *       <sequence>
- *         <element name="Encoding" type="{http://www.onvif.org/ver10/schema}VideoEncoding"/>
- *         <element name="Resolution" type="{http://www.onvif.org/ver10/schema}VideoResolution"/>
- *         <element name="Quality" type="{http://www.w3.org/2001/XMLSchema}float"/>
- *         <element name="RateControl" type="{http://www.onvif.org/ver10/schema}VideoRateControl" minOccurs="0"/>
- *         <element name="MPEG4" type="{http://www.onvif.org/ver10/schema}Mpeg4Configuration" minOccurs="0"/>
- *         <element name="H264" type="{http://www.onvif.org/ver10/schema}H264Configuration" minOccurs="0"/>
- *         <element name="Multicast" type="{http://www.onvif.org/ver10/schema}MulticastConfiguration"/>
- *         <element name="SessionTimeout" type="{http://www.w3.org/2001/XMLSchema}duration"/>
- *         <any processContents='lax' maxOccurs="unbounded" minOccurs="0"/>
- *       </sequence>
- *       <anyAttribute processContents='lax'/>
- *     </extension>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="VideoEncoderConfiguration"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.onvif.org/ver10/schema}ConfigurationEntity"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Encoding" type="{http://www.onvif.org/ver10/schema}VideoEncoding"/&gt;
+ *         &lt;element name="Resolution" type="{http://www.onvif.org/ver10/schema}VideoResolution"/&gt;
+ *         &lt;element name="Quality" type="{http://www.w3.org/2001/XMLSchema}float"/&gt;
+ *         &lt;element name="RateControl" type="{http://www.onvif.org/ver10/schema}VideoRateControl" minOccurs="0"/&gt;
+ *         &lt;element name="MPEG4" type="{http://www.onvif.org/ver10/schema}Mpeg4Configuration" minOccurs="0"/&gt;
+ *         &lt;element name="H264" type="{http://www.onvif.org/ver10/schema}H264Configuration" minOccurs="0"/&gt;
+ *         &lt;element name="Multicast" type="{http://www.onvif.org/ver10/schema}MulticastConfiguration"/&gt;
+ *         &lt;element name="SessionTimeout" type="{http://www.w3.org/2001/XMLSchema}duration"/&gt;
+ *         &lt;any processContents='lax' maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VideoEncoderConfiguration", propOrder = { "encoding", "resolution", "quality", "rateControl", "mpeg4", "h264", "multicast", "sessionTimeout",
-		"any" })
-public class VideoEncoderConfiguration extends ConfigurationEntity {
+@XmlType(name = "VideoEncoderConfiguration", propOrder = {
+    "encoding",
+    "resolution",
+    "quality",
+    "rateControl",
+    "mpeg4",
+    "h264",
+    "multicast",
+    "sessionTimeout",
+    "any"
+})
+public class VideoEncoderConfiguration
+    extends ConfigurationEntity
+{
 
-	@XmlElement(name = "Encoding", required = true)
-	protected VideoEncoding encoding;
-	@XmlElement(name = "Resolution", required = true)
-	protected VideoResolution resolution;
-	@XmlElement(name = "Quality")
-	protected float quality;
-	@XmlElement(name = "RateControl")
-	protected VideoRateControl rateControl;
-	@XmlElement(name = "MPEG4")
-	protected Mpeg4Configuration mpeg4;
-	@XmlElement(name = "H264")
-	protected H264Configuration h264;
-	@XmlElement(name = "Multicast", required = true)
-	protected MulticastConfiguration multicast;
-	@XmlElement(name = "SessionTimeout", required = true)
-	protected Duration sessionTimeout;
-	@XmlAnyElement(lax = true)
-	protected List<java.lang.Object> any;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "Encoding", required = true)
+    @XmlSchemaType(name = "string")
+    protected VideoEncoding encoding;
+    @XmlElement(name = "Resolution", required = true)
+    protected VideoResolution resolution;
+    @XmlElement(name = "Quality")
+    protected float quality;
+    @XmlElement(name = "RateControl")
+    protected VideoRateControl rateControl;
+    @XmlElement(name = "MPEG4")
+    protected Mpeg4Configuration mpeg4;
+    @XmlElement(name = "H264")
+    protected H264Configuration h264;
+    @XmlElement(name = "Multicast", required = true)
+    protected MulticastConfiguration multicast;
+    @XmlElement(name = "SessionTimeout", required = true)
+    protected Duration sessionTimeout;
+    @XmlAnyElement(lax = true)
+    protected List<java.lang.Object> any;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der encoding-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link VideoEncoding }
-	 * 
-	 */
-	public VideoEncoding getEncoding() {
-		return encoding;
-	}
+    /**
+     * 获取encoding属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link VideoEncoding }
+     *     
+     */
+    public VideoEncoding getEncoding() {
+        return encoding;
+    }
 
-	/**
-	 * Legt den Wert der encoding-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link VideoEncoding }
-	 * 
-	 */
-	public void setEncoding(VideoEncoding value) {
-		this.encoding = value;
-	}
+    /**
+     * 设置encoding属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link VideoEncoding }
+     *     
+     */
+    public void setEncoding(VideoEncoding value) {
+        this.encoding = value;
+    }
 
-	/**
-	 * Ruft den Wert der resolution-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link VideoResolution }
-	 * 
-	 */
-	public VideoResolution getResolution() {
-		return resolution;
-	}
+    /**
+     * 获取resolution属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link VideoResolution }
+     *     
+     */
+    public VideoResolution getResolution() {
+        return resolution;
+    }
 
-	/**
-	 * Legt den Wert der resolution-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link VideoResolution }
-	 * 
-	 */
-	public void setResolution(VideoResolution value) {
-		this.resolution = value;
-	}
+    /**
+     * 设置resolution属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link VideoResolution }
+     *     
+     */
+    public void setResolution(VideoResolution value) {
+        this.resolution = value;
+    }
 
-	/**
-	 * Ruft den Wert der quality-Eigenschaft ab.
-	 * 
-	 */
-	public float getQuality() {
-		return quality;
-	}
+    /**
+     * 获取quality属性的值。
+     * 
+     */
+    public float getQuality() {
+        return quality;
+    }
 
-	/**
-	 * Legt den Wert der quality-Eigenschaft fest.
-	 * 
-	 */
-	public void setQuality(float value) {
-		this.quality = value;
-	}
+    /**
+     * 设置quality属性的值。
+     * 
+     */
+    public void setQuality(float value) {
+        this.quality = value;
+    }
 
-	/**
-	 * Ruft den Wert der rateControl-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link VideoRateControl }
-	 * 
-	 */
-	public VideoRateControl getRateControl() {
-		return rateControl;
-	}
+    /**
+     * 获取rateControl属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link VideoRateControl }
+     *     
+     */
+    public VideoRateControl getRateControl() {
+        return rateControl;
+    }
 
-	/**
-	 * Legt den Wert der rateControl-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link VideoRateControl }
-	 * 
-	 */
-	public void setRateControl(VideoRateControl value) {
-		this.rateControl = value;
-	}
+    /**
+     * 设置rateControl属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link VideoRateControl }
+     *     
+     */
+    public void setRateControl(VideoRateControl value) {
+        this.rateControl = value;
+    }
 
-	/**
-	 * Ruft den Wert der mpeg4-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Mpeg4Configuration }
-	 * 
-	 */
-	public Mpeg4Configuration getMPEG4() {
-		return mpeg4;
-	}
+    /**
+     * 获取mpeg4属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Mpeg4Configuration }
+     *     
+     */
+    public Mpeg4Configuration getMPEG4() {
+        return mpeg4;
+    }
 
-	/**
-	 * Legt den Wert der mpeg4-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Mpeg4Configuration }
-	 * 
-	 */
-	public void setMPEG4(Mpeg4Configuration value) {
-		this.mpeg4 = value;
-	}
+    /**
+     * 设置mpeg4属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Mpeg4Configuration }
+     *     
+     */
+    public void setMPEG4(Mpeg4Configuration value) {
+        this.mpeg4 = value;
+    }
 
-	/**
-	 * Ruft den Wert der h264-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link H264Configuration }
-	 * 
-	 */
-	public H264Configuration getH264() {
-		return h264;
-	}
+    /**
+     * 获取h264属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link H264Configuration }
+     *     
+     */
+    public H264Configuration getH264() {
+        return h264;
+    }
 
-	/**
-	 * Legt den Wert der h264-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link H264Configuration }
-	 * 
-	 */
-	public void setH264(H264Configuration value) {
-		this.h264 = value;
-	}
+    /**
+     * 设置h264属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link H264Configuration }
+     *     
+     */
+    public void setH264(H264Configuration value) {
+        this.h264 = value;
+    }
 
-	/**
-	 * Ruft den Wert der multicast-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link MulticastConfiguration }
-	 * 
-	 */
-	public MulticastConfiguration getMulticast() {
-		return multicast;
-	}
+    /**
+     * 获取multicast属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link MulticastConfiguration }
+     *     
+     */
+    public MulticastConfiguration getMulticast() {
+        return multicast;
+    }
 
-	/**
-	 * Legt den Wert der multicast-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link MulticastConfiguration }
-	 * 
-	 */
-	public void setMulticast(MulticastConfiguration value) {
-		this.multicast = value;
-	}
+    /**
+     * 设置multicast属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MulticastConfiguration }
+     *     
+     */
+    public void setMulticast(MulticastConfiguration value) {
+        this.multicast = value;
+    }
 
-	/**
-	 * Ruft den Wert der sessionTimeout-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Duration }
-	 * 
-	 */
-	public Duration getSessionTimeout() {
-		return sessionTimeout;
-	}
+    /**
+     * 获取sessionTimeout属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Duration }
+     *     
+     */
+    public Duration getSessionTimeout() {
+        return sessionTimeout;
+    }
 
-	/**
-	 * Legt den Wert der sessionTimeout-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Duration }
-	 * 
-	 */
-	public void setSessionTimeout(Duration value) {
-		this.sessionTimeout = value;
-	}
+    /**
+     * 设置sessionTimeout属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Duration }
+     *     
+     */
+    public void setSessionTimeout(Duration value) {
+        this.sessionTimeout = value;
+    }
 
-	/**
-	 * Gets the value of the any property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the any property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getAny().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link Element } {@link java.lang.Object }
-	 * 
-	 * 
-	 */
-	public List<java.lang.Object> getAny() {
-		if (any == null) {
-			any = new ArrayList<java.lang.Object>();
-		}
-		return this.any;
-	}
+    /**
+     * Gets the value of the any property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the any property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAny().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link java.lang.Object }
+     * {@link Element }
+     * 
+     * 
+     */
+    public List<java.lang.Object> getAny() {
+        if (any == null) {
+            any = new ArrayList<java.lang.Object>();
+        }
+        return this.any;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

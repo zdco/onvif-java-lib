@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -21,164 +22,176 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 MetadataAttributes complex type.
+ * <p>MetadataAttributes complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="MetadataAttributes">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="CanContainPTZ" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="CanContainAnalytics" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="CanContainNotifications" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <any processContents='lax' maxOccurs="unbounded" minOccurs="0"/>
- *       </sequence>
- *       <attribute name="PtzSpaces" type="{http://www.onvif.org/ver10/schema}StringAttrList" />
- *       <anyAttribute processContents='lax'/>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="MetadataAttributes"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="CanContainPTZ" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="CanContainAnalytics" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="CanContainNotifications" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;any processContents='lax' maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="PtzSpaces" type="{http://www.onvif.org/ver10/schema}StringAttrList" /&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MetadataAttributes", propOrder = { "canContainPTZ", "canContainAnalytics", "canContainNotifications", "any" })
+@XmlType(name = "MetadataAttributes", propOrder = {
+    "canContainPTZ",
+    "canContainAnalytics",
+    "canContainNotifications",
+    "any"
+})
 public class MetadataAttributes {
 
-	@XmlElement(name = "CanContainPTZ")
-	protected boolean canContainPTZ;
-	@XmlElement(name = "CanContainAnalytics")
-	protected boolean canContainAnalytics;
-	@XmlElement(name = "CanContainNotifications")
-	protected boolean canContainNotifications;
-	@XmlAnyElement(lax = true)
-	protected List<java.lang.Object> any;
-	@XmlAttribute(name = "PtzSpaces")
-	protected List<String> ptzSpaces;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "CanContainPTZ")
+    protected boolean canContainPTZ;
+    @XmlElement(name = "CanContainAnalytics")
+    protected boolean canContainAnalytics;
+    @XmlElement(name = "CanContainNotifications")
+    protected boolean canContainNotifications;
+    @XmlAnyElement(lax = true)
+    protected List<java.lang.Object> any;
+    @XmlAttribute(name = "PtzSpaces")
+    protected List<String> ptzSpaces;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der canContainPTZ-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isCanContainPTZ() {
-		return canContainPTZ;
-	}
+    /**
+     * 获取canContainPTZ属性的值。
+     * 
+     */
+    public boolean isCanContainPTZ() {
+        return canContainPTZ;
+    }
 
-	/**
-	 * Legt den Wert der canContainPTZ-Eigenschaft fest.
-	 * 
-	 */
-	public void setCanContainPTZ(boolean value) {
-		this.canContainPTZ = value;
-	}
+    /**
+     * 设置canContainPTZ属性的值。
+     * 
+     */
+    public void setCanContainPTZ(boolean value) {
+        this.canContainPTZ = value;
+    }
 
-	/**
-	 * Ruft den Wert der canContainAnalytics-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isCanContainAnalytics() {
-		return canContainAnalytics;
-	}
+    /**
+     * 获取canContainAnalytics属性的值。
+     * 
+     */
+    public boolean isCanContainAnalytics() {
+        return canContainAnalytics;
+    }
 
-	/**
-	 * Legt den Wert der canContainAnalytics-Eigenschaft fest.
-	 * 
-	 */
-	public void setCanContainAnalytics(boolean value) {
-		this.canContainAnalytics = value;
-	}
+    /**
+     * 设置canContainAnalytics属性的值。
+     * 
+     */
+    public void setCanContainAnalytics(boolean value) {
+        this.canContainAnalytics = value;
+    }
 
-	/**
-	 * Ruft den Wert der canContainNotifications-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isCanContainNotifications() {
-		return canContainNotifications;
-	}
+    /**
+     * 获取canContainNotifications属性的值。
+     * 
+     */
+    public boolean isCanContainNotifications() {
+        return canContainNotifications;
+    }
 
-	/**
-	 * Legt den Wert der canContainNotifications-Eigenschaft fest.
-	 * 
-	 */
-	public void setCanContainNotifications(boolean value) {
-		this.canContainNotifications = value;
-	}
+    /**
+     * 设置canContainNotifications属性的值。
+     * 
+     */
+    public void setCanContainNotifications(boolean value) {
+        this.canContainNotifications = value;
+    }
 
-	/**
-	 * Gets the value of the any property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the any property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getAny().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link Element } {@link java.lang.Object }
-	 * 
-	 * 
-	 */
-	public List<java.lang.Object> getAny() {
-		if (any == null) {
-			any = new ArrayList<java.lang.Object>();
-		}
-		return this.any;
-	}
+    /**
+     * Gets the value of the any property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the any property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAny().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link java.lang.Object }
+     * {@link Element }
+     * 
+     * 
+     */
+    public List<java.lang.Object> getAny() {
+        if (any == null) {
+            any = new ArrayList<java.lang.Object>();
+        }
+        return this.any;
+    }
 
-	/**
-	 * Gets the value of the ptzSpaces property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the ptzSpaces property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getPtzSpaces().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link String }
-	 * 
-	 * 
-	 */
-	public List<String> getPtzSpaces() {
-		if (ptzSpaces == null) {
-			ptzSpaces = new ArrayList<String>();
-		}
-		return this.ptzSpaces;
-	}
+    /**
+     * Gets the value of the ptzSpaces property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the ptzSpaces property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getPtzSpaces().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
+     */
+    public List<String> getPtzSpaces() {
+        if (ptzSpaces == null) {
+            ptzSpaces = new ArrayList<String>();
+        }
+        return this.ptzSpaces;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

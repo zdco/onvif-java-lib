@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -15,252 +16,316 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAnyAttribute;
 import javax.xml.bind.annotation.XmlAnyElement;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.Duration;
 import javax.xml.namespace.QName;
 import org.w3c.dom.Element;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 MetadataConfiguration complex type.
+ * <p>MetadataConfiguration complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="MetadataConfiguration">
- *   <complexContent>
- *     <extension base="{http://www.onvif.org/ver10/schema}ConfigurationEntity">
- *       <sequence>
- *         <element name="PTZStatus" type="{http://www.onvif.org/ver10/schema}PTZFilter" minOccurs="0"/>
- *         <element name="Events" type="{http://www.onvif.org/ver10/schema}EventSubscription" minOccurs="0"/>
- *         <element name="Analytics" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         <element name="Multicast" type="{http://www.onvif.org/ver10/schema}MulticastConfiguration"/>
- *         <element name="SessionTimeout" type="{http://www.w3.org/2001/XMLSchema}duration"/>
- *         <any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="AnalyticsEngineConfiguration" type="{http://www.onvif.org/ver10/schema}AnalyticsEngineConfiguration" minOccurs="0"/>
- *         <element name="Extension" type="{http://www.onvif.org/ver10/schema}MetadataConfigurationExtension" minOccurs="0"/>
- *       </sequence>
- *       <anyAttribute processContents='lax'/>
- *     </extension>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="MetadataConfiguration"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.onvif.org/ver10/schema}ConfigurationEntity"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="PTZStatus" type="{http://www.onvif.org/ver10/schema}PTZFilter" minOccurs="0"/&gt;
+ *         &lt;element name="Events" type="{http://www.onvif.org/ver10/schema}EventSubscription" minOccurs="0"/&gt;
+ *         &lt;element name="Analytics" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *         &lt;element name="Multicast" type="{http://www.onvif.org/ver10/schema}MulticastConfiguration"/&gt;
+ *         &lt;element name="SessionTimeout" type="{http://www.w3.org/2001/XMLSchema}duration"/&gt;
+ *         &lt;any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="AnalyticsEngineConfiguration" type="{http://www.onvif.org/ver10/schema}AnalyticsEngineConfiguration" minOccurs="0"/&gt;
+ *         &lt;element name="Extension" type="{http://www.onvif.org/ver10/schema}MetadataConfigurationExtension" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="CompressionType" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MetadataConfiguration", propOrder = { "ptzStatus", "events", "analytics", "multicast", "sessionTimeout", "any",
-		"analyticsEngineConfiguration", "extension" })
-public class MetadataConfiguration extends ConfigurationEntity {
+@XmlType(name = "MetadataConfiguration", propOrder = {
+    "ptzStatus",
+    "events",
+    "analytics",
+    "multicast",
+    "sessionTimeout",
+    "any",
+    "analyticsEngineConfiguration",
+    "extension"
+})
+public class MetadataConfiguration
+    extends ConfigurationEntity
+{
 
-	@XmlElement(name = "PTZStatus")
-	protected PTZFilter ptzStatus;
-	@XmlElement(name = "Events")
-	protected EventSubscription events;
-	@XmlElement(name = "Analytics")
-	protected Boolean analytics;
-	@XmlElement(name = "Multicast", required = true)
-	protected MulticastConfiguration multicast;
-	@XmlElement(name = "SessionTimeout", required = true)
-	protected Duration sessionTimeout;
-	@XmlAnyElement(lax = true)
-	protected List<java.lang.Object> any;
-	@XmlElement(name = "AnalyticsEngineConfiguration")
-	protected AnalyticsEngineConfiguration analyticsEngineConfiguration;
-	@XmlElement(name = "Extension")
-	protected MetadataConfigurationExtension extension;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "PTZStatus")
+    protected PTZFilter ptzStatus;
+    @XmlElement(name = "Events")
+    protected EventSubscription events;
+    @XmlElement(name = "Analytics")
+    protected Boolean analytics;
+    @XmlElement(name = "Multicast", required = true)
+    protected MulticastConfiguration multicast;
+    @XmlElement(name = "SessionTimeout", required = true)
+    protected Duration sessionTimeout;
+    @XmlAnyElement(lax = true)
+    protected List<java.lang.Object> any;
+    @XmlElement(name = "AnalyticsEngineConfiguration")
+    protected AnalyticsEngineConfiguration analyticsEngineConfiguration;
+    @XmlElement(name = "Extension")
+    protected MetadataConfigurationExtension extension;
+    @XmlAttribute(name = "CompressionType")
+    protected String compressionType;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der ptzStatus-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link PTZFilter }
-	 * 
-	 */
-	public PTZFilter getPTZStatus() {
-		return ptzStatus;
-	}
+    /**
+     * 获取ptzStatus属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link PTZFilter }
+     *     
+     */
+    public PTZFilter getPTZStatus() {
+        return ptzStatus;
+    }
 
-	/**
-	 * Legt den Wert der ptzStatus-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link PTZFilter }
-	 * 
-	 */
-	public void setPTZStatus(PTZFilter value) {
-		this.ptzStatus = value;
-	}
+    /**
+     * 设置ptzStatus属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PTZFilter }
+     *     
+     */
+    public void setPTZStatus(PTZFilter value) {
+        this.ptzStatus = value;
+    }
 
-	/**
-	 * Ruft den Wert der events-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link EventSubscription }
-	 * 
-	 */
-	public EventSubscription getEvents() {
-		return events;
-	}
+    /**
+     * 获取events属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link EventSubscription }
+     *     
+     */
+    public EventSubscription getEvents() {
+        return events;
+    }
 
-	/**
-	 * Legt den Wert der events-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link EventSubscription }
-	 * 
-	 */
-	public void setEvents(EventSubscription value) {
-		this.events = value;
-	}
+    /**
+     * 设置events属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link EventSubscription }
+     *     
+     */
+    public void setEvents(EventSubscription value) {
+        this.events = value;
+    }
 
-	/**
-	 * Ruft den Wert der analytics-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Boolean }
-	 * 
-	 */
-	public Boolean isAnalytics() {
-		return analytics;
-	}
+    /**
+     * 获取analytics属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isAnalytics() {
+        return analytics;
+    }
 
-	/**
-	 * Legt den Wert der analytics-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Boolean }
-	 * 
-	 */
-	public void setAnalytics(Boolean value) {
-		this.analytics = value;
-	}
+    /**
+     * 设置analytics属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setAnalytics(Boolean value) {
+        this.analytics = value;
+    }
 
-	/**
-	 * Ruft den Wert der multicast-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link MulticastConfiguration }
-	 * 
-	 */
-	public MulticastConfiguration getMulticast() {
-		return multicast;
-	}
+    /**
+     * 获取multicast属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link MulticastConfiguration }
+     *     
+     */
+    public MulticastConfiguration getMulticast() {
+        return multicast;
+    }
 
-	/**
-	 * Legt den Wert der multicast-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link MulticastConfiguration }
-	 * 
-	 */
-	public void setMulticast(MulticastConfiguration value) {
-		this.multicast = value;
-	}
+    /**
+     * 设置multicast属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MulticastConfiguration }
+     *     
+     */
+    public void setMulticast(MulticastConfiguration value) {
+        this.multicast = value;
+    }
 
-	/**
-	 * Ruft den Wert der sessionTimeout-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Duration }
-	 * 
-	 */
-	public Duration getSessionTimeout() {
-		return sessionTimeout;
-	}
+    /**
+     * 获取sessionTimeout属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Duration }
+     *     
+     */
+    public Duration getSessionTimeout() {
+        return sessionTimeout;
+    }
 
-	/**
-	 * Legt den Wert der sessionTimeout-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Duration }
-	 * 
-	 */
-	public void setSessionTimeout(Duration value) {
-		this.sessionTimeout = value;
-	}
+    /**
+     * 设置sessionTimeout属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Duration }
+     *     
+     */
+    public void setSessionTimeout(Duration value) {
+        this.sessionTimeout = value;
+    }
 
-	/**
-	 * Gets the value of the any property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the any property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getAny().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link Element } {@link java.lang.Object }
-	 * 
-	 * 
-	 */
-	public List<java.lang.Object> getAny() {
-		if (any == null) {
-			any = new ArrayList<java.lang.Object>();
-		}
-		return this.any;
-	}
+    /**
+     * Gets the value of the any property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the any property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAny().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link java.lang.Object }
+     * {@link Element }
+     * 
+     * 
+     */
+    public List<java.lang.Object> getAny() {
+        if (any == null) {
+            any = new ArrayList<java.lang.Object>();
+        }
+        return this.any;
+    }
 
-	/**
-	 * Ruft den Wert der analyticsEngineConfiguration-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link AnalyticsEngineConfiguration }
-	 * 
-	 */
-	public AnalyticsEngineConfiguration getAnalyticsEngineConfiguration() {
-		return analyticsEngineConfiguration;
-	}
+    /**
+     * 获取analyticsEngineConfiguration属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link AnalyticsEngineConfiguration }
+     *     
+     */
+    public AnalyticsEngineConfiguration getAnalyticsEngineConfiguration() {
+        return analyticsEngineConfiguration;
+    }
 
-	/**
-	 * Legt den Wert der analyticsEngineConfiguration-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link AnalyticsEngineConfiguration }
-	 * 
-	 */
-	public void setAnalyticsEngineConfiguration(AnalyticsEngineConfiguration value) {
-		this.analyticsEngineConfiguration = value;
-	}
+    /**
+     * 设置analyticsEngineConfiguration属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AnalyticsEngineConfiguration }
+     *     
+     */
+    public void setAnalyticsEngineConfiguration(AnalyticsEngineConfiguration value) {
+        this.analyticsEngineConfiguration = value;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link MetadataConfigurationExtension }
-	 * 
-	 */
-	public MetadataConfigurationExtension getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link MetadataConfigurationExtension }
+     *     
+     */
+    public MetadataConfigurationExtension getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link MetadataConfigurationExtension }
-	 * 
-	 */
-	public void setExtension(MetadataConfigurationExtension value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MetadataConfigurationExtension }
+     *     
+     */
+    public void setExtension(MetadataConfigurationExtension value) {
+        this.extension = value;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * 获取compressionType属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCompressionType() {
+        return compressionType;
+    }
+
+    /**
+     * 设置compressionType属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCompressionType(String value) {
+        this.compressionType = value;
+    }
+
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

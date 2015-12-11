@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -16,162 +17,177 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import org.w3c.dom.Element;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 NetworkInterfaceExtension complex type.
+ * <p>NetworkInterfaceExtension complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="NetworkInterfaceExtension">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="InterfaceType" type="{http://www.onvif.org/ver10/schema}IANA-IfTypes"/>
- *         <element name="Dot3" type="{http://www.onvif.org/ver10/schema}Dot3Configuration" maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="Dot11" type="{http://www.onvif.org/ver10/schema}Dot11Configuration" maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="Extension" type="{http://www.onvif.org/ver10/schema}NetworkInterfaceExtension2" minOccurs="0"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="NetworkInterfaceExtension"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;any processContents='lax' namespace='##other' maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="InterfaceType" type="{http://www.onvif.org/ver10/schema}IANA-IfTypes"/&gt;
+ *         &lt;element name="Dot3" type="{http://www.onvif.org/ver10/schema}Dot3Configuration" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="Dot11" type="{http://www.onvif.org/ver10/schema}Dot11Configuration" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="Extension" type="{http://www.onvif.org/ver10/schema}NetworkInterfaceExtension2" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkInterfaceExtension", propOrder = { "any", "interfaceType", "dot3", "dot11", "extension" })
+@XmlType(name = "NetworkInterfaceExtension", propOrder = {
+    "any",
+    "interfaceType",
+    "dot3",
+    "dot11",
+    "extension"
+})
 public class NetworkInterfaceExtension {
 
-	@XmlAnyElement(lax = true)
-	protected List<java.lang.Object> any;
-	@XmlElement(name = "InterfaceType")
-	protected int interfaceType;
-	@XmlElement(name = "Dot3")
-	protected List<Dot3Configuration> dot3;
-	@XmlElement(name = "Dot11")
-	protected List<Dot11Configuration> dot11;
-	@XmlElement(name = "Extension")
-	protected NetworkInterfaceExtension2 extension;
+    @XmlAnyElement(lax = true)
+    protected List<java.lang.Object> any;
+    @XmlElement(name = "InterfaceType")
+    protected int interfaceType;
+    @XmlElement(name = "Dot3")
+    protected List<Dot3Configuration> dot3;
+    @XmlElement(name = "Dot11")
+    protected List<Dot11Configuration> dot11;
+    @XmlElement(name = "Extension")
+    protected NetworkInterfaceExtension2 extension;
 
-	/**
-	 * Gets the value of the any property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the any property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getAny().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link Element } {@link java.lang.Object }
-	 * 
-	 * 
-	 */
-	public List<java.lang.Object> getAny() {
-		if (any == null) {
-			any = new ArrayList<java.lang.Object>();
-		}
-		return this.any;
-	}
+    /**
+     * Gets the value of the any property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the any property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAny().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link java.lang.Object }
+     * {@link Element }
+     * 
+     * 
+     */
+    public List<java.lang.Object> getAny() {
+        if (any == null) {
+            any = new ArrayList<java.lang.Object>();
+        }
+        return this.any;
+    }
 
-	/**
-	 * Ruft den Wert der interfaceType-Eigenschaft ab.
-	 * 
-	 */
-	public int getInterfaceType() {
-		return interfaceType;
-	}
+    /**
+     * 获取interfaceType属性的值。
+     * 
+     */
+    public int getInterfaceType() {
+        return interfaceType;
+    }
 
-	/**
-	 * Legt den Wert der interfaceType-Eigenschaft fest.
-	 * 
-	 */
-	public void setInterfaceType(int value) {
-		this.interfaceType = value;
-	}
+    /**
+     * 设置interfaceType属性的值。
+     * 
+     */
+    public void setInterfaceType(int value) {
+        this.interfaceType = value;
+    }
 
-	/**
-	 * Gets the value of the dot3 property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the dot3 property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getDot3().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link Dot3Configuration }
-	 * 
-	 * 
-	 */
-	public List<Dot3Configuration> getDot3() {
-		if (dot3 == null) {
-			dot3 = new ArrayList<Dot3Configuration>();
-		}
-		return this.dot3;
-	}
+    /**
+     * Gets the value of the dot3 property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the dot3 property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getDot3().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Dot3Configuration }
+     * 
+     * 
+     */
+    public List<Dot3Configuration> getDot3() {
+        if (dot3 == null) {
+            dot3 = new ArrayList<Dot3Configuration>();
+        }
+        return this.dot3;
+    }
 
-	/**
-	 * Gets the value of the dot11 property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the dot11 property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getDot11().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link Dot11Configuration }
-	 * 
-	 * 
-	 */
-	public List<Dot11Configuration> getDot11() {
-		if (dot11 == null) {
-			dot11 = new ArrayList<Dot11Configuration>();
-		}
-		return this.dot11;
-	}
+    /**
+     * Gets the value of the dot11 property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the dot11 property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getDot11().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Dot11Configuration }
+     * 
+     * 
+     */
+    public List<Dot11Configuration> getDot11() {
+        if (dot11 == null) {
+            dot11 = new ArrayList<Dot11Configuration>();
+        }
+        return this.dot11;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link NetworkInterfaceExtension2 }
-	 * 
-	 */
-	public NetworkInterfaceExtension2 getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link NetworkInterfaceExtension2 }
+     *     
+     */
+    public NetworkInterfaceExtension2 getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link NetworkInterfaceExtension2 }
-	 * 
-	 */
-	public void setExtension(NetworkInterfaceExtension2 value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link NetworkInterfaceExtension2 }
+     *     
+     */
+    public void setExtension(NetworkInterfaceExtension2 value) {
+        this.extension = value;
+    }
 
 }

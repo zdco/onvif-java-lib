@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -17,97 +18,107 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
+
 /**
  * The value range of "Transparent" could be defined by vendors only should follow this rule: the minimum value means non-transparent and the maximum value maens fully transparent.
  * 
- * <p>
- * Java-Klasse f锟絩 OSDColor complex type.
+ * <p>OSDColor complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="OSDColor">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="Color" type="{http://www.onvif.org/ver10/schema}Color"/>
- *       </sequence>
- *       <attribute name="Transparent" type="{http://www.w3.org/2001/XMLSchema}int" />
- *       <anyAttribute processContents='lax'/>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="OSDColor"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Color" type="{http://www.onvif.org/ver10/schema}Color"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="Transparent" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OSDColor", propOrder = { "color" })
+@XmlType(name = "OSDColor", propOrder = {
+    "color"
+})
 public class OSDColor {
 
-	@XmlElement(name = "Color", required = true)
-	protected Color color;
-	@XmlAttribute(name = "Transparent")
-	protected Integer transparent;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "Color", required = true)
+    protected Color color;
+    @XmlAttribute(name = "Transparent")
+    protected Integer transparent;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der color-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Color }
-	 * 
-	 */
-	public Color getColor() {
-		return color;
-	}
+    /**
+     * 获取color属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Color }
+     *     
+     */
+    public Color getColor() {
+        return color;
+    }
 
-	/**
-	 * Legt den Wert der color-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Color }
-	 * 
-	 */
-	public void setColor(Color value) {
-		this.color = value;
-	}
+    /**
+     * 设置color属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Color }
+     *     
+     */
+    public void setColor(Color value) {
+        this.color = value;
+    }
 
-	/**
-	 * Ruft den Wert der transparent-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Integer }
-	 * 
-	 */
-	public Integer getTransparent() {
-		return transparent;
-	}
+    /**
+     * 获取transparent属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getTransparent() {
+        return transparent;
+    }
 
-	/**
-	 * Legt den Wert der transparent-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Integer }
-	 * 
-	 */
-	public void setTransparent(Integer value) {
-		this.transparent = value;
-	}
+    /**
+     * 设置transparent属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setTransparent(Integer value) {
+        this.transparent = value;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

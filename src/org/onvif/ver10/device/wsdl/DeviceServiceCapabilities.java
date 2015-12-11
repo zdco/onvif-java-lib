@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:30:43 PM CST 
 //
+
 
 package org.onvif.ver10.device.wsdl;
 
@@ -12,125 +13,141 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 DeviceServiceCapabilities complex type.
+ * <p>DeviceServiceCapabilities complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="DeviceServiceCapabilities">
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="Network" type="{http://www.onvif.org/ver10/device/wsdl}NetworkCapabilities"/>
- *         <element name="Security" type="{http://www.onvif.org/ver10/device/wsdl}SecurityCapabilities"/>
- *         <element name="System" type="{http://www.onvif.org/ver10/device/wsdl}SystemCapabilities"/>
- *         <element name="Misc" type="{http://www.onvif.org/ver10/device/wsdl}MiscCapabilities" minOccurs="0"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="DeviceServiceCapabilities"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Network" type="{http://www.onvif.org/ver10/device/wsdl}NetworkCapabilities"/&gt;
+ *         &lt;element name="Security" type="{http://www.onvif.org/ver10/device/wsdl}SecurityCapabilities"/&gt;
+ *         &lt;element name="System" type="{http://www.onvif.org/ver10/device/wsdl}SystemCapabilities"/&gt;
+ *         &lt;element name="Misc" type="{http://www.onvif.org/ver10/device/wsdl}MiscCapabilities" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DeviceServiceCapabilities", propOrder = { "network", "security", "system", "misc" })
+@XmlType(name = "DeviceServiceCapabilities", propOrder = {
+    "network",
+    "security",
+    "system",
+    "misc"
+})
 public class DeviceServiceCapabilities {
 
-	@XmlElement(name = "Network", required = true)
-	protected NetworkCapabilities network;
-	@XmlElement(name = "Security", required = true)
-	protected SecurityCapabilities security;
-	@XmlElement(name = "System", required = true)
-	protected SystemCapabilities system;
-	@XmlElement(name = "Misc")
-	protected MiscCapabilities misc;
+    @XmlElement(name = "Network", required = true)
+    protected NetworkCapabilities network;
+    @XmlElement(name = "Security", required = true)
+    protected SecurityCapabilities security;
+    @XmlElement(name = "System", required = true)
+    protected SystemCapabilities system;
+    @XmlElement(name = "Misc")
+    protected MiscCapabilities misc;
 
-	/**
-	 * Ruft den Wert der network-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link NetworkCapabilities }
-	 * 
-	 */
-	public NetworkCapabilities getNetwork() {
-		return network;
-	}
+    /**
+     * 获取network属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link NetworkCapabilities }
+     *     
+     */
+    public NetworkCapabilities getNetwork() {
+        return network;
+    }
 
-	/**
-	 * Legt den Wert der network-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link NetworkCapabilities }
-	 * 
-	 */
-	public void setNetwork(NetworkCapabilities value) {
-		this.network = value;
-	}
+    /**
+     * 设置network属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link NetworkCapabilities }
+     *     
+     */
+    public void setNetwork(NetworkCapabilities value) {
+        this.network = value;
+    }
 
-	/**
-	 * Ruft den Wert der security-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link SecurityCapabilities }
-	 * 
-	 */
-	public SecurityCapabilities getSecurity() {
-		return security;
-	}
+    /**
+     * 获取security属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link SecurityCapabilities }
+     *     
+     */
+    public SecurityCapabilities getSecurity() {
+        return security;
+    }
 
-	/**
-	 * Legt den Wert der security-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link SecurityCapabilities }
-	 * 
-	 */
-	public void setSecurity(SecurityCapabilities value) {
-		this.security = value;
-	}
+    /**
+     * 设置security属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SecurityCapabilities }
+     *     
+     */
+    public void setSecurity(SecurityCapabilities value) {
+        this.security = value;
+    }
 
-	/**
-	 * Ruft den Wert der system-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link SystemCapabilities }
-	 * 
-	 */
-	public SystemCapabilities getSystem() {
-		return system;
-	}
+    /**
+     * 获取system属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link SystemCapabilities }
+     *     
+     */
+    public SystemCapabilities getSystem() {
+        return system;
+    }
 
-	/**
-	 * Legt den Wert der system-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link SystemCapabilities }
-	 * 
-	 */
-	public void setSystem(SystemCapabilities value) {
-		this.system = value;
-	}
+    /**
+     * 设置system属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SystemCapabilities }
+     *     
+     */
+    public void setSystem(SystemCapabilities value) {
+        this.system = value;
+    }
 
-	/**
-	 * Ruft den Wert der misc-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link MiscCapabilities }
-	 * 
-	 */
-	public MiscCapabilities getMisc() {
-		return misc;
-	}
+    /**
+     * 获取misc属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link MiscCapabilities }
+     *     
+     */
+    public MiscCapabilities getMisc() {
+        return misc;
+    }
 
-	/**
-	 * Legt den Wert der misc-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link MiscCapabilities }
-	 * 
-	 */
-	public void setMisc(MiscCapabilities value) {
-		this.misc = value;
-	}
+    /**
+     * 设置misc属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MiscCapabilities }
+     *     
+     */
+    public void setMisc(MiscCapabilities value) {
+        this.misc = value;
+    }
 
 }

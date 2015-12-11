@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:30:43 PM CST 
 //
+
 
 package org.onvif.ver10.device.wsdl;
 
@@ -13,150 +14,170 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 anonymous complex type.
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType>
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="Manufacturer" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         <element name="Model" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         <element name="FirmwareVersion" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         <element name="SerialNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         <element name="HardwareId" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Manufacturer" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="Model" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="FirmwareVersion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="SerialNumber" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="HardwareId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "manufacturer", "model", "firmwareVersion", "serialNumber", "hardwareId" })
+@XmlType(name = "", propOrder = {
+    "manufacturer",
+    "model",
+    "firmwareVersion",
+    "serialNumber",
+    "hardwareId"
+})
 @XmlRootElement(name = "GetDeviceInformationResponse")
 public class GetDeviceInformationResponse {
 
-	@XmlElement(name = "Manufacturer", required = true)
-	protected String manufacturer;
-	@XmlElement(name = "Model", required = true)
-	protected String model;
-	@XmlElement(name = "FirmwareVersion", required = true)
-	protected String firmwareVersion;
-	@XmlElement(name = "SerialNumber", required = true)
-	protected String serialNumber;
-	@XmlElement(name = "HardwareId", required = true)
-	protected String hardwareId;
+    @XmlElement(name = "Manufacturer", required = true)
+    protected String manufacturer;
+    @XmlElement(name = "Model", required = true)
+    protected String model;
+    @XmlElement(name = "FirmwareVersion", required = true)
+    protected String firmwareVersion;
+    @XmlElement(name = "SerialNumber", required = true)
+    protected String serialNumber;
+    @XmlElement(name = "HardwareId", required = true)
+    protected String hardwareId;
 
-	/**
-	 * Ruft den Wert der manufacturer-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getManufacturer() {
-		return manufacturer;
-	}
+    /**
+     * 获取manufacturer属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getManufacturer() {
+        return manufacturer;
+    }
 
-	/**
-	 * Legt den Wert der manufacturer-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setManufacturer(String value) {
-		this.manufacturer = value;
-	}
+    /**
+     * 设置manufacturer属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setManufacturer(String value) {
+        this.manufacturer = value;
+    }
 
-	/**
-	 * Ruft den Wert der model-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getModel() {
-		return model;
-	}
+    /**
+     * 获取model属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getModel() {
+        return model;
+    }
 
-	/**
-	 * Legt den Wert der model-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setModel(String value) {
-		this.model = value;
-	}
+    /**
+     * 设置model属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setModel(String value) {
+        this.model = value;
+    }
 
-	/**
-	 * Ruft den Wert der firmwareVersion-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getFirmwareVersion() {
-		return firmwareVersion;
-	}
+    /**
+     * 获取firmwareVersion属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFirmwareVersion() {
+        return firmwareVersion;
+    }
 
-	/**
-	 * Legt den Wert der firmwareVersion-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setFirmwareVersion(String value) {
-		this.firmwareVersion = value;
-	}
+    /**
+     * 设置firmwareVersion属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFirmwareVersion(String value) {
+        this.firmwareVersion = value;
+    }
 
-	/**
-	 * Ruft den Wert der serialNumber-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getSerialNumber() {
-		return serialNumber;
-	}
+    /**
+     * 获取serialNumber属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getSerialNumber() {
+        return serialNumber;
+    }
 
-	/**
-	 * Legt den Wert der serialNumber-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setSerialNumber(String value) {
-		this.serialNumber = value;
-	}
+    /**
+     * 设置serialNumber属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSerialNumber(String value) {
+        this.serialNumber = value;
+    }
 
-	/**
-	 * Ruft den Wert der hardwareId-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getHardwareId() {
-		return hardwareId;
-	}
+    /**
+     * 获取hardwareId属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getHardwareId() {
+        return hardwareId;
+    }
 
-	/**
-	 * Legt den Wert der hardwareId-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setHardwareId(String value) {
-		this.hardwareId = value;
-	}
+    /**
+     * 设置hardwareId属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setHardwareId(String value) {
+        this.hardwareId = value;
+    }
 
 }

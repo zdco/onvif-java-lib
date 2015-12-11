@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.oasis_open.docs.wsn.b_2;
 
@@ -16,127 +17,143 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 import org.w3._2005._08.addressing.EndpointReferenceType;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 anonymous complex type.
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType>
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element ref="{http://docs.oasis-open.org/wsn/b-2}ConsumerReference"/>
- *         <element ref="{http://docs.oasis-open.org/wsn/b-2}Filter" minOccurs="0"/>
- *         <element ref="{http://docs.oasis-open.org/wsn/b-2}SubscriptionPolicy" minOccurs="0"/>
- *         <element ref="{http://docs.oasis-open.org/wsn/b-2}CreationTime" minOccurs="0"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://docs.oasis-open.org/wsn/b-2}ConsumerReference"/&gt;
+ *         &lt;element ref="{http://docs.oasis-open.org/wsn/b-2}Filter" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://docs.oasis-open.org/wsn/b-2}SubscriptionPolicy" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://docs.oasis-open.org/wsn/b-2}CreationTime" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "consumerReference", "filter", "subscriptionPolicy", "creationTime" })
+@XmlType(name = "", propOrder = {
+    "consumerReference",
+    "filter",
+    "subscriptionPolicy",
+    "creationTime"
+})
 @XmlRootElement(name = "SubscriptionManagerRP")
 public class SubscriptionManagerRP {
 
-	@XmlElement(name = "ConsumerReference", required = true)
-	protected EndpointReferenceType consumerReference;
-	@XmlElement(name = "Filter")
-	protected FilterType filter;
-	@XmlElement(name = "SubscriptionPolicy")
-	protected SubscriptionPolicyType subscriptionPolicy;
-	@XmlElement(name = "CreationTime")
-	@XmlSchemaType(name = "dateTime")
-	protected XMLGregorianCalendar creationTime;
+    @XmlElement(name = "ConsumerReference", required = true)
+    protected EndpointReferenceType consumerReference;
+    @XmlElement(name = "Filter")
+    protected FilterType filter;
+    @XmlElement(name = "SubscriptionPolicy")
+    protected SubscriptionPolicyType subscriptionPolicy;
+    @XmlElement(name = "CreationTime")
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar creationTime;
 
-	/**
-	 * Ruft den Wert der consumerReference-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link EndpointReferenceType }
-	 * 
-	 */
-	public EndpointReferenceType getConsumerReference() {
-		return consumerReference;
-	}
+    /**
+     * 获取consumerReference属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link EndpointReferenceType }
+     *     
+     */
+    public EndpointReferenceType getConsumerReference() {
+        return consumerReference;
+    }
 
-	/**
-	 * Legt den Wert der consumerReference-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link EndpointReferenceType }
-	 * 
-	 */
-	public void setConsumerReference(EndpointReferenceType value) {
-		this.consumerReference = value;
-	}
+    /**
+     * 设置consumerReference属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link EndpointReferenceType }
+     *     
+     */
+    public void setConsumerReference(EndpointReferenceType value) {
+        this.consumerReference = value;
+    }
 
-	/**
-	 * Ruft den Wert der filter-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FilterType }
-	 * 
-	 */
-	public FilterType getFilter() {
-		return filter;
-	}
+    /**
+     * 获取filter属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link FilterType }
+     *     
+     */
+    public FilterType getFilter() {
+        return filter;
+    }
 
-	/**
-	 * Legt den Wert der filter-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FilterType }
-	 * 
-	 */
-	public void setFilter(FilterType value) {
-		this.filter = value;
-	}
+    /**
+     * 设置filter属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FilterType }
+     *     
+     */
+    public void setFilter(FilterType value) {
+        this.filter = value;
+    }
 
-	/**
-	 * Ruft den Wert der subscriptionPolicy-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link SubscriptionPolicyType }
-	 * 
-	 */
-	public SubscriptionPolicyType getSubscriptionPolicy() {
-		return subscriptionPolicy;
-	}
+    /**
+     * 获取subscriptionPolicy属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link SubscriptionPolicyType }
+     *     
+     */
+    public SubscriptionPolicyType getSubscriptionPolicy() {
+        return subscriptionPolicy;
+    }
 
-	/**
-	 * Legt den Wert der subscriptionPolicy-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link SubscriptionPolicyType }
-	 * 
-	 */
-	public void setSubscriptionPolicy(SubscriptionPolicyType value) {
-		this.subscriptionPolicy = value;
-	}
+    /**
+     * 设置subscriptionPolicy属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SubscriptionPolicyType }
+     *     
+     */
+    public void setSubscriptionPolicy(SubscriptionPolicyType value) {
+        this.subscriptionPolicy = value;
+    }
 
-	/**
-	 * Ruft den Wert der creationTime-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link XMLGregorianCalendar }
-	 * 
-	 */
-	public XMLGregorianCalendar getCreationTime() {
-		return creationTime;
-	}
+    /**
+     * 获取creationTime属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getCreationTime() {
+        return creationTime;
+    }
 
-	/**
-	 * Legt den Wert der creationTime-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link XMLGregorianCalendar }
-	 * 
-	 */
-	public void setCreationTime(XMLGregorianCalendar value) {
-		this.creationTime = value;
-	}
+    /**
+     * 设置creationTime属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setCreationTime(XMLGregorianCalendar value) {
+        this.creationTime = value;
+    }
 
 }

@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:30:43 PM CST 
 //
+
 
 package org.onvif.ver10.device.wsdl;
 
@@ -19,195 +20,215 @@ import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.SystemLogUriList;
 import org.w3c.dom.Element;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 anonymous complex type.
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType>
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="SystemLogUris" type="{http://www.onvif.org/ver10/schema}SystemLogUriList" minOccurs="0"/>
- *         <element name="SupportInfoUri" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *         <element name="SystemBackupUri" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *         <element name="Extension" minOccurs="0">
- *           <complexType>
- *             <complexContent>
- *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 <sequence>
- *                   <any processContents='lax' maxOccurs="unbounded" minOccurs="0"/>
- *                 </sequence>
- *               </restriction>
- *             </complexContent>
- *           </complexType>
- *         </element>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="SystemLogUris" type="{http://www.onvif.org/ver10/schema}SystemLogUriList" minOccurs="0"/&gt;
+ *         &lt;element name="SupportInfoUri" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
+ *         &lt;element name="SystemBackupUri" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
+ *         &lt;element name="Extension" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;any processContents='lax' maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "systemLogUris", "supportInfoUri", "systemBackupUri", "extension" })
+@XmlType(name = "", propOrder = {
+    "systemLogUris",
+    "supportInfoUri",
+    "systemBackupUri",
+    "extension"
+})
 @XmlRootElement(name = "GetSystemUrisResponse")
 public class GetSystemUrisResponse {
 
-	@XmlElement(name = "SystemLogUris")
-	protected SystemLogUriList systemLogUris;
-	@XmlElement(name = "SupportInfoUri")
-	@XmlSchemaType(name = "anyURI")
-	protected String supportInfoUri;
-	@XmlElement(name = "SystemBackupUri")
-	@XmlSchemaType(name = "anyURI")
-	protected String systemBackupUri;
-	@XmlElement(name = "Extension")
-	protected GetSystemUrisResponse.Extension extension;
+    @XmlElement(name = "SystemLogUris")
+    protected SystemLogUriList systemLogUris;
+    @XmlElement(name = "SupportInfoUri")
+    @XmlSchemaType(name = "anyURI")
+    protected String supportInfoUri;
+    @XmlElement(name = "SystemBackupUri")
+    @XmlSchemaType(name = "anyURI")
+    protected String systemBackupUri;
+    @XmlElement(name = "Extension")
+    protected GetSystemUrisResponse.Extension extension;
 
-	/**
-	 * Ruft den Wert der systemLogUris-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link SystemLogUriList }
-	 * 
-	 */
-	public SystemLogUriList getSystemLogUris() {
-		return systemLogUris;
-	}
+    /**
+     * 获取systemLogUris属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link SystemLogUriList }
+     *     
+     */
+    public SystemLogUriList getSystemLogUris() {
+        return systemLogUris;
+    }
 
-	/**
-	 * Legt den Wert der systemLogUris-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link SystemLogUriList }
-	 * 
-	 */
-	public void setSystemLogUris(SystemLogUriList value) {
-		this.systemLogUris = value;
-	}
+    /**
+     * 设置systemLogUris属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SystemLogUriList }
+     *     
+     */
+    public void setSystemLogUris(SystemLogUriList value) {
+        this.systemLogUris = value;
+    }
 
-	/**
-	 * Ruft den Wert der supportInfoUri-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getSupportInfoUri() {
-		return supportInfoUri;
-	}
+    /**
+     * 获取supportInfoUri属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getSupportInfoUri() {
+        return supportInfoUri;
+    }
 
-	/**
-	 * Legt den Wert der supportInfoUri-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setSupportInfoUri(String value) {
-		this.supportInfoUri = value;
-	}
+    /**
+     * 设置supportInfoUri属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSupportInfoUri(String value) {
+        this.supportInfoUri = value;
+    }
 
-	/**
-	 * Ruft den Wert der systemBackupUri-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getSystemBackupUri() {
-		return systemBackupUri;
-	}
+    /**
+     * 获取systemBackupUri属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getSystemBackupUri() {
+        return systemBackupUri;
+    }
 
-	/**
-	 * Legt den Wert der systemBackupUri-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setSystemBackupUri(String value) {
-		this.systemBackupUri = value;
-	}
+    /**
+     * 设置systemBackupUri属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSystemBackupUri(String value) {
+        this.systemBackupUri = value;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link GetSystemUrisResponse.Extension }
-	 * 
-	 */
-	public GetSystemUrisResponse.Extension getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link GetSystemUrisResponse.Extension }
+     *     
+     */
+    public GetSystemUrisResponse.Extension getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link GetSystemUrisResponse.Extension }
-	 * 
-	 */
-	public void setExtension(GetSystemUrisResponse.Extension value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link GetSystemUrisResponse.Extension }
+     *     
+     */
+    public void setExtension(GetSystemUrisResponse.Extension value) {
+        this.extension = value;
+    }
 
-	/**
-	 * <p>
-	 * Java-Klasse f锟絩 anonymous complex type.
-	 * 
-	 * <p>
-	 * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
-	 * 
-	 * <pre>
-	 * <complexType>
-	 *   <complexContent>
-	 *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-	 *       <sequence>
-	 *         <any processContents='lax' maxOccurs="unbounded" minOccurs="0"/>
-	 *       </sequence>
-	 *     </restriction>
-	 *   </complexContent>
-	 * </complexType>
-	 * </pre>
-	 * 
-	 * 
-	 */
-	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlType(name = "", propOrder = { "any" })
-	public static class Extension {
 
-		@XmlAnyElement(lax = true)
-		protected List<Object> any;
+    /**
+     * <p>anonymous complex type的 Java 类。
+     * 
+     * <p>以下模式片段指定包含在此类中的预期内容。
+     * 
+     * <pre>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;any processContents='lax' maxOccurs="unbounded" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * </pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "any"
+    })
+    public static class Extension {
 
-		/**
-		 * Gets the value of the any property.
-		 * 
-		 * <p>
-		 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB
-		 * object. This is why there is not a <CODE>set</CODE> method for the any property.
-		 * 
-		 * <p>
-		 * For example, to add a new item, do as follows:
-		 * 
-		 * <pre>
-		 * getAny().add(newItem);
-		 * </pre>
-		 * 
-		 * 
-		 * <p>
-		 * Objects of the following type(s) are allowed in the list {@link Element } {@link Object }
-		 * 
-		 * 
-		 */
-		public List<Object> getAny() {
-			if (any == null) {
-				any = new ArrayList<Object>();
-			}
-			return this.any;
-		}
+        @XmlAnyElement(lax = true)
+        protected List<Object> any;
 
-	}
+        /**
+         * Gets the value of the any property.
+         * 
+         * <p>
+         * This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the any property.
+         * 
+         * <p>
+         * For example, to add a new item, do as follows:
+         * <pre>
+         *    getAny().add(newItem);
+         * </pre>
+         * 
+         * 
+         * <p>
+         * Objects of the following type(s) are allowed in the list
+         * {@link Object }
+         * {@link Element }
+         * 
+         * 
+         */
+        public List<Object> getAny() {
+            if (any == null) {
+                any = new ArrayList<Object>();
+            }
+            return this.any;
+        }
+
+    }
 
 }

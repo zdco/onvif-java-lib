@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.04 um 12:22:03 PM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:42:49 PM CST 
 //
+
 
 package org.onvif.ver10.schema;
 
@@ -19,211 +20,236 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 PTZNode complex type.
+ * <p>PTZNode complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType name="PTZNode">
- *   <complexContent>
- *     <extension base="{http://www.onvif.org/ver10/schema}DeviceEntity">
- *       <sequence>
- *         <element name="Name" type="{http://www.onvif.org/ver10/schema}Name" minOccurs="0"/>
- *         <element name="SupportedPTZSpaces" type="{http://www.onvif.org/ver10/schema}PTZSpaces"/>
- *         <element name="MaximumNumberOfPresets" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         <element name="HomeSupported" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         <element name="AuxiliaryCommands" type="{http://www.onvif.org/ver10/schema}AuxiliaryData" maxOccurs="unbounded" minOccurs="0"/>
- *         <element name="Extension" type="{http://www.onvif.org/ver10/schema}PTZNodeExtension" minOccurs="0"/>
- *       </sequence>
- *       <attribute name="FixedHomePosition" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       <anyAttribute processContents='lax'/>
- *     </extension>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType name="PTZNode"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.onvif.org/ver10/schema}DeviceEntity"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Name" type="{http://www.onvif.org/ver10/schema}Name" minOccurs="0"/&gt;
+ *         &lt;element name="SupportedPTZSpaces" type="{http://www.onvif.org/ver10/schema}PTZSpaces"/&gt;
+ *         &lt;element name="MaximumNumberOfPresets" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="HomeSupported" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="AuxiliaryCommands" type="{http://www.onvif.org/ver10/schema}AuxiliaryData" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="Extension" type="{http://www.onvif.org/ver10/schema}PTZNodeExtension" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="FixedHomePosition" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;anyAttribute processContents='lax'/&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PTZNode", propOrder = { "name", "supportedPTZSpaces", "maximumNumberOfPresets", "homeSupported", "auxiliaryCommands", "extension" })
-public class PTZNode extends DeviceEntity {
+@XmlType(name = "PTZNode", propOrder = {
+    "name",
+    "supportedPTZSpaces",
+    "maximumNumberOfPresets",
+    "homeSupported",
+    "auxiliaryCommands",
+    "extension"
+})
+public class PTZNode
+    extends DeviceEntity
+{
 
-	@XmlElement(name = "Name")
-	protected String name;
-	@XmlElement(name = "SupportedPTZSpaces", required = true)
-	protected PTZSpaces supportedPTZSpaces;
-	@XmlElement(name = "MaximumNumberOfPresets")
-	protected int maximumNumberOfPresets;
-	@XmlElement(name = "HomeSupported")
-	protected boolean homeSupported;
-	@XmlElement(name = "AuxiliaryCommands")
-	protected List<String> auxiliaryCommands;
-	@XmlElement(name = "Extension")
-	protected PTZNodeExtension extension;
-	@XmlAttribute(name = "FixedHomePosition")
-	protected Boolean fixedHomePosition;
-	@XmlAnyAttribute
-	private Map<QName, String> otherAttributes = new HashMap<QName, String>();
+    @XmlElement(name = "Name")
+    protected String name;
+    @XmlElement(name = "SupportedPTZSpaces", required = true)
+    protected PTZSpaces supportedPTZSpaces;
+    @XmlElement(name = "MaximumNumberOfPresets")
+    protected int maximumNumberOfPresets;
+    @XmlElement(name = "HomeSupported")
+    protected boolean homeSupported;
+    @XmlElement(name = "AuxiliaryCommands")
+    protected List<String> auxiliaryCommands;
+    @XmlElement(name = "Extension")
+    protected PTZNodeExtension extension;
+    @XmlAttribute(name = "FixedHomePosition")
+    protected Boolean fixedHomePosition;
+    @XmlAnyAttribute
+    private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
-	/**
-	 * Ruft den Wert der name-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getName() {
-		return name;
-	}
+    /**
+     * 获取name属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getName() {
+        return name;
+    }
 
-	/**
-	 * Legt den Wert der name-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setName(String value) {
-		this.name = value;
-	}
+    /**
+     * 设置name属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setName(String value) {
+        this.name = value;
+    }
 
-	/**
-	 * Ruft den Wert der supportedPTZSpaces-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link PTZSpaces }
-	 * 
-	 */
-	public PTZSpaces getSupportedPTZSpaces() {
-		return supportedPTZSpaces;
-	}
+    /**
+     * 获取supportedPTZSpaces属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link PTZSpaces }
+     *     
+     */
+    public PTZSpaces getSupportedPTZSpaces() {
+        return supportedPTZSpaces;
+    }
 
-	/**
-	 * Legt den Wert der supportedPTZSpaces-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link PTZSpaces }
-	 * 
-	 */
-	public void setSupportedPTZSpaces(PTZSpaces value) {
-		this.supportedPTZSpaces = value;
-	}
+    /**
+     * 设置supportedPTZSpaces属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PTZSpaces }
+     *     
+     */
+    public void setSupportedPTZSpaces(PTZSpaces value) {
+        this.supportedPTZSpaces = value;
+    }
 
-	/**
-	 * Ruft den Wert der maximumNumberOfPresets-Eigenschaft ab.
-	 * 
-	 */
-	public int getMaximumNumberOfPresets() {
-		return maximumNumberOfPresets;
-	}
+    /**
+     * 获取maximumNumberOfPresets属性的值。
+     * 
+     */
+    public int getMaximumNumberOfPresets() {
+        return maximumNumberOfPresets;
+    }
 
-	/**
-	 * Legt den Wert der maximumNumberOfPresets-Eigenschaft fest.
-	 * 
-	 */
-	public void setMaximumNumberOfPresets(int value) {
-		this.maximumNumberOfPresets = value;
-	}
+    /**
+     * 设置maximumNumberOfPresets属性的值。
+     * 
+     */
+    public void setMaximumNumberOfPresets(int value) {
+        this.maximumNumberOfPresets = value;
+    }
 
-	/**
-	 * Ruft den Wert der homeSupported-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isHomeSupported() {
-		return homeSupported;
-	}
+    /**
+     * 获取homeSupported属性的值。
+     * 
+     */
+    public boolean isHomeSupported() {
+        return homeSupported;
+    }
 
-	/**
-	 * Legt den Wert der homeSupported-Eigenschaft fest.
-	 * 
-	 */
-	public void setHomeSupported(boolean value) {
-		this.homeSupported = value;
-	}
+    /**
+     * 设置homeSupported属性的值。
+     * 
+     */
+    public void setHomeSupported(boolean value) {
+        this.homeSupported = value;
+    }
 
-	/**
-	 * Gets the value of the auxiliaryCommands property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be present inside the JAXB object.
-	 * This is why there is not a <CODE>set</CODE> method for the auxiliaryCommands property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getAuxiliaryCommands().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link String }
-	 * 
-	 * 
-	 */
-	public List<String> getAuxiliaryCommands() {
-		if (auxiliaryCommands == null) {
-			auxiliaryCommands = new ArrayList<String>();
-		}
-		return this.auxiliaryCommands;
-	}
+    /**
+     * Gets the value of the auxiliaryCommands property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the auxiliaryCommands property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAuxiliaryCommands().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
+     */
+    public List<String> getAuxiliaryCommands() {
+        if (auxiliaryCommands == null) {
+            auxiliaryCommands = new ArrayList<String>();
+        }
+        return this.auxiliaryCommands;
+    }
 
-	/**
-	 * Ruft den Wert der extension-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link PTZNodeExtension }
-	 * 
-	 */
-	public PTZNodeExtension getExtension() {
-		return extension;
-	}
+    /**
+     * 获取extension属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link PTZNodeExtension }
+     *     
+     */
+    public PTZNodeExtension getExtension() {
+        return extension;
+    }
 
-	/**
-	 * Legt den Wert der extension-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link PTZNodeExtension }
-	 * 
-	 */
-	public void setExtension(PTZNodeExtension value) {
-		this.extension = value;
-	}
+    /**
+     * 设置extension属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PTZNodeExtension }
+     *     
+     */
+    public void setExtension(PTZNodeExtension value) {
+        this.extension = value;
+    }
 
-	/**
-	 * Ruft den Wert der fixedHomePosition-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Boolean }
-	 * 
-	 */
-	public Boolean isFixedHomePosition() {
-		return fixedHomePosition;
-	}
+    /**
+     * 获取fixedHomePosition属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isFixedHomePosition() {
+        return fixedHomePosition;
+    }
 
-	/**
-	 * Legt den Wert der fixedHomePosition-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Boolean }
-	 * 
-	 */
-	public void setFixedHomePosition(Boolean value) {
-		this.fixedHomePosition = value;
-	}
+    /**
+     * 设置fixedHomePosition属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setFixedHomePosition(Boolean value) {
+        this.fixedHomePosition = value;
+    }
 
-	/**
-	 * Gets a map that contains attributes that aren't bound to any typed property on this class.
-	 * 
-	 * <p>
-	 * the map is keyed by the name of the attribute and the value is the string value of the attribute.
-	 * 
-	 * the map returned by this method is live, and you can add new attribute by updating the map directly. Because of this design, there's no setter.
-	 * 
-	 * 
-	 * @return always non-null
-	 */
-	public Map<QName, String> getOtherAttributes() {
-		return otherAttributes;
-	}
+    /**
+     * Gets a map that contains attributes that aren't bound to any typed property on this class.
+     * 
+     * <p>
+     * the map is keyed by the name of the attribute and 
+     * the value is the string value of the attribute.
+     * 
+     * the map returned by this method is live, and you can add new attribute
+     * by updating the map directly. Because of this design, there's no setter.
+     * 
+     * 
+     * @return
+     *     always non-null
+     */
+    public Map<QName, String> getOtherAttributes() {
+        return otherAttributes;
+    }
 
 }

@@ -1,9 +1,10 @@
 //
-// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.5-2 generiert 
-// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 锟絥derungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.02.17 um 11:33:29 AM CET 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2015.12.11 时间 09:39:54 PM CST 
 //
+
 
 package org.onvif.ver20.ptz.wsdl;
 
@@ -14,78 +15,86 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.onvif.ver10.schema.PresetTour;
 
+
 /**
- * <p>
- * Java-Klasse f锟絩 anonymous complex type.
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * <complexType>
- *   <complexContent>
- *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       <sequence>
- *         <element name="ProfileToken" type="{http://www.onvif.org/ver10/schema}ReferenceToken"/>
- *         <element name="PresetTour" type="{http://www.onvif.org/ver10/schema}PresetTour"/>
- *       </sequence>
- *     </restriction>
- *   </complexContent>
- * </complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="ProfileToken" type="{http://www.onvif.org/ver10/schema}ReferenceToken"/&gt;
+ *         &lt;element name="PresetTour" type="{http://www.onvif.org/ver10/schema}PresetTour"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "profileToken", "presetTour" })
+@XmlType(name = "", propOrder = {
+    "profileToken",
+    "presetTour"
+})
 @XmlRootElement(name = "ModifyPresetTour")
 public class ModifyPresetTour {
 
-	@XmlElement(name = "ProfileToken", required = true)
-	protected String profileToken;
-	@XmlElement(name = "PresetTour", required = true)
-	protected PresetTour presetTour;
+    @XmlElement(name = "ProfileToken", required = true)
+    protected String profileToken;
+    @XmlElement(name = "PresetTour", required = true)
+    protected PresetTour presetTour;
 
-	/**
-	 * Ruft den Wert der profileToken-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getProfileToken() {
-		return profileToken;
-	}
+    /**
+     * 获取profileToken属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getProfileToken() {
+        return profileToken;
+    }
 
-	/**
-	 * Legt den Wert der profileToken-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setProfileToken(String value) {
-		this.profileToken = value;
-	}
+    /**
+     * 设置profileToken属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setProfileToken(String value) {
+        this.profileToken = value;
+    }
 
-	/**
-	 * Ruft den Wert der presetTour-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link PresetTour }
-	 * 
-	 */
-	public PresetTour getPresetTour() {
-		return presetTour;
-	}
+    /**
+     * 获取presetTour属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link PresetTour }
+     *     
+     */
+    public PresetTour getPresetTour() {
+        return presetTour;
+    }
 
-	/**
-	 * Legt den Wert der presetTour-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link PresetTour }
-	 * 
-	 */
-	public void setPresetTour(PresetTour value) {
-		this.presetTour = value;
-	}
+    /**
+     * 设置presetTour属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PresetTour }
+     *     
+     */
+    public void setPresetTour(PresetTour value) {
+        this.presetTour = value;
+    }
 
 }
