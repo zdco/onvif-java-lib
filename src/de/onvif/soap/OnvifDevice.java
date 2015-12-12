@@ -173,7 +173,7 @@ public class OnvifDevice {
 			logger.error("Unknown/Not implemented local procotol!");
 		}
 			
-		if (!originalIp.equals(HOST_IP)) {
+		if (!HOST_IP.contains(originalIp)) {
 			isProxy = true;
 		}
 
