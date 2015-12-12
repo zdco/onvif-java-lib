@@ -13,6 +13,8 @@ import org.onvif.ver10.media.wsdl.GetVideoEncoderConfigurationOptions;
 import org.onvif.ver10.media.wsdl.GetVideoEncoderConfigurationOptionsResponse;
 import org.onvif.ver10.media.wsdl.GetVideoSources;
 import org.onvif.ver10.media.wsdl.GetVideoSourcesResponse;
+import org.onvif.ver10.media.wsdl.SetSynchronizationPoint;
+import org.onvif.ver10.media.wsdl.SetSynchronizationPointResponse;
 import org.onvif.ver10.media.wsdl.SetVideoEncoderConfiguration;
 import org.onvif.ver10.media.wsdl.SetVideoEncoderConfigurationResponse;
 import org.onvif.ver10.schema.Profile;
@@ -117,6 +119,26 @@ public class MediaDevices {
 		}
 
 		return onvifDevice.replaceLocalIpWithProxyIp(response.getMediaUri().getUri());
+	}
+	
+	public boolean setSynPoint(String profileToken) {
+		SetSynchronizationPoint request = new SetSynchronizationPoint();
+		SetSynchronizationPointResponse response = new SetSynchronizationPointResponse();
+		
+		request.setProfileToken(profileToken);
+		
+		try {
+			response = (SetSynchronizationPointResponse)soap.createSOAPMediaRequest(request, response, false);
+		} catch (ConnectException | SOAPException e) {
+			e.printStackTrace();
+			return false;
+		}
+		
+		if (response == null) {
+			return false;
+		}
+		
+		return true;
 	}
 
 	public static VideoEncoderConfiguration getVideoEncoderConfiguration(Profile profile) {
