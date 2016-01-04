@@ -11,7 +11,7 @@ import org.me.javawsdiscovery.DeviceDiscovery;
  * @author th
  * @date 2015-06-18
  */
-public class OnfivDiscovery {
+public class OnvifDiscovery {
 	public static List<OnvifPointer> discoverOnvifDevices() {
 		final ArrayList<OnvifPointer> onvifPointers = new ArrayList<>();
 		final Collection<URL> urls = DeviceDiscovery.discoverWsDevicesAsUrls("^http$", ".*onvif.*");
@@ -24,5 +24,14 @@ public class OnfivDiscovery {
 			}
 		}
 		return onvifPointers;
+	}
+	
+	/**
+	 * 探测设备web service地址
+	 * @param deviceIp 设备IP
+	 * @return http://192.168.1.232/onvif/device_service
+	 */
+	public static String probeOnvifDevice(String deviceIp) {
+		return DeviceDiscovery.probeWsDevice(deviceIp);
 	}
 }
