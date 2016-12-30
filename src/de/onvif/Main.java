@@ -75,6 +75,13 @@ public class Main {
 					streamSetup.setTransport(transport);
 					System.out.println("Stream uri:" + cam.getMedia().getStreamUri(cam.getDevices().getProfiles().get(0), streamSetup));
 					break;
+				case "time":
+					System.out.println("Device time:" + cam.getDevices().getDate());
+					break;
+				case "syntime":
+					cam.getDevices().setDate();
+					System.out.println("Set device time!");
+					break;
 				case "info":
 					System.out.println(INFO);
 					break;

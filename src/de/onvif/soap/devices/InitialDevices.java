@@ -24,6 +24,8 @@ import org.onvif.ver10.device.wsdl.GetUsersResponse;
 import org.onvif.ver10.device.wsdl.Service;
 import org.onvif.ver10.device.wsdl.SetHostname;
 import org.onvif.ver10.device.wsdl.SetHostnameResponse;
+import org.onvif.ver10.device.wsdl.SetSystemDateAndTime;
+import org.onvif.ver10.device.wsdl.SetSystemDateAndTimeResponse;
 import org.onvif.ver10.device.wsdl.SystemReboot;
 import org.onvif.ver10.device.wsdl.SystemRebootResponse;
 import org.onvif.ver10.media.wsdl.CreateProfile;
@@ -34,6 +36,7 @@ import org.onvif.ver10.media.wsdl.GetProfiles;
 import org.onvif.ver10.media.wsdl.GetProfilesResponse;
 import org.onvif.ver10.schema.Capabilities;
 import org.onvif.ver10.schema.Date;
+import org.onvif.ver10.schema.DateTime;
 import org.onvif.ver10.schema.Profile;
 import org.onvif.ver10.schema.Scope;
 import org.onvif.ver10.schema.Time;
@@ -58,18 +61,57 @@ public class InitialDevices {
 		GetSystemDateAndTimeResponse response = new GetSystemDateAndTimeResponse();
 
 		try {
-			response = (GetSystemDateAndTimeResponse) soap.createSOAPDeviceRequest(new GetSystemDateAndTime(), response, false);
-		}
-		catch (SOAPException | ConnectException e) {
+			response = (GetSystemDateAndTimeResponse) soap.createSOAPDeviceRequest(new GetSystemDateAndTime(), response,
+					false);
+		} catch (SOAPException | ConnectException e) {
 			e.printStackTrace();
 			return null;
 		}
 
 		Date date = response.getSystemDateAndTime().getUTCDateTime().getDate();
 		Time time = response.getSystemDateAndTime().getUTCDateTime().getTime();
-		cal = new GregorianCalendar(date.getYear(), date.getMonth() - 1, date.getDay(), time.getHour(), time.getMinute(), time.getSecond());
+		cal = new GregorianCalendar(date.getYear(), date.getMonth() - 1, date.getDay(), time.getHour(),
+				time.getMinute(), time.getSecond());
 
 		return cal.getTime();
+	}
+
+	@SuppressWarnings("deprecation")
+	public boolean setDate() {
+		GetSystemDateAndTimeResponse getSystemDateAndTimeResponse = new GetSystemDateAndTimeResponse();
+
+		try {
+			getSystemDateAndTimeResponse = (GetSystemDateAndTimeResponse) soap
+					.createSOAPDeviceRequest(new GetSystemDateAndTime(), getSystemDateAndTimeResponse, false);
+			
+			SetSystemDateAndTime setSystemDateAndTime = new SetSystemDateAndTime();
+			setSystemDateAndTime.setDateTimeType(getSystemDateAndTimeResponse.getSystemDateAndTime().getDateTimeType());
+			DateTime dateTime = new DateTime();
+			Calendar cal = Calendar.getInstance();
+			int zoneOffset = cal.get(java.util.Calendar.ZONE_OFFSET);
+			int dstOffset = cal.get(java.util.Calendar.DST_OFFSET);
+			cal.add(java.util.Calendar.MILLISECOND, -(zoneOffset + dstOffset));
+			Date date = new Date();
+			date.setYear(cal.getTime().getYear() + 1900);
+			date.setMonth(cal.getTime().getMonth() + 1);
+			date.setDay(cal.getTime().getDate());
+			dateTime.setDate(date);
+			Time time = new Time();
+			time.setHour(cal.getTime().getHours());
+			time.setMinute(cal.getTime().getMinutes());
+			time.setSecond(cal.getTime().getSeconds());
+			dateTime.setTime(time);
+			setSystemDateAndTime.setUTCDateTime(dateTime);
+			
+			SetSystemDateAndTimeResponse response = new SetSystemDateAndTimeResponse();
+			response = (SetSystemDateAndTimeResponse) soap.createSOAPDeviceRequest(setSystemDateAndTime, response,
+					true);
+		} catch (SOAPException | ConnectException e) {
+			e.printStackTrace();
+			return false;
+		}
+
+		return true;
 	}
 
 	public GetDeviceInformationResponse getDeviceInformation() {
@@ -77,8 +119,7 @@ public class InitialDevices {
 		GetDeviceInformationResponse response = new GetDeviceInformationResponse();
 		try {
 			response = (GetDeviceInformationResponse) soap.createSOAPDeviceRequest(getHostname, response, true);
-		}
-		catch (SOAPException | ConnectException e) {
+		} catch (SOAPException | ConnectException e) {
 			e.printStackTrace();
 			return null;
 		}
@@ -91,8 +132,7 @@ public class InitialDevices {
 		GetHostnameResponse response = new GetHostnameResponse();
 		try {
 			response = (GetHostnameResponse) soap.createSOAPDeviceRequest(getHostname, response, true);
-		}
-		catch (SOAPException | ConnectException e) {
+		} catch (SOAPException | ConnectException e) {
 			e.printStackTrace();
 			return null;
 		}
@@ -106,8 +146,7 @@ public class InitialDevices {
 		SetHostnameResponse response = new SetHostnameResponse();
 		try {
 			response = (SetHostnameResponse) soap.createSOAPDeviceRequest(setHostname, response, true);
-		}
-		catch (SOAPException | ConnectException e) {
+		} catch (SOAPException | ConnectException e) {
 			e.printStackTrace();
 			return false;
 		}
@@ -120,8 +159,7 @@ public class InitialDevices {
 		GetUsersResponse response = new GetUsersResponse();
 		try {
 			response = (GetUsersResponse) soap.createSOAPDeviceRequest(getUsers, response, true);
-		}
-		catch (SOAPException | ConnectException e) {
+		} catch (SOAPException | ConnectException e) {
 			e.printStackTrace();
 			return null;
 		}
@@ -138,9 +176,9 @@ public class InitialDevices {
 		GetCapabilitiesResponse response = new GetCapabilitiesResponse();
 
 		try {
-			response = (GetCapabilitiesResponse) soap.createSOAPRequest(getCapabilities, response, onvifDevice.getDeviceUri(), false);
-		}
-		catch (SOAPException e) {
+			response = (GetCapabilitiesResponse) soap.createSOAPRequest(getCapabilities, response,
+					onvifDevice.getDeviceUri(), false);
+		} catch (SOAPException e) {
 			throw e;
 		}
 
@@ -157,8 +195,7 @@ public class InitialDevices {
 
 		try {
 			response = (GetProfilesResponse) soap.createSOAPMediaRequest(request, response, true);
-		}
-		catch (SOAPException | ConnectException e) {
+		} catch (SOAPException | ConnectException e) {
 			e.printStackTrace();
 			return null;
 		}
@@ -178,8 +215,7 @@ public class InitialDevices {
 
 		try {
 			response = (GetProfileResponse) soap.createSOAPMediaRequest(request, response, true);
-		}
-		catch (SOAPException | ConnectException e) {
+		} catch (SOAPException | ConnectException e) {
 			e.printStackTrace();
 			return null;
 		}
@@ -199,8 +235,7 @@ public class InitialDevices {
 
 		try {
 			response = (CreateProfileResponse) soap.createSOAPMediaRequest(request, response, true);
-		}
-		catch (SOAPException | ConnectException e) {
+		} catch (SOAPException | ConnectException e) {
 			e.printStackTrace();
 			return null;
 		}
@@ -220,8 +255,7 @@ public class InitialDevices {
 
 		try {
 			response = (GetServicesResponse) soap.createSOAPDeviceRequest(request, response, true);
-		}
-		catch (SOAPException | ConnectException e) {
+		} catch (SOAPException | ConnectException e) {
 			e.printStackTrace();
 			return null;
 		}
@@ -239,8 +273,7 @@ public class InitialDevices {
 
 		try {
 			response = (GetScopesResponse) soap.createSOAPMediaRequest(request, response, true);
-		}
-		catch (SOAPException | ConnectException e) {
+		} catch (SOAPException | ConnectException e) {
 			e.printStackTrace();
 			return null;
 		}
@@ -258,8 +291,7 @@ public class InitialDevices {
 
 		try {
 			response = (SystemRebootResponse) soap.createSOAPMediaRequest(request, response, true);
-		}
-		catch (SOAPException | ConnectException e) {
+		} catch (SOAPException | ConnectException e) {
 			e.printStackTrace();
 			return null;
 		}
